@@ -1,0 +1,339 @@
+{
+  "des": {
+    "baseline_capacity_lots_per_week": {
+      "half_width": 0.1085940163,
+      "mean": 55.27,
+      "n": 10,
+      "sd": 0.1518039672
+    },
+    "baseline_litho_wait_operator_fraction": 0.2138619897,
+    "baseline_litho_wait_tech_fraction": 0.1005075519,
+    "baseline_scrapped_per_week": 5.659,
+    "baseline_starts_per_week": 60.929,
+    "options": [
+      {
+        "cost_musd": 0.0,
+        "des_capacity_half_width": 0.158200119,
+        "des_capacity_lots_per_week": 58.792,
+        "description": "Operators serve LITHO requests first (policy)",
+        "gain_half_width_paired": 0.1796101503,
+        "gain_lots_per_week": 3.522,
+        "gain_per_musd": null,
+        "imp_failures_per_week": 5.687,
+        "litho_wait_operator_fraction": 0.1794737455,
+        "litho_wait_tech_fraction": 0.09288251576,
+        "option": "operators_litho_first",
+        "rank": 1,
+        "scrapped_per_week": 5.687,
+        "starts_per_week": 64.479
+      },
+      {
+        "cost_musd": 0.6,
+        "des_capacity_half_width": 0.2472889484,
+        "des_capacity_lots_per_week": 70.139,
+        "description": "Add a third operator qualified on IMP and LITHO",
+        "gain_half_width_paired": 0.2400315877,
+        "gain_lots_per_week": 14.869,
+        "gain_per_musd": 24.78166667,
+        "imp_failures_per_week": 5.694,
+        "litho_wait_operator_fraction": 0.05014852272,
+        "litho_wait_tech_fraction": 0.09266037976,
+        "option": "add_operator_imp_litho",
+        "rank": 2,
+        "scrapped_per_week": 5.694,
+        "starts_per_week": 75.833
+      },
+      {
+        "cost_musd": 1.0,
+        "des_capacity_half_width": 0.1242723174,
+        "des_capacity_lots_per_week": 59.857,
+        "description": "Halve implanter repair time",
+        "gain_half_width_paired": 0.1270326524,
+        "gain_lots_per_week": 4.587,
+        "gain_per_musd": 4.587,
+        "imp_failures_per_week": 6.062,
+        "litho_wait_operator_fraction": 0.2406352734,
+        "litho_wait_tech_fraction": 0.01667778405,
+        "option": "halve_imp_repair",
+        "rank": 3,
+        "scrapped_per_week": 6.062,
+        "starts_per_week": 65.919
+      },
+      {
+        "cost_musd": 0.5,
+        "des_capacity_half_width": 0.1211680304,
+        "des_capacity_lots_per_week": 56.873,
+        "description": "Halve all litho setup times",
+        "gain_half_width_paired": 0.1295149458,
+        "gain_lots_per_week": 1.603,
+        "gain_per_musd": 3.206,
+        "imp_failures_per_week": 5.664,
+        "litho_wait_operator_fraction": 0.220338891,
+        "litho_wait_tech_fraction": 0.1007590581,
+        "option": "halve_litho_setup",
+        "rank": 4,
+        "scrapped_per_week": 5.664,
+        "starts_per_week": 62.537
+      },
+      {
+        "cost_musd": 0.3,
+        "des_capacity_half_width": 0.181405635,
+        "des_capacity_lots_per_week": 56.102,
+        "description": "Cut litho PM from 30 to 20 min per shift",
+        "gain_half_width_paired": 0.1819689496,
+        "gain_lots_per_week": 0.832,
+        "gain_per_musd": 2.773333333,
+        "imp_failures_per_week": 5.665,
+        "litho_wait_operator_fraction": 0.2184559848,
+        "litho_wait_tech_fraction": 0.09928750477,
+        "option": "litho_pm_30_to_20",
+        "rank": 5,
+        "scrapped_per_week": 5.665,
+        "starts_per_week": 61.767
+      },
+      {
+        "cost_musd": 12.0,
+        "des_capacity_half_width": 0.1179411216,
+        "des_capacity_lots_per_week": 67.046,
+        "description": "Buy one more litho tool (LITHO)",
+        "gain_half_width_paired": 0.1934611007,
+        "gain_lots_per_week": 11.776,
+        "gain_per_musd": 0.9813333333,
+        "imp_failures_per_week": 5.714,
+        "litho_wait_operator_fraction": 0.281874424,
+        "litho_wait_tech_fraction": 0.1142632941,
+        "option": "add_LITHO",
+        "rank": 6,
+        "scrapped_per_week": 5.714,
+        "starts_per_week": 72.76
+      },
+      {
+        "cost_musd": 2.5,
+        "des_capacity_half_width": 0.1259515803,
+        "des_capacity_lots_per_week": 53.97,
+        "description": "Buy one more diffusion furnace (DIFF)",
+        "gain_half_width_paired": 0.1223332354,
+        "gain_lots_per_week": -1.3,
+        "gain_per_musd": -0.52,
+        "imp_failures_per_week": 5.615,
+        "litho_wait_operator_fraction": 0.2057910148,
+        "litho_wait_tech_fraction": 0.1265348357,
+        "option": "add_DIFF",
+        "rank": 7,
+        "scrapped_per_week": 5.615,
+        "starts_per_week": 59.585
+      },
+      {
+        "cost_musd": 4.0,
+        "des_capacity_half_width": 0.1725132779,
+        "des_capacity_lots_per_week": 43.117,
+        "description": "Buy one more implanter (IMP)",
+        "gain_half_width_paired": 0.2065897131,
+        "gain_lots_per_week": -12.153,
+        "gain_per_musd": -3.03825,
+        "imp_failures_per_week": 7.957,
+        "litho_wait_operator_fraction": 0.1555668885,
+        "litho_wait_tech_fraction": 0.2967067073,
+        "option": "add_IMP",
+        "rank": 8,
+        "scrapped_per_week": 7.957,
+        "starts_per_week": 51.074
+      }
+    ]
+  },
+  "settings": {
+    "conwip_wip": 40,
+    "reps": 10,
+    "rule": "FIFO"
+  },
+  "static": {
+    "baseline_bottleneck": "LITHO",
+    "baseline_max_starts_per_week": 81.50670484,
+    "baseline_operator_utilization": 0.8528769841,
+    "baseline_technician_utilization": 0.8697368421,
+    "baseline_technician_utilization_by_failure_model": {
+      "calendar_dist": 0.8697368421,
+      "calendar_spec": 0.775,
+      "run_dist": 0.8697368421,
+      "run_spec": 0.775
+    },
+    "options": [
+      {
+        "bottleneck_after": "LITHO",
+        "cost_musd": 0.5,
+        "description": "Halve all litho setup times",
+        "gain_per_musd": 9.858684279,
+        "gain_starts_per_week": 4.92934214,
+        "max_starts_per_week": 86.43604698,
+        "operator_utilization_after": 0.815327381,
+        "option": "halve_litho_setup",
+        "rank": 1,
+        "technician_utilization_after": 0.8697368421,
+        "technician_utilization_after_by_failure_model": {
+          "calendar_dist": 0.8697368421,
+          "calendar_spec": 0.775,
+          "run_dist": 0.8697368421,
+          "run_spec": 0.775
+        },
+        "technician_utilization_after_range": [
+          0.775,
+          0.8697368421
+        ]
+      },
+      {
+        "bottleneck_after": "LITHO",
+        "cost_musd": 0.3,
+        "description": "Cut litho PM from 30 to 20 min per shift",
+        "gain_per_musd": 3.937521973,
+        "gain_starts_per_week": 1.181256592,
+        "max_starts_per_week": 82.68796143,
+        "operator_utilization_after": 0.8528769841,
+        "option": "litho_pm_30_to_20",
+        "rank": 2,
+        "technician_utilization_after": 0.8530701754,
+        "technician_utilization_after_by_failure_model": {
+          "calendar_dist": 0.8530701754,
+          "calendar_spec": 0.7583333333,
+          "run_dist": 0.8530701754,
+          "run_spec": 0.7583333333
+        },
+        "technician_utilization_after_range": [
+          0.7583333333,
+          0.8530701754
+        ]
+      },
+      {
+        "bottleneck_after": "DIFF",
+        "cost_musd": 12.0,
+        "description": "Buy one more litho tool (LITHO)",
+        "gain_per_musd": 1.170274597,
+        "gain_starts_per_week": 14.04329516,
+        "max_starts_per_week": 95.55,
+        "operator_utilization_after": 0.8528769841,
+        "option": "add_LITHO",
+        "rank": 3,
+        "technician_utilization_after": 0.9197368421,
+        "technician_utilization_after_by_failure_model": {
+          "calendar_dist": 0.9197368421,
+          "calendar_spec": 0.825,
+          "run_dist": 0.9197368421,
+          "run_spec": 0.825
+        },
+        "technician_utilization_after_range": [
+          0.825,
+          0.9197368421
+        ]
+      },
+      {
+        "bottleneck_after": "LITHO",
+        "cost_musd": 2.5,
+        "description": "Buy one more diffusion furnace (DIFF)",
+        "gain_per_musd": 0.0,
+        "gain_starts_per_week": 0.0,
+        "max_starts_per_week": 81.50670484,
+        "operator_utilization_after": 0.8528769841,
+        "option": "add_DIFF",
+        "rank": 4,
+        "technician_utilization_after": 0.9322368421,
+        "technician_utilization_after_by_failure_model": {
+          "calendar_dist": 0.9322368421,
+          "calendar_spec": 0.8375,
+          "run_dist": 0.9322368421,
+          "run_spec": 0.8375
+        },
+        "technician_utilization_after_range": [
+          0.8375,
+          0.9322368421
+        ]
+      },
+      {
+        "bottleneck_after": "LITHO",
+        "cost_musd": 4.0,
+        "description": "Buy one more implanter (IMP)",
+        "gain_per_musd": 0.0,
+        "gain_starts_per_week": 0.0,
+        "max_starts_per_week": 81.50670484,
+        "operator_utilization_after": 0.8528769841,
+        "option": "add_IMP",
+        "rank": 5,
+        "technician_utilization_after": 1.217105263,
+        "technician_utilization_after_by_failure_model": {
+          "calendar_dist": 1.217105263,
+          "calendar_spec": 1.075,
+          "run_dist": 1.069736842,
+          "run_spec": 0.975
+        },
+        "technician_utilization_after_range": [
+          0.975,
+          1.217105263
+        ]
+      },
+      {
+        "bottleneck_after": "LITHO",
+        "cost_musd": 0.6,
+        "description": "Add a third operator qualified on IMP and LITHO",
+        "gain_per_musd": 0.0,
+        "gain_starts_per_week": 0.0,
+        "max_starts_per_week": 81.50670484,
+        "operator_utilization_after": 0.5685846561,
+        "option": "add_operator_imp_litho",
+        "rank": 6,
+        "technician_utilization_after": 0.8697368421,
+        "technician_utilization_after_by_failure_model": {
+          "calendar_dist": 0.8697368421,
+          "calendar_spec": 0.775,
+          "run_dist": 0.8697368421,
+          "run_spec": 0.775
+        },
+        "technician_utilization_after_range": [
+          0.775,
+          0.8697368421
+        ]
+      },
+      {
+        "bottleneck_after": "LITHO",
+        "cost_musd": 1.0,
+        "description": "Halve implanter repair time",
+        "gain_per_musd": 0.0,
+        "gain_starts_per_week": 0.0,
+        "max_starts_per_week": 81.50670484,
+        "operator_utilization_after": 0.8528769841,
+        "option": "halve_imp_repair",
+        "rank": 7,
+        "technician_utilization_after": 0.7320093458,
+        "technician_utilization_after_by_failure_model": {
+          "calendar_dist": 0.7223684211,
+          "calendar_spec": 0.675,
+          "run_dist": 0.7223684211,
+          "run_spec": 0.675
+        },
+        "technician_utilization_after_range": [
+          0.675,
+          0.7223684211
+        ]
+      },
+      {
+        "bottleneck_after": "LITHO",
+        "cost_musd": 0.0,
+        "description": "Operators serve LITHO requests first (policy)",
+        "gain_per_musd": null,
+        "gain_starts_per_week": 0.0,
+        "max_starts_per_week": 81.50670484,
+        "operator_utilization_after": 0.8528769841,
+        "option": "operators_litho_first",
+        "rank": 8,
+        "technician_utilization_after": 0.8697368421,
+        "technician_utilization_after_by_failure_model": {
+          "calendar_dist": 0.8697368421,
+          "calendar_spec": 0.775,
+          "run_dist": 0.8697368421,
+          "run_spec": 0.775
+        },
+        "technician_utilization_after_range": [
+          0.775,
+          0.8697368421
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+scenario,quarter_ordered,quarter_installed,group,tools,cost_musd
+base,Q2,Q3,LITHO,1,12.0
+base,Q4,Q5,DIFF,1,2.5
+base,Q4,Q5,IMP,1,4.0
+demand_plus_20,Q1,Q2,LITHO,1,12.0
+demand_plus_20,Q2,Q3,DIFF,1,2.5
+demand_plus_20,Q2,Q3,IMP,1,4.0
+demand_plus_20,Q7,Q8,DIFF,1,2.5
+demand_plus_20,Q7,Q8,IMP,1,4.0
+mix_shift_pc,Q2,Q3,LITHO,1,12.0
+mix_shift_pc,Q4,Q5,DIFF,1,2.5
+mix_shift_pc,Q4,Q5,IMP,1,4.0

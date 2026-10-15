@@ -1,0 +1,260 @@
+{
+  "note": "Pc is the illustrative extra product of data/planning.json (not part of Kempf's Mini-Fab)",
+  "pa_share_of_commercial": [
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.004192547,
+      "litho_setup_min_per_job": 5.241071429,
+      "max_starts_per_week": 83.64929643,
+      "pa_share": 0.0,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 0.8209876543,
+        "LITHO": 1.004192547
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.014380435,
+      "litho_setup_min_per_job": 5.826875,
+      "max_starts_per_week": 82.80916816,
+      "pa_share": 0.1,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 0.8209876543,
+        "LITHO": 1.014380435
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.022304348,
+      "litho_setup_min_per_job": 6.2825,
+      "max_starts_per_week": 82.1673117,
+      "pa_share": 0.2,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 0.8209876543,
+        "LITHO": 1.022304348
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.027964286,
+      "litho_setup_min_per_job": 6.607946429,
+      "max_starts_per_week": 81.71490116,
+      "pa_share": 0.3,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 0.8209876543,
+        "LITHO": 1.027964286
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.031360248,
+      "litho_setup_min_per_job": 6.803214286,
+      "max_starts_per_week": 81.44583828,
+      "pa_share": 0.4,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 0.8209876543,
+        "LITHO": 1.031360248
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.032492236,
+      "litho_setup_min_per_job": 6.868303571,
+      "max_starts_per_week": 81.35654397,
+      "pa_share": 0.5,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 0.8209876543,
+        "LITHO": 1.032492236
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.031360248,
+      "litho_setup_min_per_job": 6.803214286,
+      "max_starts_per_week": 81.44583828,
+      "pa_share": 0.6,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 0.8209876543,
+        "LITHO": 1.031360248
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.027964286,
+      "litho_setup_min_per_job": 6.607946429,
+      "max_starts_per_week": 81.71490116,
+      "pa_share": 0.7,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 0.8209876543,
+        "LITHO": 1.027964286
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.022304348,
+      "litho_setup_min_per_job": 6.2825,
+      "max_starts_per_week": 82.1673117,
+      "pa_share": 0.8,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 0.8209876543,
+        "LITHO": 1.022304348
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.014380435,
+      "litho_setup_min_per_job": 5.826875,
+      "max_starts_per_week": 82.80916816,
+      "pa_share": 0.9,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 0.8209876543,
+        "LITHO": 1.014380435
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.004192547,
+      "litho_setup_min_per_job": 5.241071429,
+      "max_starts_per_week": 83.64929643,
+      "pa_share": 1.0,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 0.8209876543,
+        "LITHO": 1.004192547
+      }
+    }
+  ],
+  "pc_share_illustrative": [
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.030590062,
+      "max_starts_per_week": 81.50670484,
+      "share": 0.0,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 0.8209876543,
+        "LITHO": 1.030590062
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.111895997,
+      "max_starts_per_week": 75.54663405,
+      "share": 0.1,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 0.8662257496,
+        "LITHO": 1.111895997
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.189408825,
+      "max_starts_per_week": 70.62331994,
+      "share": 0.2,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 0.9114638448,
+        "LITHO": 1.189408825
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.263607862,
+      "max_starts_per_week": 66.47631952,
+      "share": 0.3,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 0.95670194,
+        "LITHO": 1.263607862
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.334894931,
+      "max_starts_per_week": 62.92630084,
+      "share": 0.4,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 1.001940035,
+        "LITHO": 1.334894931
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.403609411,
+      "max_starts_per_week": 59.84570876,
+      "share": 0.5,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 1.047178131,
+        "LITHO": 1.403609411
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.470039917,
+      "max_starts_per_week": 57.14130551,
+      "share": 0.6,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 1.092416226,
+        "LITHO": 1.470039917
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.534433447,
+      "max_starts_per_week": 54.74333223,
+      "share": 0.7,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 1.137654321,
+        "LITHO": 1.534433447
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.597002625,
+      "max_starts_per_week": 52.59853595,
+      "share": 0.8,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 1.182892416,
+        "LITHO": 1.597002625
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.657931476,
+      "max_starts_per_week": 50.66554391,
+      "share": 0.9,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 1.228130511,
+        "LITHO": 1.657931476
+      }
+    },
+    {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.717380079,
+      "max_starts_per_week": 48.9117121,
+      "share": 1.0,
+      "utilization": {
+        "DIFF": 0.8791208791,
+        "IMP": 1.273368607,
+        "LITHO": 1.717380079
+      }
+    }
+  ]
+}

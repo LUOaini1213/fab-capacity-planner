@@ -1,0 +1,434 @@
+{
+  "at_kempf_starts": {
+    "ca2": 1.0,
+    "cycle_time_min": null,
+    "em_mode": "renewal",
+    "groups": {
+      "DIFF": {
+        "batch_size": 3,
+        "ca2_job": 0.3333333333,
+        "ce2": 0.01259515571,
+        "ctq": 201.6722774,
+        "group": "DIFF",
+        "jobs_per_min": 0.005555555556,
+        "lot_arrivals_per_min": 0.01666666667,
+        "setup_mean": 0.0,
+        "t0": 300.0,
+        "t_natural": 300.0,
+        "te": 318.75,
+        "tools": 2,
+        "u": 0.8854166667
+      },
+      "IMP": {
+        "batch_size": 1,
+        "ca2_job": 1.0,
+        "ce2": 0.7397035428,
+        "ctq": 294.0445678,
+        "group": "IMP",
+        "jobs_per_min": 0.01666666667,
+        "lot_arrivals_per_min": 0.01666666667,
+        "setup_mean": 0.0,
+        "t0": 70.0,
+        "t_natural": 70.0,
+        "te": 104.7368421,
+        "tools": 2,
+        "u": 0.8728070175
+      },
+      "LITHO": {
+        "batch_size": 1,
+        "ca2_job": 1.0,
+        "ce2": 0.156431317,
+        "ctq": null,
+        "group": "LITHO",
+        "jobs_per_min": 0.01666666667,
+        "lot_arrivals_per_min": 0.01666666667,
+        "setup_mean": 6.758928571,
+        "t0": 59.25892857,
+        "t_natural": 52.5,
+        "te": 61.75892857,
+        "tools": 1,
+        "u": 1.029315476
+      }
+    },
+    "include_setups": true,
+    "products": {
+      "Pa": {
+        "cycle_time_min": null,
+        "raw_process_time_min": 845.0,
+        "visits": [
+          {
+            "ct": 625.4222774,
+            "group": "DIFF",
+            "step": "S1",
+            "wait": 321.6722774
+          },
+          {
+            "ct": 388.7814099,
+            "group": "IMP",
+            "step": "S2",
+            "wait": 294.0445678
+          },
+          {
+            "ct": null,
+            "group": "LITHO",
+            "step": "S3",
+            "wait": null
+          },
+          {
+            "ct": 408.7814099,
+            "group": "IMP",
+            "step": "S4",
+            "wait": 294.0445678
+          },
+          {
+            "ct": 726.0105127,
+            "group": "DIFF",
+            "step": "S5",
+            "wait": 392.2605127
+          },
+          {
+            "ct": null,
+            "group": "LITHO",
+            "step": "S6",
+            "wait": null
+          }
+        ],
+        "x_factor": null
+      },
+      "Pb": {
+        "cycle_time_min": null,
+        "raw_process_time_min": 845.0,
+        "visits": [
+          {
+            "ct": 625.4222774,
+            "group": "DIFF",
+            "step": "S1",
+            "wait": 321.6722774
+          },
+          {
+            "ct": 388.7814099,
+            "group": "IMP",
+            "step": "S2",
+            "wait": 294.0445678
+          },
+          {
+            "ct": null,
+            "group": "LITHO",
+            "step": "S3",
+            "wait": null
+          },
+          {
+            "ct": 408.7814099,
+            "group": "IMP",
+            "step": "S4",
+            "wait": 294.0445678
+          },
+          {
+            "ct": 859.4222774,
+            "group": "DIFF",
+            "step": "S5",
+            "wait": 525.6722774
+          },
+          {
+            "ct": null,
+            "group": "LITHO",
+            "step": "S6",
+            "wait": null
+          }
+        ],
+        "x_factor": null
+      },
+      "TW": {
+        "cycle_time_min": null,
+        "raw_process_time_min": 845.0,
+        "visits": [
+          {
+            "ct": 625.4222774,
+            "group": "DIFF",
+            "step": "S1",
+            "wait": 321.6722774
+          },
+          {
+            "ct": 388.7814099,
+            "group": "IMP",
+            "step": "S2",
+            "wait": 294.0445678
+          },
+          {
+            "ct": null,
+            "group": "LITHO",
+            "step": "S3",
+            "wait": null
+          },
+          {
+            "ct": 408.7814099,
+            "group": "IMP",
+            "step": "S4",
+            "wait": 294.0445678
+          },
+          {
+            "ct": 775.4222774,
+            "group": "DIFF",
+            "step": "S5",
+            "wait": 441.6722774
+          },
+          {
+            "ct": null,
+            "group": "LITHO",
+            "step": "S6",
+            "wait": null
+          }
+        ],
+        "x_factor": null
+      }
+    },
+    "raw_process_time_min": 845.0,
+    "x_factor": null
+  },
+  "curve_ca2_0": [
+    {
+      "bottleneck_utilization": 0.3,
+      "cycle_time_min": 2520.862179,
+      "group_u": {
+        "DIFF": 0.294662812,
+        "IMP": 0.4592793193,
+        "LITHO": 0.3291666667
+      },
+      "starts_per_week": 24.45201145,
+      "x_factor": 2.983268851
+    },
+    {
+      "bottleneck_utilization": 0.4,
+      "cycle_time_min": 2128.290569,
+      "group_u": {
+        "DIFF": 0.3755226382,
+        "IMP": 0.5158811976,
+        "LITHO": 0.425
+      },
+      "starts_per_week": 32.60268193,
+      "x_factor": 2.518687064
+    },
+    {
+      "bottleneck_utilization": 0.5,
+      "cycle_time_min": 1900.018879,
+      "group_u": {
+        "DIFF": 0.4563824645,
+        "IMP": 0.572483076,
+        "LITHO": 0.5208333333
+      },
+      "starts_per_week": 40.75335242,
+      "x_factor": 2.248543052
+    },
+    {
+      "bottleneck_utilization": 0.6,
+      "cycle_time_min": 1757.068642,
+      "group_u": {
+        "DIFF": 0.5372422907,
+        "IMP": 0.6290849544,
+        "LITHO": 0.6166666667
+      },
+      "starts_per_week": 48.9040229,
+      "x_factor": 2.079371174
+    },
+    {
+      "bottleneck_utilization": 0.7,
+      "cycle_time_min": 1668.209985,
+      "group_u": {
+        "DIFF": 0.6181021169,
+        "IMP": 0.6856868327,
+        "LITHO": 0.7125
+      },
+      "starts_per_week": 57.05469339,
+      "x_factor": 1.974213
+    },
+    {
+      "bottleneck_utilization": 0.75,
+      "cycle_time_min": 1640.444336,
+      "group_u": {
+        "DIFF": 0.65853203,
+        "IMP": 0.7139877719,
+        "LITHO": 0.7604166667
+      },
+      "starts_per_week": 61.13002863,
+      "x_factor": 1.941354244
+    },
+    {
+      "bottleneck_utilization": 0.8,
+      "cycle_time_min": 1624.331441,
+      "group_u": {
+        "DIFF": 0.6989619431,
+        "IMP": 0.7422887111,
+        "LITHO": 0.8083333333
+      },
+      "starts_per_week": 65.20536387,
+      "x_factor": 1.922285729
+    },
+    {
+      "bottleneck_utilization": 0.85,
+      "cycle_time_min": 1623.174181,
+      "group_u": {
+        "DIFF": 0.7393918563,
+        "IMP": 0.7705896503,
+        "LITHO": 0.85625
+      },
+      "starts_per_week": 69.28069911,
+      "x_factor": 1.92091619
+    },
+    {
+      "bottleneck_utilization": 0.9,
+      "cycle_time_min": 1647.783615,
+      "group_u": {
+        "DIFF": 0.7798217694,
+        "IMP": 0.7988905894,
+        "LITHO": 0.9041666667
+      },
+      "starts_per_week": 73.35603435,
+      "x_factor": 1.950039782
+    },
+    {
+      "bottleneck_utilization": 0.95,
+      "cycle_time_min": 1750.554225,
+      "group_u": {
+        "DIFF": 0.8202516825,
+        "IMP": 0.8271915286,
+        "LITHO": 0.9520833333
+      },
+      "starts_per_week": 77.43136959,
+      "x_factor": 2.071661804
+    },
+    {
+      "bottleneck_utilization": 0.98,
+      "cycle_time_min": 2061.376279,
+      "group_u": {
+        "DIFF": 0.8445096304,
+        "IMP": 0.8441720921,
+        "LITHO": 0.9808333333
+      },
+      "starts_per_week": 79.87657074,
+      "x_factor": 2.439498556
+    }
+  ],
+  "curve_ca2_1": [
+    {
+      "bottleneck_utilization": 0.3,
+      "cycle_time_min": 2625.480229,
+      "group_u": {
+        "DIFF": 0.294662812,
+        "IMP": 0.4592793193,
+        "LITHO": 0.3291666667
+      },
+      "starts_per_week": 24.45201145,
+      "x_factor": 3.107077194
+    },
+    {
+      "bottleneck_utilization": 0.4,
+      "cycle_time_min": 2262.441387,
+      "group_u": {
+        "DIFF": 0.3755226382,
+        "IMP": 0.5158811976,
+        "LITHO": 0.425
+      },
+      "starts_per_week": 32.60268193,
+      "x_factor": 2.677445429
+    },
+    {
+      "bottleneck_utilization": 0.5,
+      "cycle_time_min": 2077.11928,
+      "group_u": {
+        "DIFF": 0.4563824645,
+        "IMP": 0.572483076,
+        "LITHO": 0.5208333333
+      },
+      "starts_per_week": 40.75335242,
+      "x_factor": 2.458129326
+    },
+    {
+      "bottleneck_utilization": 0.6,
+      "cycle_time_min": 1997.202577,
+      "group_u": {
+        "DIFF": 0.5372422907,
+        "IMP": 0.6290849544,
+        "LITHO": 0.6166666667
+      },
+      "starts_per_week": 48.9040229,
+      "x_factor": 2.363553345
+    },
+    {
+      "bottleneck_utilization": 0.7,
+      "cycle_time_min": 2006.901022,
+      "group_u": {
+        "DIFF": 0.6181021169,
+        "IMP": 0.6856868327,
+        "LITHO": 0.7125
+      },
+      "starts_per_week": 57.05469339,
+      "x_factor": 2.375030796
+    },
+    {
+      "bottleneck_utilization": 0.75,
+      "cycle_time_min": 2052.51429,
+      "group_u": {
+        "DIFF": 0.65853203,
+        "IMP": 0.7139877719,
+        "LITHO": 0.7604166667
+      },
+      "starts_per_week": 61.13002863,
+      "x_factor": 2.429010994
+    },
+    {
+      "bottleneck_utilization": 0.8,
+      "cycle_time_min": 2139.156952,
+      "group_u": {
+        "DIFF": 0.6989619431,
+        "IMP": 0.7422887111,
+        "LITHO": 0.8083333333
+      },
+      "starts_per_week": 65.20536387,
+      "x_factor": 2.531546688
+    },
+    {
+      "bottleneck_utilization": 0.85,
+      "cycle_time_min": 2294.934551,
+      "group_u": {
+        "DIFF": 0.7393918563,
+        "IMP": 0.7705896503,
+        "LITHO": 0.85625
+      },
+      "starts_per_week": 69.28069911,
+      "x_factor": 2.715898877
+    },
+    {
+      "bottleneck_utilization": 0.9,
+      "cycle_time_min": 2600.689967,
+      "group_u": {
+        "DIFF": 0.7798217694,
+        "IMP": 0.7988905894,
+        "LITHO": 0.9041666667
+      },
+      "starts_per_week": 73.35603435,
+      "x_factor": 3.077739606
+    },
+    {
+      "bottleneck_utilization": 0.95,
+      "cycle_time_min": 3441.427467,
+      "group_u": {
+        "DIFF": 0.8202516825,
+        "IMP": 0.8271915286,
+        "LITHO": 0.9520833333
+      },
+      "starts_per_week": 77.43136959,
+      "x_factor": 4.072695227
+    },
+    {
+      "bottleneck_utilization": 0.98,
+      "cycle_time_min": 5764.067116,
+      "group_u": {
+        "DIFF": 0.8445096304,
+        "IMP": 0.8441720921,
+        "LITHO": 0.9808333333
+      },
+      "starts_per_week": 79.87657074,
+      "x_factor": 6.821381202
+    }
+  ]
+}

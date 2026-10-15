@@ -1,0 +1,3607 @@
+{
+  "provenance": {
+    "heldout_sha256": "31c447a5697d6620a264089a86cfc8e88fd57b1a0d82bb8994e18fd3850fe7db",
+    "llm_system_prompt_sha256": "b0042522ddb70dc3855bf014341cb91e55bee4d8927266219658be12451d446e",
+    "router_py_sha256": "ac0f6fb74de33d4a1cec1cdd39daf54d49448259f175425e1e3679723862230c"
+  },
+  "rows": [
+    {
+      "answer": "The bottleneck is LITHO at 103.1% utilization.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The bottleneck is LITHO at 103.1% utilization.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "c01",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Which tool group is the bottleneck at current demand, and how utilized is it?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 10.3,
+      "split": "dev"
+    },
+    {
+      "answer": "The bottleneck is LITHO at 103.1% utilization.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The bottleneck is LITHO at 103.1% utilization.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "c02",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What's the bottleneck right now and its utilization?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 9.7,
+      "split": "test"
+    },
+    {
+      "answer": "The utilization of the implant tools is 82.1%.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The utilization of the implant tools is 82.1%.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "c03",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What is the utilization of the implant tools?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 9.4,
+      "split": "dev"
+    },
+    {
+      "answer": "The diffusion furnaces (DIFF) are at 87.9% utilization, which is below the bottleneck lithography tools at 103.1%.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The diffusion furnaces (DIFF) are at 87.9% utilization, which is below the bottleneck lithography tools at 103.1%.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "c04",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How busy are the diffusion furnaces at today's volume?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 12.0,
+      "split": "test"
+    },
+    {
+      "answer": "The fab can start at most 81.5 lots per week under current conditions (LITHO is the bottleneck). At an 85% utilization cap, the maximum would be 69.3 lots per week.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The fab can start at most 81.5 lots per week under current conditions (LITHO is the bottleneck). At an 85% utilization cap, the maximum would be 69.3 lots per week.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "c05",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How many lots per week can the fab start at most?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 13.5,
+      "split": "dev"
+    },
+    {
+      "answer": "The maximum weekly start rate the line can sustain is 81.5 starts/week, which corresponds to a capacity percentage of 85.0% given the bottleneck at LITHO with 103.1% utilization.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The maximum weekly start rate the line can sustain is 81.5 starts/week at 100% utilization, or 69.3 starts/week at an 85% utilization cap. The bottleneck is LITHO at 103.1% utilization.",
+      "first_unsupported": [
+        100.0
+      ],
+      "first_valid": false,
+      "id": "c06",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What is the maximum weekly start rate the line can sustain?",
+      "repaired": true,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": false
+      },
+      "seconds": 27.3,
+      "split": "test"
+    },
+    {
+      "answer": "We can load up to 69.3 starts per week if no tool group may exceed an 85% utilization cap. The bottleneck is LITHO at 103.1% utilization under standard conditions.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "We can load up to 69.3 starts per week if no tool group may exceed an 85% utilization cap. The bottleneck is LITHO at 103.1% utilization under standard conditions.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "c07",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How many starts per week can we load if no tool group may exceed an 85% utilization cap?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 14.8,
+      "split": "dev"
+    },
+    {
+      "answer": "With an 85% utilization ceiling, the maximum starts per week is 69.3.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "With an 85% utilization ceiling, the maximum starts per week is 69.3.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "c08",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "With an 85% utilization ceiling, what's the max starts per week?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 10.3,
+      "split": "test"
+    },
+    {
+      "answer": "With a 20% demand increase, the bottleneck is LITHO at 123.7% utilization.",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": 20
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "With a 20% demand increase, the bottleneck is LITHO at 123.7% utilization.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "c09",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If demand rises 20%, where is the bottleneck and how loaded is it?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 12.6,
+      "split": "dev"
+    },
+    {
+      "answer": "The LITHO group becomes the constraint at 118.5% utilization.",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": 15
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The LITHO group becomes the constraint at 118.5% utilization.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "c10",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Demand goes up by 15%. Which group becomes the constraint and at what utilization?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 12.2,
+      "split": "test"
+    },
+    {
+      "answer": "The litho utilization is 77.3%.",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": -25
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The litho utilization is 77.3%.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "c11",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If demand falls 25%, what is the litho utilization?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 11.1,
+      "split": "dev"
+    },
+    {
+      "answer": "Implant utilization would be 73.9% if volume dropped by 10%.",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": -10
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "Implant utilization would be 73.9% if volume dropped by 10%.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "c12",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What would implant utilization be if volume dropped by 10%?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 12.4,
+      "split": "test"
+    },
+    {
+      "answer": "With one additional litho tool, the maximum starts per week is 95.5 and the bottleneck remains DIFF at 87.9% utilization.",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "extra_tools": 1,
+            "extra_tools_group": "LITHO"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "With one additional litho tool, the maximum starts per week is 95.5 and the bottleneck remains DIFF at 87.9% utilization.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "c13",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If we add one litho tool, what is the maximum starts per week and the new bottleneck?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 16.0,
+      "split": "dev"
+    },
+    {
+      "answer": "With an additional lithography scanner, the maximum weekly starts become 95.5, and the bottleneck remains the DIFF group at 87.9% utilization.",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "extra_tools": 1,
+            "extra_tools_group": "LITHO"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "With an additional lithography scanner, the maximum weekly starts become 95.5, and the bottleneck remains the DIFF group at 87.9% utilization.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "c14",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Suppose we buy another lithography scanner. What becomes the max weekly starts, and which group is then the bottleneck?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 16.4,
+      "split": "test"
+    },
+    {
+      "answer": "With one more implanter, implant utilization would be 54.7%.",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "extra_tools": 1,
+            "extra_tools_group": "IMP"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "With one more implanter, implant utilization would be 54.7%.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "c15",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "With one more implanter, what would implant utilization be?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 13.7,
+      "split": "dev"
+    },
+    {
+      "answer": "With 2 additional diffusion furnaces, the diffusion utilization is 44%.",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "extra_tools": 2,
+            "extra_tools_group": "DIFF"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "With 2 additional diffusion furnaces, the diffusion utilization is 44%.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "c16",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If we add 2 diffusion furnaces, what is the diffusion utilization?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 13.9,
+      "split": "test"
+    },
+    {
+      "answer": "At the requested demand: estimated mean cycle time 33.7 h, raw process time 14.1 h, X-factor 2.39. Queue time per visit (waiting for a free tool): DIFF 0.7 h, IMP 1.7 h, LITHO 1.7 h. Total wait per visit including batch formation: DIFF 5 h, IMP 1.7 h, LITHO 1.7 h.",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": -30
+          }
+        ]
+      ],
+      "fallback": true,
+      "first_answer": "The estimated cycle time at 70% of current demand is 33.7 hours.",
+      "first_unsupported": [
+        70.0
+      ],
+      "first_valid": false,
+      "id": "t01",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What is the estimated cycle time at 70% of current demand?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          2.39
+        ],
+        "tool_call_match": true,
+        "validator_ok": false
+      },
+      "seconds": 19.6,
+      "split": "dev"
+    },
+    {
+      "answer": "At a 40% demand cut, the X-factor is 2.36 and the cycle time is 33.2 hours.",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": -40
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "At a 40% demand cut, the X-factor is 2.36 and the cycle time is 33.2 hours.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "t02",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Estimate the X-factor and cycle time if volume is cut by 40%.",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 15.0,
+      "split": "test"
+    },
+    {
+      "answer": "Lots queue for 3.0 hours at litho if demand drops 20%.",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": -20
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "Lots queue for 3.0 hours at litho if demand drops 20%.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "t03",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How long do lots queue at litho if demand drops 20%?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 12.8,
+      "split": "dev"
+    },
+    {
+      "answer": "At the implanters, lots wait 2.3 hours due to a 20% demand decrease.",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": -20
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "At the implanters, lots wait 2.3 hours due to a 20% demand decrease.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "t04",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If demand decreases by 20%, how many hours do lots wait at the implanters?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 12.7,
+      "split": "test"
+    },
+    {
+      "answer": "The raw process time of a lot is 14.1 hours.",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": 0
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The raw process time of a lot is 14.1 hours.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "t05",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What is the raw process time of a lot?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 11.5,
+      "split": "dev"
+    },
+    {
+      "answer": "A lot needs 14.1 hours of pure processing time without any waiting.",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": 0
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "A lot needs 14.1 hours of pure processing time without any waiting.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "t06",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How many hours of pure processing does a lot need, without any waiting?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 12.0,
+      "split": "test"
+    },
+    {
+      "answer": "With a 20% demand increase starting next quarter, the bottleneck is LITHO (at 95% utilization before purchases). The optimal plan calls for buying one LITHO tool in Q1, plus additional DIFF and IMP tools later to maintain capacity.",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": 20,
+            "from_quarter": "2"
+          }
+        ],
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 20,
+            "from_quarter": 2
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "With a 20% demand increase starting next quarter, the bottleneck is LITHO (at 95% utilization before purchases). The optimal plan calls for buying one LITHO tool in Q1, plus additional DIFF and IMP tools later to maintain capacity.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "p01",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If demand rises 20% next quarter, where is the bottleneck and what should we buy?",
+      "repaired": false,
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          25.0
+        ],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          25.0
+        ],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 31.2,
+      "split": "dev"
+    },
+    {
+      "answer": "Order one LITHO tool in Q1 and one DIFF tool each in Q2 and Q7; total capex is $25M.",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 20,
+            "from_quarter": 2
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "Order one LITHO tool in Q1 and one DIFF tool each in Q2 and Q7; total capex is $25M.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "p02",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Demand jumps 20% starting next quarter. What tools should we order and what is the total capex?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 19.4,
+      "split": "test"
+    },
+    {
+      "answer": "The total capex of the base capacity plan is 18.5 M$.",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 0,
+            "from_quarter": 1,
+            "scenario": "base"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The total capex of the base capacity plan is 18.5 M$.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "p03",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What is the total capex of the base capacity plan?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 18.1,
+      "split": "dev"
+    },
+    {
+      "answer": "Under the base forecast, total capex spending over the planning horizon is $18.5M, with purchases of one LITHO tool ($12M), one DIFF tool ($2.5M), and one IMP tool ($4M).",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 0,
+            "from_quarter": 1,
+            "scenario": "base"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "Under the base forecast, total capex spending over the planning horizon is $18.5M, with purchases of one LITHO tool ($12M), one DIFF tool ($2.5M), and one IMP tool ($4M).",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "p04",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How much do we need to spend on tools over the planning horizon under the base forecast?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 22.3,
+      "split": "test"
+    },
+    {
+      "answer": "Under the base plan, we buy one LITHO tool first in Q2.",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 0,
+            "from_quarter": 1,
+            "scenario": "base"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "Under the base plan, we buy one LITHO tool first in Q2.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "p05",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Under the base plan, which tool do we buy first and when do we order it?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 17.5,
+      "split": "dev"
+    },
+    {
+      "answer": "The first purchase is one LITHO tool ordered in Q2.",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 0,
+            "from_quarter": 1,
+            "scenario": "base"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The first purchase is one LITHO tool ordered in Q2.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "p06",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "In the base forecast, what is the first purchase and in which quarter is it ordered?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 17.2,
+      "split": "test"
+    },
+    {
+      "answer": "The total capex for the product mix shift toward Pc scenario is 18.5 M$.",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 0,
+            "from_quarter": 1,
+            "scenario": "mix_shift_pc"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The total capex for the product mix shift toward Pc scenario is 18.5 M$.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "p07",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If the product mix shifts toward Pc, what is the total capex?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 18.6,
+      "split": "dev"
+    },
+    {
+      "answer": "With the mix shift to product Pc, the total capex needed is 18.5 M$, consisting of one LITHO tool (Q2), one DIFF tool (Q4), and one IMP tool (Q4).",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 0,
+            "from_quarter": 1,
+            "scenario": "mix_shift_pc"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "With the mix shift to product Pc, the total capex needed is 18.5 M$, consisting of one LITHO tool (Q2), one DIFF tool (Q4), and one IMP tool (Q4).",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "p08",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "With the mix shift to product Pc, how much capex is needed?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 22.7,
+      "split": "test"
+    },
+    {
+      "answer": "The total capex is 18.5 M$.",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 10,
+            "from_quarter": 3
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The total capex is 18.5 M$.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "p09",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If demand is 10% higher from quarter 3, what is the total capex?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 16.2,
+      "split": "dev"
+    },
+    {
+      "answer": "Total tool spend is 37.0 M$ (plus 0.95 M$ labour cost), with purchases of one LITHO tool in Q2/Q7, two DIFF tools in Q3/Q6, and two IMP tools in Q3/Q6.",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 30,
+            "from_quarter": 4
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "Total tool spend is 37.0 M$ (plus 0.95 M$ labour cost), with purchases of one LITHO tool in Q2/Q7, two DIFF tools in Q3/Q6, and two IMP tools in Q3/Q6.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "p10",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Total tool spend if demand rises 30% from Q4 onward?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 25.3,
+      "split": "test"
+    },
+    {
+      "answer": "According to the static model, halving litho setup time gives the most throughput per dollar at 9.9 gain_per_musd.",
+      "calls": [
+        [
+          "debottleneck_ranking",
+          {
+            "method": "static"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "According to the static model, halving litho setup time gives the most throughput per dollar at 9.9 gain_per_musd.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "d01",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Which improvement gives the most throughput per dollar according to the static model?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 16.2,
+      "split": "dev"
+    },
+    {
+      "answer": "According to the static capacity model, the best debottlenecking option per dollar is halving litho setup time, with a gain of 9.9 starts per week per M$.",
+      "calls": [
+        [
+          "debottleneck_ranking",
+          {
+            "method": "static"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "According to the static capacity model, the best debottlenecking option per dollar is halving litho setup time, with a gain of 9.9 starts per week per M$.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "d02",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Using the capacity model, what's the best debottlenecking option per dollar?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 16.9,
+      "split": "test"
+    },
+    {
+      "answer": "According to the simulation, the best value for money is adding an operator to both IMP and LITHO (gain_per_musd: 24.8), though the top-ranked option with no cost is setting litho operators first priority.",
+      "calls": [
+        [
+          "debottleneck_ranking",
+          {
+            "method": "des"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "According to the simulation, the best value for money is adding an operator to both IMP and LITHO (gain_per_musd: 24.8), though the top-ranked option with no cost is setting litho operators first priority.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "d03",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "According to the simulation, which improvement is the best value for money?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 19.6,
+      "split": "dev"
+    },
+    {
+      "answer": "According to the simulation (method='des'), the debottlenecking option ranked first is \"operators_litho_first\".",
+      "calls": [
+        [
+          "debottleneck_ranking",
+          {
+            "method": "des"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "According to the simulation (method='des'), the debottlenecking option ranked first is \"operators_litho_first\".",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "d04",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Which debottlenecking option does the simulation rank first?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 16.0,
+      "split": "test"
+    },
+    {
+      "answer": "The simulation gives a capacity of 55.3 good lots/week under FIFO dispatching.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "FIFO"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The simulation gives a capacity of 55.3 good lots/week under FIFO dispatching.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "s01",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What capacity does the simulation give under FIFO dispatching?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 12.7,
+      "split": "dev"
+    },
+    {
+      "answer": "The simulated capacity with the critical ratio (CR) rule is 55.0 good lots per week.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "CR"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The simulated capacity with the critical ratio (CR) rule is 55.0 good lots per week.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "s02",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What is the simulated capacity with the critical ratio rule?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 12.8,
+      "split": "test"
+    },
+    {
+      "answer": "The simulation results show that the SA (setup avoidance) dispatching rule gives the highest simulated capacity at 57.9 good lots/week, compared to FIFO at 55.3 and CR at 55.0.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "FIFO"
+          }
+        ],
+        [
+          "simulation_summary",
+          {
+            "rule": "CR"
+          }
+        ],
+        [
+          "simulation_summary",
+          {
+            "rule": "SA"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The simulation results show that the SA (setup avoidance) dispatching rule gives the highest simulated capacity at 57.9 good lots/week, compared to FIFO at 55.3 and CR at 55.0.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "s03",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Which dispatching rule gives the highest simulated capacity?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 25.8,
+      "split": "dev"
+    },
+    {
+      "answer": "In the simulation with setup-avoidance dispatching, 57.9 good lots per week come out at 84 starts.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "SA"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "In the simulation with setup-avoidance dispatching, 57.9 good lots per week come out at 84 starts.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "s04",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "In the simulation, how many good lots per week come out at 84 starts with setup-avoidance dispatching?",
+      "repaired": false,
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          26.3
+        ],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          26.3
+        ],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 13.9,
+      "split": "test"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "o01",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "What will TSMC's stock price be next month?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 8.6,
+      "split": "dev"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "o02",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "What is Samsung's DRAM market share this year?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 8.7,
+      "split": "test"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "o03",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Write a short poem about silicon wafers.",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 4.4,
+      "split": "dev"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "o04",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Can you translate 'cycle time' into French?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 4.5,
+      "split": "test"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "o05",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "What is the weather in Singapore tomorrow?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 4.4,
+      "split": "dev"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "o06",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "How many wafers per month does Intel's Fab 52 produce?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 8.9,
+      "split": "test"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "o07",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Who invented the transistor?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 4.6,
+      "split": "dev"
+    },
+    {
+      "answer": "I cannot book meetings or schedule maintenance activities; I can only provide capacity planning analysis for the Mini-Fab model.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "I cannot book meetings or schedule maintenance activities; I can only provide capacity planning analysis for the Mini-Fab model.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "o08",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Book a meeting with the maintenance team for Friday.",
+      "repaired": false,
+      "score": {
+        "correct": false,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": false,
+        "kind": "out_of_scope"
+      },
+      "seconds": 11.2,
+      "split": "test"
+    },
+    {
+      "answer": "Yes, the LITHO tool group will choke with a 15% demand increase, reaching 118.5% utilization and becoming the bottleneck.",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": 15
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "Yes, the LITHO tool group will choke with a 15% demand increase, reaching 118.5% utilization and becoming the bottleneck.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "h01",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Is any tool set going to choke if we take 15% more orders, and which one?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 15.1,
+      "split": "hard"
+    },
+    {
+      "answer": "The throughput ceiling is 81.5 lots per week, which occurs when LITHO utilization reaches its bottleneck level of 103.1%. At the 85% capacity cap, the maximum starts are limited to 69.3 lots per week.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The throughput ceiling is 81.5 lots per week at 100% utilization, or 69.3 lots per week at the 85% utilization cap. The bottleneck is LITHO (lithography) at 103.1% utilization.",
+      "first_unsupported": [
+        100.0
+      ],
+      "first_valid": false,
+      "id": "h02",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What's our throughput ceiling in lots a week?",
+      "repaired": true,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": false
+      },
+      "seconds": 27.7,
+      "split": "hard"
+    },
+    {
+      "answer": "The scanner (LITHO) is at 69% utilization when orders drop by a third.",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": -33
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The scanner (LITHO) is at 69% utilization when orders drop by a third.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "h03",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Orders drop by a third, 33%. How loaded is the scanner then?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 13.4,
+      "split": "hard"
+    },
+    {
+      "answer": "Yes, adding a second lithography tool lifts the weekly start ceiling from 81.5 to 95.5 starts per week.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ],
+        [
+          "capacity_status",
+          {
+            "extra_tools": 1,
+            "extra_tools_group": "LITHO"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "Yes, adding a second lithography tool lifts the weekly start ceiling from 81.5 to 95.5 starts per week.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "h04",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Would a second scanner lift the weekly start ceiling? To what?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 20.9,
+      "split": "hard"
+    },
+    {
+      "answer": "At the requested demand: estimated mean cycle time 34.8 h, raw process time 14.1 h, X-factor 2.47. Queue time per visit (waiting for a free tool): DIFF 0.8 h, IMP 2 h, LITHO 2.2 h. Total wait per visit including batch formation: DIFF 4.8 h, IMP 2 h, LITHO 2.2 h.",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": -25
+          }
+        ]
+      ],
+      "fallback": true,
+      "first_answer": "At 25% below today's volume, a lot spends 34.8 hours in the fab (14.1 raw process time + 20.7 queue/wait time).",
+      "first_unsupported": [
+        20.7
+      ],
+      "first_valid": false,
+      "id": "h05",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "End to end, how many hours does a lot spend in the fab if we run 25% below today's volume?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": false
+      },
+      "seconds": 47.8,
+      "split": "hard"
+    },
+    {
+      "answer": "To handle the 25% demand increase from Q3, we need to purchase one DIFF tool ($2.5M), one IMP tool ($4.0M), and one LITHO tool ($12.0M) in Q2, plus additional tools in Q7-Q8, for a total capex of $37.0M. We also need to hire technicians and operators with total labour costs of $0.94M.",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 25,
+            "from_quarter": 3
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "To handle the 25% demand increase from Q3, we need to purchase one DIFF tool ($2.5M), one IMP tool ($4.0M), and one LITHO tool ($12.0M) in Q2, plus additional tools in Q7-Q8, for a total capex of $37.0M. We also need to hire technicians and operators with total labour costs of $0.94M.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "h06",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Sales says volumes go up 25% from Q3. What equipment do we need and what does it cost in total?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 33.8,
+      "split": "hard"
+    },
+    {
+      "answer": "The total capex for new tools over the next eight quarters is $18.5M USD.",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 0,
+            "from_quarter": 1,
+            "scenario": "base"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The total capex for new tools over the next eight quarters is $18.5M USD.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "h07",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If we do nothing special, how much money goes into new tools over the next eight quarters?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 19.4,
+      "split": "hard"
+    },
+    {
+      "answer": "The cheapest lever to get more lots out is halving litho setup time, which costs $0.5M and yields 4.9 additional starts per week.",
+      "calls": [
+        [
+          "debottleneck_ranking",
+          {
+            "method": "static"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The cheapest lever to get more lots out is halving litho setup time, which costs $0.5M and yields 4.9 additional starts per week.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "h08",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Ignoring the simulation, what's the cheapest lever to get more lots out?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 17.3,
+      "split": "hard"
+    },
+    {
+      "answer": "Under setup-avoidance sequencing, the line can deliver at most 57.9 good lots per week in the simulation.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "SA"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "Under setup-avoidance sequencing, the line can deliver at most 57.9 good lots per week in the simulation.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "h09",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Under setup-avoidance sequencing, how many good lots per week can the line deliver at most in the simulation?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 17.9,
+      "split": "hard"
+    },
+    {
+      "answer": "A lot waits 3.4 hours in front of the furnaces (DIFF).",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": 0
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "A lot waits 3.4 hours in front of the furnaces (DIFF).",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "h10",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How many hours does a lot wait in front of the furnaces at today's loading?",
+      "repaired": false,
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          6.4
+        ],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          6.4
+        ],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 15.3,
+      "split": "hard"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "h11",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "What did Intel pay for its last EUV scanner?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 9.3,
+      "split": "hard"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "h12",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Summarise the plot of a movie about chip fabs.",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 8.6,
+      "split": "hard"
+    },
+    {
+      "answer": "The lithography group runs at 103.1% utilization under the current weekly starts of 84 lot starts/week.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The lithography group runs at 103.1% utilization under the current weekly starts of 84 lot starts/week.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x01",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What utilization does the lithography group run at under the current weekly starts?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 11.7,
+      "split": "heldout"
+    },
+    {
+      "answer": "The LITHO tool group limits output today with a utilization of 103.1%.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The LITHO tool group limits output today with a utilization of 103.1%.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x02",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Which of the three tool groups limits output today?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 12.3,
+      "split": "heldout"
+    },
+    {
+      "answer": "The implant utilization is 90.3%.",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": 10
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The implant utilization is 90.3%.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x03",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If we start 10% more lots, what is the implant utilization?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 12.3,
+      "split": "heldout"
+    },
+    {
+      "answer": "Diffusion is at 74.7% utilization when demand shrinks by 15%.",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": -15
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "Diffusion is at 74.7% utilization when demand shrinks by 15%.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x04",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Suppose demand shrinks by 15%. How heavily loaded is diffusion?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 12.0,
+      "split": "heldout"
+    },
+    {
+      "answer": "At an 85% utilization cap, we can start 69.3 lots per week; the bottleneck is LITHO at 103.1% utilization.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "At an 85% utilization cap, we can start 69.3 lots per week; the bottleneck is LITHO at 103.1% utilization.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x05",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Keeping every tool group at or below 85% utilization, how many lots can we start each week?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 13.7,
+      "split": "heldout"
+    },
+    {
+      "answer": "The ceiling on weekly starts with two additional implanters is 81.5, limited by the LITHO bottleneck at 103.1% utilization. At an 85% utilization cap, the maximum would be 69.3 starts per week.",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "extra_tools": 2,
+            "extra_tools_group": "IMP"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The ceiling on weekly starts with two additional implanters is 81.5, limited by the LITHO bottleneck at 103.1% utilization. At an 85% utilization cap, the maximum would be 69.3 starts per week.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x06",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What is the ceiling on weekly starts if we install two more implanters?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 20.2,
+      "split": "heldout"
+    },
+    {
+      "answer": "After adding one diffusion furnace, the bottleneck is LITHO with 103.1% utilization.",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "extra_tools": 1,
+            "extra_tools_group": "DIFF"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "After adding one diffusion furnace, the bottleneck is LITHO with 103.1% utilization.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x07",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "After adding one diffusion furnace, which group is the bottleneck?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 15.0,
+      "split": "heldout"
+    },
+    {
+      "answer": "At the requested demand: estimated mean cycle time 36.7 h, raw process time 14.1 h, X-factor 2.61. Queue time per visit (waiting for a free tool): DIFF 1 h, IMP 2.3 h, LITHO 3 h. Total wait per visit including batch formation: DIFF 4.8 h, IMP 2.3 h, LITHO 3 h.",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": -20
+          }
+        ]
+      ],
+      "fallback": true,
+      "first_answer": "The average cycle time is 36.7 hours when demand drops to 80% of today's level.",
+      "first_unsupported": [
+        80.0
+      ],
+      "first_valid": false,
+      "id": "x08",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How long is the average cycle time, in hours, if demand drops to 80% of today's level?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": false
+      },
+      "seconds": 24.4,
+      "split": "heldout"
+    },
+    {
+      "answer": "The queueing model predicts an X-factor of 3.47 if demand is 10% lower.",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": -10
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The queueing model predicts an X-factor of 3.47 if demand is 10% lower.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x09",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What X-factor does the queueing model predict if demand is 10% lower?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 13.7,
+      "split": "heldout"
+    },
+    {
+      "answer": "At the requested demand: estimated mean cycle time 33.2 h, raw process time 14.1 h, X-factor 2.36. Queue time per visit (waiting for a free tool): DIFF 0.5 h, IMP 1.4 h, LITHO 1.1 h. Total wait per visit including batch formation: DIFF 5.5 h, IMP 1.4 h, LITHO 1.1 h.",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": -40
+          }
+        ]
+      ],
+      "fallback": true,
+      "first_answer": "At 60% of current demand, a lot spends 1.1 hours waiting for a free litho tool per visit.",
+      "first_unsupported": [
+        60.0
+      ],
+      "first_valid": false,
+      "id": "x10",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "At 60% of current demand, how many hours does a lot spend waiting for a free litho tool per visit?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": false
+      },
+      "seconds": 21.3,
+      "split": "heldout"
+    },
+    {
+      "answer": "Without any queueing, one lot needs 14.1 hours of processing time.",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": 0
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "Without any queueing, one lot needs 14.1 hours of processing time.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x11",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Without any queueing, how many hours of processing does one lot need?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 12.6,
+      "split": "heldout"
+    },
+    {
+      "answer": "With demand down 30%, the total wait per visit at diffusion including batch forming is 5.0 hours.",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": -30
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "With demand down 30%, the total wait per visit at diffusion including batch forming is 5.0 hours.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x12",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "With demand down 30%, what's the total wait per visit at diffusion including batch forming?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 13.8,
+      "split": "heldout"
+    },
+    {
+      "answer": "The base plan requires a total capital expenditure of $18.5M, consisting of purchasing one LITHO tool in Q2 ($12M), one DIFF tool in Q4 ($2.5M), and one IMP tool in Q4 ($4M). Additionally, the plan includes hiring one technician in Q1 and one operator in Q5, with a total labour cost of $0.68M.",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 0,
+            "from_quarter": 1,
+            "scenario": "base"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The base plan requires a total capital expenditure of $18.5M, consisting of purchasing one LITHO tool in Q2 ($12M), one DIFF tool in Q4 ($2.5M), and one IMP tool in Q4 ($4M). Additionally, the plan includes hiring one technician in Q1 and one operator in Q5, with a total labour cost of $0.68M.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x13",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How much capital spending does the base plan need?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 29.4,
+      "split": "heldout"
+    },
+    {
+      "answer": "The first tool we have to order is one LITHO tool in Q1.",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 15,
+            "from_quarter": 2
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The first tool we have to order is one LITHO tool in Q1.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x14",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If demand climbs 15% starting in quarter 2, what is the first tool we have to order?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 16.7,
+      "split": "heldout"
+    },
+    {
+      "answer": "Under the base plan, we need to hire one technician in Q1 and one operator in Q5.",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 0,
+            "from_quarter": 1,
+            "scenario": "base"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "Under the base plan, we need to hire one technician in Q1 and one operator in Q5.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x15",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Who do we need to hire under the base plan, and in which quarter?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 18.7,
+      "split": "heldout"
+    },
+    {
+      "answer": "The base plan adds a labour cost of 0.68 M$.",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 0,
+            "from_quarter": 1,
+            "scenario": "base"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The base plan adds a labour cost of 0.68 M$.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x16",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What labour cost does the base plan add over the horizon?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 18.3,
+      "split": "heldout"
+    },
+    {
+      "answer": "The total tool cost is 18.5 M$.",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "scenario": "mix_shift_pc"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The total tool cost is 18.5 M$.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x17",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If Pc takes over a larger part of the product mix, how much do the tools cost in total?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 14.2,
+      "split": "heldout"
+    },
+    {
+      "answer": "Total capex needed is 37 M$ with purchases of one LITHO tool in Q2, two DIFF tools (one in Q4 and one in Q7), two IMP tools (one in Q4 and one in Q7), and one LITHO tool in Q7.",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 25,
+            "from_quarter": 5
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "Total capex needed is 37 M$ with purchases of one LITHO tool in Q2, two DIFF tools (one in Q4 and one in Q7), two IMP tools (one in Q4 and one in Q7), and one LITHO tool in Q7.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x18",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What capex is needed if demand is 25% higher from Q5?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 32.1,
+      "split": "heldout"
+    },
+    {
+      "answer": "The upgrade with the best return per million dollars in the static capacity model is halving litho setup time, with a gain of 9.9 starts per week per M$.",
+      "calls": [
+        [
+          "debottleneck_ranking",
+          {
+            "method": "static"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The upgrade with the best return per million dollars in the static capacity model is halving litho setup time, with a gain of 9.9 starts per week per M$.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x19",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Which upgrade has the best return per million dollars in the static capacity model?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 18.0,
+      "split": "heldout"
+    },
+    {
+      "answer": "According to the discrete-event simulation, the top-ranked debottlenecking step is setting operator priority for lithography tools (operators_litho_first), which yields a throughput gain of 3.5 lots per week at zero cost.",
+      "calls": [
+        [
+          "debottleneck_ranking",
+          {
+            "method": "des"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "According to the discrete-event simulation, the top-ranked debottlenecking step is setting operator priority for lithography tools (operators_litho_first), which yields a throughput gain of 3.5 lots per week at zero cost.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x20",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Going by the discrete-event simulation, what is the top-ranked debottlenecking step?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 19.4,
+      "split": "heldout"
+    },
+    {
+      "answer": "In the simulation with critical ratio dispatching, the line sustains 55.0 good lots per week.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "CR"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "In the simulation with critical ratio dispatching, the line sustains 55.0 good lots per week.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x21",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "In the simulation, how many good lots per week does the line sustain with critical ratio dispatching?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 12.9,
+      "split": "heldout"
+    },
+    {
+      "answer": "The simulated capacity under FIFO is 55.3 good lots/week with a confidence interval half-width of 0.1.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "FIFO"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The simulated capacity under FIFO is 55.3 good lots/week with a 95% confidence interval half-width of 0.1.",
+      "first_unsupported": [
+        95.0
+      ],
+      "first_valid": false,
+      "id": "x22",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What is the simulated capacity under FIFO, and how wide is its confidence interval?",
+      "repaired": true,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": false
+      },
+      "seconds": 21.5,
+      "split": "heldout"
+    },
+    {
+      "answer": "The simulation shows that the SA (setup avoidance) dispatching rule performs best with a capacity of 57.9 good lots/week, compared to FIFO at 55.3 and CR at 55.0.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "FIFO"
+          }
+        ],
+        [
+          "simulation_summary",
+          {
+            "rule": "CR"
+          }
+        ],
+        [
+          "simulation_summary",
+          {
+            "rule": "SA"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The simulation shows that the SA (setup avoidance) dispatching rule performs best with a capacity of 57.9 good lots/week, compared to FIFO at 55.3 and CR at 55.0.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x23",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Which dispatching rule does best in the simulation?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 27.5,
+      "split": "heldout"
+    },
+    {
+      "answer": "The simulation shows that under SA dispatching with 84 lots/week released, the output is 26.3 good lots/week.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "SA"
+          }
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "The simulation shows that under SA dispatching with 84 lots/week released, the output is 26.3 good lots/week.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "x24",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "When 84 lots a week are released under SA dispatching, what output does the simulation show?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "seconds": 14.3,
+      "split": "heldout"
+    },
+    {
+      "answer": "GlobalFoundries starts 84 lots per week at the standard product mix.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "GlobalFoundries starts 84 lots per week at the standard product mix.",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "y01",
+      "known_before_rules": true,
+      "out_of_scope": true,
+      "question": "How many lots does GlobalFoundries start per week?",
+      "repaired": false,
+      "score": {
+        "correct": false,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": false,
+        "kind": "out_of_scope"
+      },
+      "seconds": 10.3,
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "y02",
+      "known_before_rules": true,
+      "out_of_scope": true,
+      "question": "What's the capacity of my coffee machine in cups per week?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 9.0,
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "y03",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "What is the bottleneck in a car assembly plant?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 8.6,
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "y04",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Recommend a good textbook on queueing theory.",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 4.5,
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "y05",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "How many EUV scanners did ASML ship last year?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 8.7,
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "y06",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "What is the utilization of the Singapore MRT during rush hour?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 8.7,
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "y07",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Explain how a transistor works.",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 4.4,
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "y08",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "What will DRAM prices do next quarter?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 9.2,
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "y09",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Translate 'bottleneck' into German.",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 4.5,
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "y10",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Which semiconductor stock should I buy this week?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 8.9,
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "y11",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "How many hours of sleep does an engineer need per night?",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 4.6,
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "fallback": false,
+      "first_answer": "OUT_OF_SCOPE",
+      "first_unsupported": [],
+      "first_valid": true,
+      "id": "y12",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Write an email to my manager asking for a raise.",
+      "repaired": false,
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "score_first_answer_raw": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "seconds": 4.7,
+      "split": "heldout"
+    }
+  ],
+  "summary_final": {
+    "all": {
+      "accuracy": 0.9479166667,
+      "false_refusals": 0,
+      "in_scope_correct": 71,
+      "in_scope_exact_match": 0.9594594595,
+      "in_scope_n": 74,
+      "n": 96,
+      "out_of_scope_n": 22,
+      "out_of_scope_refused": 20,
+      "tool_call_match": 74
+    },
+    "dev": {
+      "accuracy": 0.9583333333,
+      "false_refusals": 0,
+      "in_scope_correct": 19,
+      "in_scope_exact_match": 0.95,
+      "in_scope_n": 20,
+      "n": 24,
+      "out_of_scope_n": 4,
+      "out_of_scope_refused": 4,
+      "tool_call_match": 20
+    },
+    "hard": {
+      "accuracy": 0.9166666667,
+      "false_refusals": 0,
+      "in_scope_correct": 9,
+      "in_scope_exact_match": 0.9,
+      "in_scope_n": 10,
+      "n": 12,
+      "out_of_scope_n": 2,
+      "out_of_scope_refused": 2,
+      "tool_call_match": 10
+    },
+    "heldout": {
+      "accuracy": 0.9722222222,
+      "false_refusals": 0,
+      "in_scope_correct": 24,
+      "in_scope_exact_match": 1.0,
+      "in_scope_n": 24,
+      "n": 36,
+      "out_of_scope_n": 12,
+      "out_of_scope_refused": 11,
+      "tool_call_match": 24
+    },
+    "heldout_unseen": {
+      "accuracy": 1.0,
+      "false_refusals": 0,
+      "in_scope_correct": 24,
+      "in_scope_exact_match": 1.0,
+      "in_scope_n": 24,
+      "n": 34,
+      "out_of_scope_n": 10,
+      "out_of_scope_refused": 10,
+      "tool_call_match": 24
+    },
+    "test": {
+      "accuracy": 0.9166666667,
+      "false_refusals": 0,
+      "in_scope_correct": 19,
+      "in_scope_exact_match": 0.95,
+      "in_scope_n": 20,
+      "n": 24,
+      "out_of_scope_n": 4,
+      "out_of_scope_refused": 3,
+      "tool_call_match": 20
+    }
+  },
+  "summary_first_answer_raw": {
+    "all": {
+      "accuracy": 0.875,
+      "false_refusals": 0,
+      "in_scope_correct": 64,
+      "in_scope_exact_match": 0.8648648649,
+      "in_scope_n": 74,
+      "n": 96,
+      "out_of_scope_n": 22,
+      "out_of_scope_refused": 20,
+      "tool_call_match": 74
+    },
+    "dev": {
+      "accuracy": 0.9166666667,
+      "false_refusals": 0,
+      "in_scope_correct": 18,
+      "in_scope_exact_match": 0.9,
+      "in_scope_n": 20,
+      "n": 24,
+      "out_of_scope_n": 4,
+      "out_of_scope_refused": 4,
+      "tool_call_match": 20
+    },
+    "hard": {
+      "accuracy": 0.75,
+      "false_refusals": 0,
+      "in_scope_correct": 7,
+      "in_scope_exact_match": 0.7,
+      "in_scope_n": 10,
+      "n": 12,
+      "out_of_scope_n": 2,
+      "out_of_scope_refused": 2,
+      "tool_call_match": 10
+    },
+    "heldout": {
+      "accuracy": 0.8888888889,
+      "false_refusals": 0,
+      "in_scope_correct": 21,
+      "in_scope_exact_match": 0.875,
+      "in_scope_n": 24,
+      "n": 36,
+      "out_of_scope_n": 12,
+      "out_of_scope_refused": 11,
+      "tool_call_match": 24
+    },
+    "heldout_unseen": {
+      "accuracy": 0.9117647059,
+      "false_refusals": 0,
+      "in_scope_correct": 21,
+      "in_scope_exact_match": 0.875,
+      "in_scope_n": 24,
+      "n": 34,
+      "out_of_scope_n": 10,
+      "out_of_scope_refused": 10,
+      "tool_call_match": 24
+    },
+    "test": {
+      "accuracy": 0.875,
+      "false_refusals": 0,
+      "in_scope_correct": 18,
+      "in_scope_exact_match": 0.9,
+      "in_scope_n": 20,
+      "n": 24,
+      "out_of_scope_n": 4,
+      "out_of_scope_refused": 3,
+      "tool_call_match": 20
+    }
+  },
+  "system": "ollama:qwen3.5:4b",
+  "validator": {
+    "fallback_to_template": 4,
+    "first_answer_rejected": 7,
+    "repaired": 3
+  }
+}

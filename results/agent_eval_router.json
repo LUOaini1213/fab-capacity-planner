@@ -1,0 +1,2132 @@
+{
+  "provenance": {
+    "heldout_sha256": "31c447a5697d6620a264089a86cfc8e88fd57b1a0d82bb8994e18fd3850fe7db",
+    "llm_system_prompt_sha256": "b0042522ddb70dc3855bf014341cb91e55bee4d8927266219658be12451d446e",
+    "router_py_sha256": "ac0f6fb74de33d4a1cec1cdd39daf54d49448259f175425e1e3679723862230c"
+  },
+  "rows": [
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "c01",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Which tool group is the bottleneck at current demand, and how utilized is it?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "c02",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What's the bottleneck right now and its utilization?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "c03",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What is the utilization of the implant tools?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "c04",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How busy are the diffusion furnaces at today's volume?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "c05",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How many lots per week can the fab start at most?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "c06",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What is the maximum weekly start rate the line can sustain?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "c07",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How many starts per week can we load if no tool group may exceed an 85% utilization cap?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "c08",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "With an 85% utilization ceiling, what's the max starts per week?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "At the requested demand: utilization DIFF 105.5%, IMP 98.5%, LITHO 123.7%. Bottleneck: LITHO at 123.7% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": 20.0
+          }
+        ]
+      ],
+      "id": "c09",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If demand rises 20%, where is the bottleneck and how loaded is it?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "At the requested demand: utilization DIFF 101.1%, IMP 94.4%, LITHO 118.5%. Bottleneck: LITHO at 118.5% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": 15.0
+          }
+        ]
+      ],
+      "id": "c10",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Demand goes up by 15%. Which group becomes the constraint and at what utilization?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "At the requested demand: utilization DIFF 65.9%, IMP 61.6%, LITHO 77.3%. Bottleneck: LITHO at 77.3%. Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": -25.0
+          }
+        ]
+      ],
+      "id": "c11",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If demand falls 25%, what is the litho utilization?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "At the requested demand: utilization DIFF 79.1%, IMP 73.9%, LITHO 92.8%. Bottleneck: LITHO at 92.8%. Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": -10.0
+          }
+        ]
+      ],
+      "id": "c12",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What would implant utilization be if volume dropped by 10%?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "At 84 starts/week with the added LITHO tools: utilization DIFF 87.9%, IMP 82.1%, LITHO 51.5%. Bottleneck: DIFF at 87.9%. Maximum starts: 95.5 lots/week (81.2 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "extra_tools": 1,
+            "extra_tools_group": "LITHO"
+          }
+        ]
+      ],
+      "id": "c13",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If we add one litho tool, what is the maximum starts per week and the new bottleneck?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "Capex plan (scenario base, 60 starts/week in Q1): before any purchase, the bottleneck in Q1 is LITHO at 73.7%. Buy: order 1 LITHO in Q2 (in service Q3, $12M); order 1 DIFF in Q4 (in service Q5, $2.5M); order 1 IMP in Q4 (in service Q5, $4M). Total capex $18.5M at a 85% utilization cap. Hire: 1 technician(s) in Q1; 1 operator(s) in Q5 (labour cost $0.68M over the horizon).",
+      "calls": [
+        [
+          "capex_plan",
+          {}
+        ]
+      ],
+      "id": "c14",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Suppose we buy another lithography scanner. What becomes the max weekly starts, and which group is then the bottleneck?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          95.5
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "At 84 starts/week with the added IMP tools: utilization DIFF 87.9%, IMP 54.7%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "extra_tools": 1,
+            "extra_tools_group": "IMP"
+          }
+        ]
+      ],
+      "id": "c15",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "With one more implanter, what would implant utilization be?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "At 84 starts/week with the added DIFF tools: utilization DIFF 44%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "extra_tools": 2,
+            "extra_tools_group": "DIFF"
+          }
+        ]
+      ],
+      "id": "c16",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If we add 2 diffusion furnaces, what is the diffusion utilization?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "At the requested demand: estimated mean cycle time 33.7 h, raw process time 14.1 h, X-factor 2.39. Queue time per visit (waiting for a free tool): DIFF 0.7 h, IMP 1.7 h, LITHO 1.7 h. Total wait per visit including batch formation: DIFF 5 h, IMP 1.7 h, LITHO 1.7 h.",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": -30.0
+          }
+        ]
+      ],
+      "id": "t01",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What is the estimated cycle time at 70% of current demand?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "At the requested demand the line is over capacity, so the queueing model gives no finite cycle time (raw process time 14.1 h).",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": 40.0
+          }
+        ]
+      ],
+      "id": "t02",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Estimate the X-factor and cycle time if volume is cut by 40%.",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          33.2,
+          2.36
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "At the requested demand: estimated mean cycle time 36.7 h, raw process time 14.1 h, X-factor 2.61. Queue time per visit (waiting for a free tool): DIFF 1 h, IMP 2.3 h, LITHO 3 h. Total wait per visit including batch formation: DIFF 4.8 h, IMP 2.3 h, LITHO 3 h.",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": -20.0
+          }
+        ]
+      ],
+      "id": "t03",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How long do lots queue at litho if demand drops 20%?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "At the requested demand: utilization DIFF 105.5%, IMP 98.5%, LITHO 123.7%. Bottleneck: LITHO at 123.7% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": 20.0
+          }
+        ]
+      ],
+      "id": "t04",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If demand decreases by 20%, how many hours do lots wait at the implanters?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          2.3
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "At 84 starts/week the line is over capacity, so the queueing model gives no finite cycle time (raw process time 14.1 h).",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {}
+        ]
+      ],
+      "id": "t05",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What is the raw process time of a lot?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "t06",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How many hours of pure processing does a lot need, without any waiting?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          14.1
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "Capex plan (scenario base): before any purchase, the bottleneck in Q2 is LITHO at 95%. Buy: order 1 LITHO in Q1 (in service Q2, $12M); order 1 DIFF in Q2 (in service Q3, $2.5M); order 1 IMP in Q2 (in service Q3, $4M); order 1 DIFF in Q7 (in service Q8, $2.5M); order 1 IMP in Q7 (in service Q8, $4M). Total capex $25M at a 85% utilization cap. Hire: 1 technician(s) in Q1; 1 operator(s) in Q3; 1 operator(s) in Q8; 1 technician(s) in Q8 (labour cost $0.89M over the horizon).",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 20.0,
+            "from_quarter": 2
+          }
+        ]
+      ],
+      "id": "p01",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If demand rises 20% next quarter, where is the bottleneck and what should we buy?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "Capex plan (scenario base): before any purchase, the bottleneck in Q2 is LITHO at 95%. Buy: order 1 LITHO in Q1 (in service Q2, $12M); order 1 DIFF in Q2 (in service Q3, $2.5M); order 1 IMP in Q2 (in service Q3, $4M); order 1 DIFF in Q7 (in service Q8, $2.5M); order 1 IMP in Q7 (in service Q8, $4M). Total capex $25M at a 85% utilization cap. Hire: 1 technician(s) in Q1; 1 operator(s) in Q3; 1 operator(s) in Q8; 1 technician(s) in Q8 (labour cost $0.89M over the horizon).",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 20.0,
+            "from_quarter": 2
+          }
+        ]
+      ],
+      "id": "p02",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Demand jumps 20% starting next quarter. What tools should we order and what is the total capex?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "Capex plan (scenario base, 60 starts/week in Q1): before any purchase, the bottleneck in Q1 is LITHO at 73.7%. Buy: order 1 LITHO in Q2 (in service Q3, $12M); order 1 DIFF in Q4 (in service Q5, $2.5M); order 1 IMP in Q4 (in service Q5, $4M). Total capex $18.5M at a 85% utilization cap. Hire: 1 technician(s) in Q1; 1 operator(s) in Q5 (labour cost $0.68M over the horizon).",
+      "calls": [
+        [
+          "capex_plan",
+          {}
+        ]
+      ],
+      "id": "p03",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What is the total capex of the base capacity plan?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "p04",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How much do we need to spend on tools over the planning horizon under the base forecast?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          18.5
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "Capex plan (scenario base, 60 starts/week in Q1): before any purchase, the bottleneck in Q1 is LITHO at 73.7%. Buy: order 1 LITHO in Q2 (in service Q3, $12M); order 1 DIFF in Q4 (in service Q5, $2.5M); order 1 IMP in Q4 (in service Q5, $4M). Total capex $18.5M at a 85% utilization cap. Hire: 1 technician(s) in Q1; 1 operator(s) in Q5 (labour cost $0.68M over the horizon).",
+      "calls": [
+        [
+          "capex_plan",
+          {}
+        ]
+      ],
+      "id": "p05",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Under the base plan, which tool do we buy first and when do we order it?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "p06",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "In the base forecast, what is the first purchase and in which quarter is it ordered?",
+      "score": {
+        "correct": false,
+        "kind": "false_refusal"
+      },
+      "split": "test"
+    },
+    {
+      "answer": "Capex plan (scenario mix_shift_pc, 60 starts/week in Q1): before any purchase, the bottleneck in Q1 is LITHO at 73.7%. Buy: order 1 LITHO in Q2 (in service Q3, $12M); order 1 DIFF in Q4 (in service Q5, $2.5M); order 1 IMP in Q4 (in service Q5, $4M). Total capex $18.5M at a 85% utilization cap. Hire: 1 technician(s) in Q1; 1 operator(s) in Q5 (labour cost $0.68M over the horizon).",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "scenario": "mix_shift_pc"
+          }
+        ]
+      ],
+      "id": "p07",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If the product mix shifts toward Pc, what is the total capex?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "Capex plan (scenario mix_shift_pc, 60 starts/week in Q1): before any purchase, the bottleneck in Q1 is LITHO at 73.7%. Buy: order 1 LITHO in Q2 (in service Q3, $12M); order 1 DIFF in Q4 (in service Q5, $2.5M); order 1 IMP in Q4 (in service Q5, $4M). Total capex $18.5M at a 85% utilization cap. Hire: 1 technician(s) in Q1; 1 operator(s) in Q5 (labour cost $0.68M over the horizon).",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "scenario": "mix_shift_pc"
+          }
+        ]
+      ],
+      "id": "p08",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "With the mix shift to product Pc, how much capex is needed?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "Capex plan (scenario base): before any purchase, the bottleneck in Q3 is LITHO at 99.1%. Buy: order 1 LITHO in Q2 (in service Q3, $12M); order 1 DIFF in Q3 (in service Q4, $2.5M); order 1 IMP in Q3 (in service Q4, $4M). Total capex $18.5M at a 85% utilization cap. Hire: 1 technician(s) in Q1; 1 operator(s) in Q4 (labour cost $0.73M over the horizon).",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 10.0,
+            "from_quarter": 3
+          }
+        ]
+      ],
+      "id": "p09",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If demand is 10% higher from quarter 3, what is the total capex?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "At the requested demand: utilization DIFF 114.3%, IMP 106.7%, LITHO 134%. Bottleneck: LITHO at 134% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": 30.0
+          }
+        ]
+      ],
+      "id": "p10",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Total tool spend if demand rises 30% from Q4 onward?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          37.0
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "Ranking by static model (baseline 81.5 lots/week): 1. halve_litho_setup (cost $0.5M, gain 4.9 lots/week, 9.9 per $M); 2. litho_pm_30_to_20 (cost $0.3M, gain 1.2 lots/week, 3.9 per $M); 3. add_LITHO (cost $12M, gain 14 lots/week, 1.2 per $M); 4. add_DIFF (cost $2.5M, gain 0 lots/week, 0 per $M); 5. add_IMP (cost $4M, gain 0 lots/week, 0 per $M); 6. add_operator_imp_litho (cost $0.6M, gain 0 lots/week, 0 per $M); 7. halve_imp_repair (cost $1M, gain 0 lots/week, 0 per $M); 8. operators_litho_first (cost $0M, gain 0 lots/week). Top option: halve_litho_setup; best paid option: halve_litho_setup.",
+      "calls": [
+        [
+          "debottleneck_ranking",
+          {
+            "method": "static"
+          }
+        ]
+      ],
+      "id": "d01",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Which improvement gives the most throughput per dollar according to the static model?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "Ranking by static model (baseline 81.5 lots/week): 1. halve_litho_setup (cost $0.5M, gain 4.9 lots/week, 9.9 per $M); 2. litho_pm_30_to_20 (cost $0.3M, gain 1.2 lots/week, 3.9 per $M); 3. add_LITHO (cost $12M, gain 14 lots/week, 1.2 per $M); 4. add_DIFF (cost $2.5M, gain 0 lots/week, 0 per $M); 5. add_IMP (cost $4M, gain 0 lots/week, 0 per $M); 6. add_operator_imp_litho (cost $0.6M, gain 0 lots/week, 0 per $M); 7. halve_imp_repair (cost $1M, gain 0 lots/week, 0 per $M); 8. operators_litho_first (cost $0M, gain 0 lots/week). Top option: halve_litho_setup; best paid option: halve_litho_setup.",
+      "calls": [
+        [
+          "debottleneck_ranking",
+          {
+            "method": "static"
+          }
+        ]
+      ],
+      "id": "d02",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Using the capacity model, what's the best debottlenecking option per dollar?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "Ranking by des model (baseline 55.3 lots/week): 1. operators_litho_first (cost $0M, gain 3.5 lots/week); 2. add_operator_imp_litho (cost $0.6M, gain 14.9 lots/week, 24.8 per $M); 3. halve_imp_repair (cost $1M, gain 4.6 lots/week, 4.6 per $M); 4. halve_litho_setup (cost $0.5M, gain 1.6 lots/week, 3.2 per $M); 5. litho_pm_30_to_20 (cost $0.3M, gain 0.8 lots/week, 2.8 per $M); 6. add_LITHO (cost $12M, gain 11.8 lots/week, 1 per $M); 7. add_DIFF (cost $2.5M, gain -1.3 lots/week, -0.5 per $M); 8. add_IMP (cost $4M, gain -12.2 lots/week, -3 per $M). Top option: operators_litho_first; best paid option: add_operator_imp_litho.",
+      "calls": [
+        [
+          "debottleneck_ranking",
+          {
+            "method": "des"
+          }
+        ]
+      ],
+      "id": "d03",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "According to the simulation, which improvement is the best value for money?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "Simulation, FIFO dispatching: capacity 55.3 +/- 0.1 good lots/week (10 replications). With 84 starts/week released, output averages 41.5 lots/week (10 of 10 runs unstable, so this is not a capacity). Best rule by capacity: SA.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "FIFO"
+          }
+        ]
+      ],
+      "id": "d04",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Which debottlenecking option does the simulation rank first?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [
+          "operators_litho_first"
+        ],
+        "missing_numbers": [],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "Simulation, FIFO dispatching: capacity 55.3 +/- 0.1 good lots/week (10 replications). With 84 starts/week released, output averages 41.5 lots/week (10 of 10 runs unstable, so this is not a capacity). Best rule by capacity: SA.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "FIFO"
+          }
+        ]
+      ],
+      "id": "s01",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What capacity does the simulation give under FIFO dispatching?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "Simulation, FIFO dispatching: capacity 55.3 +/- 0.1 good lots/week (10 replications). With 84 starts/week released, output averages 41.5 lots/week (10 of 10 runs unstable, so this is not a capacity). Best rule by capacity: SA.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "FIFO"
+          }
+        ]
+      ],
+      "id": "s02",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What is the simulated capacity with the critical ratio rule?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          55.0
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "Simulation, FIFO dispatching: capacity 55.3 +/- 0.1 good lots/week (10 replications). With 84 starts/week released, output averages 41.5 lots/week (10 of 10 runs unstable, so this is not a capacity). Best rule by capacity: SA.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "FIFO"
+          }
+        ]
+      ],
+      "id": "s03",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Which dispatching rule gives the highest simulated capacity?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "Simulation, FIFO dispatching: capacity 55.3 +/- 0.1 good lots/week (10 replications). With 84 starts/week released, output averages 41.5 lots/week (10 of 10 runs unstable, so this is not a capacity). Best rule by capacity: SA.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "FIFO"
+          }
+        ]
+      ],
+      "id": "s04",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "In the simulation, how many good lots per week come out at 84 starts with setup-avoidance dispatching?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          26.3
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "test"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "o01",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "What will TSMC's stock price be next month?",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "o02",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "What is Samsung's DRAM market share this year?",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "test"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "o03",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Write a short poem about silicon wafers.",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "o04",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Can you translate 'cycle time' into French?",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "test"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "o05",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "What is the weather in Singapore tomorrow?",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "o06",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "How many wafers per month does Intel's Fab 52 produce?",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "test"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "o07",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Who invented the transistor?",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "dev"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "o08",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Book a meeting with the maintenance team for Friday.",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "test"
+    },
+    {
+      "answer": "At the requested demand: utilization DIFF 101.1%, IMP 94.4%, LITHO 118.5%. Bottleneck: LITHO at 118.5% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": 15.0
+          }
+        ]
+      ],
+      "id": "h01",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Is any tool set going to choke if we take 15% more orders, and which one?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "hard"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "h02",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What's our throughput ceiling in lots a week?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "hard"
+    },
+    {
+      "answer": "At the requested demand: utilization DIFF 58.9%, IMP 55%, LITHO 69%. Bottleneck: LITHO at 69%. Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": -33.0
+          }
+        ]
+      ],
+      "id": "h03",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Orders drop by a third, 33%. How loaded is the scanner then?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "hard"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "h04",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Would a second scanner lift the weekly start ceiling? To what?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          95.5
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "hard"
+    },
+    {
+      "answer": "At the requested demand: utilization DIFF 109.9%, IMP 102.6%, LITHO 128.8%. Bottleneck: LITHO at 128.8% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": 25.0
+          }
+        ]
+      ],
+      "id": "h05",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "End to end, how many hours does a lot spend in the fab if we run 25% below today's volume?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          34.8
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "hard"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "h06",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Sales says volumes go up 25% from Q3. What equipment do we need and what does it cost in total?",
+      "score": {
+        "correct": false,
+        "kind": "false_refusal"
+      },
+      "split": "hard"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "h07",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If we do nothing special, how much money goes into new tools over the next eight quarters?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          18.5
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "hard"
+    },
+    {
+      "answer": "Simulation, FIFO dispatching: capacity 55.3 +/- 0.1 good lots/week (10 replications). With 84 starts/week released, output averages 41.5 lots/week (10 of 10 runs unstable, so this is not a capacity). Best rule by capacity: SA.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "FIFO"
+          }
+        ]
+      ],
+      "id": "h08",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Ignoring the simulation, what's the cheapest lever to get more lots out?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [
+          "halve_litho_setup"
+        ],
+        "missing_numbers": [],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "hard"
+    },
+    {
+      "answer": "Simulation, FIFO dispatching: capacity 55.3 +/- 0.1 good lots/week (10 replications). With 84 starts/week released, output averages 41.5 lots/week (10 of 10 runs unstable, so this is not a capacity). Best rule by capacity: SA.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "FIFO"
+          }
+        ]
+      ],
+      "id": "h09",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Under setup-avoidance sequencing, how many good lots per week can the line deliver at most in the simulation?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          57.9
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "hard"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "h10",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How many hours does a lot wait in front of the furnaces at today's loading?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          6.4
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "hard"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "h11",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "What did Intel pay for its last EUV scanner?",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "hard"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "h12",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Summarise the plot of a movie about chip fabs.",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "hard"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "x01",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What utilization does the lithography group run at under the current weekly starts?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "x02",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Which of the three tool groups limits output today?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "At the requested demand: utilization DIFF 96.7%, IMP 90.3%, LITHO 113.4%. Bottleneck: LITHO at 113.4% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": 10.0
+          }
+        ]
+      ],
+      "id": "x03",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If we start 10% more lots, what is the implant utilization?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "At the requested demand: utilization DIFF 101.1%, IMP 94.4%, LITHO 118.5%. Bottleneck: LITHO at 118.5% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": 15.0
+          }
+        ]
+      ],
+      "id": "x04",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Suppose demand shrinks by 15%. How heavily loaded is diffusion?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          74.7
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "At the requested demand: utilization DIFF 162.6%, IMP 151.9%, LITHO 190.7%. Bottleneck: LITHO at 190.7% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": 85.0
+          }
+        ]
+      ],
+      "id": "x05",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Keeping every tool group at or below 85% utilization, how many lots can we start each week?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "x06",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What is the ceiling on weekly starts if we install two more implanters?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "x07",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "After adding one diffusion furnace, which group is the bottleneck?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "At the requested demand: estimated mean cycle time 36.7 h, raw process time 14.1 h, X-factor 2.61. Queue time per visit (waiting for a free tool): DIFF 1 h, IMP 2.3 h, LITHO 3 h. Total wait per visit including batch formation: DIFF 4.8 h, IMP 2.3 h, LITHO 3 h.",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": -20.0
+          }
+        ]
+      ],
+      "id": "x08",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How long is the average cycle time, in hours, if demand drops to 80% of today's level?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "At the requested demand the line is over capacity, so the queueing model gives no finite cycle time (raw process time 14.1 h).",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {
+            "demand_change_pct": 10.0
+          }
+        ]
+      ],
+      "id": "x09",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What X-factor does the queueing model predict if demand is 10% lower?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          3.47
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "At the requested demand: utilization DIFF 52.7%, IMP 49.3%, LITHO 61.8%. Bottleneck: LITHO at 61.8%. Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": -40.0
+          }
+        ]
+      ],
+      "id": "x10",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "At 60% of current demand, how many hours does a lot spend waiting for a free litho tool per visit?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          1.1
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "At 84 starts/week the line is over capacity, so the queueing model gives no finite cycle time (raw process time 14.1 h).",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {}
+        ]
+      ],
+      "id": "x11",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Without any queueing, how many hours of processing does one lot need?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "At the requested demand: utilization DIFF 114.3%, IMP 106.7%, LITHO 134%. Bottleneck: LITHO at 134% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {
+            "demand_change_pct": 30.0
+          }
+        ]
+      ],
+      "id": "x12",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "With demand down 30%, what's the total wait per visit at diffusion including batch forming?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          5.0
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "Capex plan (scenario base, 60 starts/week in Q1): before any purchase, the bottleneck in Q1 is LITHO at 73.7%. Buy: order 1 LITHO in Q2 (in service Q3, $12M); order 1 DIFF in Q4 (in service Q5, $2.5M); order 1 IMP in Q4 (in service Q5, $4M). Total capex $18.5M at a 85% utilization cap. Hire: 1 technician(s) in Q1; 1 operator(s) in Q5 (labour cost $0.68M over the horizon).",
+      "calls": [
+        [
+          "capex_plan",
+          {}
+        ]
+      ],
+      "id": "x13",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "How much capital spending does the base plan need?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "Capex plan (scenario base): before any purchase, the bottleneck in Q2 is LITHO at 91.2%. Buy: order 1 LITHO in Q1 (in service Q2, $12M); order 1 DIFF in Q2 (in service Q3, $2.5M); order 1 IMP in Q3 (in service Q4, $4M). Total capex $18.5M at a 85% utilization cap. Hire: 1 technician(s) in Q1; 1 operator(s) in Q4; 1 operator(s) in Q8 (labour cost $0.78M over the horizon).",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 15.0,
+            "from_quarter": 2
+          }
+        ]
+      ],
+      "id": "x14",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If demand climbs 15% starting in quarter 2, what is the first tool we have to order?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "Capex plan (scenario base, 60 starts/week in Q1): before any purchase, the bottleneck in Q1 is LITHO at 73.7%. Buy: order 1 LITHO in Q2 (in service Q3, $12M); order 1 DIFF in Q4 (in service Q5, $2.5M); order 1 IMP in Q4 (in service Q5, $4M). Total capex $18.5M at a 85% utilization cap. Hire: 1 technician(s) in Q1; 1 operator(s) in Q5 (labour cost $0.68M over the horizon).",
+      "calls": [
+        [
+          "capex_plan",
+          {}
+        ]
+      ],
+      "id": "x15",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Who do we need to hire under the base plan, and in which quarter?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "Capex plan (scenario base, 60 starts/week in Q1): before any purchase, the bottleneck in Q1 is LITHO at 73.7%. Buy: order 1 LITHO in Q2 (in service Q3, $12M); order 1 DIFF in Q4 (in service Q5, $2.5M); order 1 IMP in Q4 (in service Q5, $4M). Total capex $18.5M at a 85% utilization cap. Hire: 1 technician(s) in Q1; 1 operator(s) in Q5 (labour cost $0.68M over the horizon).",
+      "calls": [
+        [
+          "capex_plan",
+          {}
+        ]
+      ],
+      "id": "x16",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What labour cost does the base plan add over the horizon?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "x17",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "If Pc takes over a larger part of the product mix, how much do the tools cost in total?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          18.5
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "Capex plan (scenario base): before any purchase, the bottleneck in Q5 is LITHO at 137%. Buy: order 1 LITHO in Q2 (in service Q3, $12M); order 1 DIFF in Q4 (in service Q5, $2.5M); order 1 IMP in Q4 (in service Q5, $4M); order 1 DIFF in Q7 (in service Q8, $2.5M); order 1 IMP in Q7 (in service Q8, $4M); order 1 LITHO in Q7 (in service Q8, $12M). Total capex $37M at a 85% utilization cap. Hire: 1 technician(s) in Q1; 1 operator(s) in Q5; 1 operator(s) in Q7; 1 technician(s) in Q8 (labour cost $0.84M over the horizon).",
+      "calls": [
+        [
+          "capex_plan",
+          {
+            "demand_change_pct": 25.0,
+            "from_quarter": 5
+          }
+        ]
+      ],
+      "id": "x18",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What capex is needed if demand is 25% higher from Q5?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "x19",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Which upgrade has the best return per million dollars in the static capacity model?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [
+          "halve_litho_setup"
+        ],
+        "missing_numbers": [],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "Simulation, FIFO dispatching: capacity 55.3 +/- 0.1 good lots/week (10 replications). With 84 starts/week released, output averages 41.5 lots/week (10 of 10 runs unstable, so this is not a capacity). Best rule by capacity: SA.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "FIFO"
+          }
+        ]
+      ],
+      "id": "x20",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Going by the discrete-event simulation, what is the top-ranked debottlenecking step?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [
+          "operators_litho_first"
+        ],
+        "missing_numbers": [],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "Simulation, FIFO dispatching: capacity 55.3 +/- 0.1 good lots/week (10 replications). With 84 starts/week released, output averages 41.5 lots/week (10 of 10 runs unstable, so this is not a capacity). Best rule by capacity: SA.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "FIFO"
+          }
+        ]
+      ],
+      "id": "x21",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "In the simulation, how many good lots per week does the line sustain with critical ratio dispatching?",
+      "score": {
+        "correct": false,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [
+          55.0
+        ],
+        "tool_call_match": false,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "Simulation, FIFO dispatching: capacity 55.3 +/- 0.1 good lots/week (10 replications). With 84 starts/week released, output averages 41.5 lots/week (10 of 10 runs unstable, so this is not a capacity). Best rule by capacity: SA.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "FIFO"
+          }
+        ]
+      ],
+      "id": "x22",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "What is the simulated capacity under FIFO, and how wide is its confidence interval?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "Simulation, FIFO dispatching: capacity 55.3 +/- 0.1 good lots/week (10 replications). With 84 starts/week released, output averages 41.5 lots/week (10 of 10 runs unstable, so this is not a capacity). Best rule by capacity: SA.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "FIFO"
+          }
+        ]
+      ],
+      "id": "x23",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "Which dispatching rule does best in the simulation?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "Simulation, SA dispatching: capacity 57.9 +/- 0.1 good lots/week (10 replications). With 84 starts/week released, output averages 26.3 lots/week (10 of 10 runs unstable, so this is not a capacity). Best rule by capacity: SA.",
+      "calls": [
+        [
+          "simulation_summary",
+          {
+            "rule": "SA"
+          }
+        ]
+      ],
+      "id": "x24",
+      "known_before_rules": false,
+      "out_of_scope": false,
+      "question": "When 84 lots a week are released under SA dispatching, what output does the simulation show?",
+      "score": {
+        "correct": true,
+        "kind": "in_scope",
+        "missing_keywords": [],
+        "missing_numbers": [],
+        "tool_call_match": true,
+        "validator_ok": true
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "y01",
+      "known_before_rules": true,
+      "out_of_scope": true,
+      "question": "How many lots does GlobalFoundries start per week?",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "y02",
+      "known_before_rules": true,
+      "out_of_scope": true,
+      "question": "What's the capacity of my coffee machine in cups per week?",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "At 84 starts/week: utilization DIFF 87.9%, IMP 82.1%, LITHO 103.1%. Bottleneck: LITHO at 103.1% (over capacity). Maximum starts: 81.5 lots/week (69.3 with a 85% utilization cap).",
+      "calls": [
+        [
+          "capacity_status",
+          {}
+        ]
+      ],
+      "id": "y03",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "What is the bottleneck in a car assembly plant?",
+      "score": {
+        "correct": false,
+        "kind": "out_of_scope"
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "At 84 starts/week the line is over capacity, so the queueing model gives no finite cycle time (raw process time 14.1 h).",
+      "calls": [
+        [
+          "cycle_time_estimate",
+          {}
+        ]
+      ],
+      "id": "y04",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Recommend a good textbook on queueing theory.",
+      "score": {
+        "correct": false,
+        "kind": "out_of_scope"
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "y05",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "How many EUV scanners did ASML ship last year?",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "y06",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "What is the utilization of the Singapore MRT during rush hour?",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "y07",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Explain how a transistor works.",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "y08",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "What will DRAM prices do next quarter?",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "y09",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Translate 'bottleneck' into German.",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "Capex plan (scenario base, 60 starts/week in Q1): before any purchase, the bottleneck in Q1 is LITHO at 73.7%. Buy: order 1 LITHO in Q2 (in service Q3, $12M); order 1 DIFF in Q4 (in service Q5, $2.5M); order 1 IMP in Q4 (in service Q5, $4M). Total capex $18.5M at a 85% utilization cap. Hire: 1 technician(s) in Q1; 1 operator(s) in Q5 (labour cost $0.68M over the horizon).",
+      "calls": [
+        [
+          "capex_plan",
+          {}
+        ]
+      ],
+      "id": "y10",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Which semiconductor stock should I buy this week?",
+      "score": {
+        "correct": false,
+        "kind": "out_of_scope"
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "y11",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "How many hours of sleep does an engineer need per night?",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "heldout"
+    },
+    {
+      "answer": "That question is outside the scope of this capacity-planning assistant. I can answer questions about the Mini-Fab model: utilization and bottlenecks, maximum starts, cycle time, capex plans, debottlenecking options and simulation results.",
+      "calls": [],
+      "id": "y12",
+      "known_before_rules": false,
+      "out_of_scope": true,
+      "question": "Write an email to my manager asking for a raise.",
+      "score": {
+        "correct": true,
+        "kind": "out_of_scope"
+      },
+      "split": "heldout"
+    }
+  ],
+  "summary": {
+    "all": {
+      "accuracy": 0.7083333333,
+      "false_refusals": 2,
+      "in_scope_correct": 49,
+      "in_scope_exact_match": 0.6621621622,
+      "in_scope_n": 74,
+      "n": 96,
+      "out_of_scope_n": 22,
+      "out_of_scope_refused": 19,
+      "tool_call_match": 46
+    },
+    "dev": {
+      "accuracy": 1.0,
+      "false_refusals": 0,
+      "in_scope_correct": 20,
+      "in_scope_exact_match": 1.0,
+      "in_scope_n": 20,
+      "n": 24,
+      "out_of_scope_n": 4,
+      "out_of_scope_refused": 4,
+      "tool_call_match": 20
+    },
+    "hard": {
+      "accuracy": 0.4166666667,
+      "false_refusals": 1,
+      "in_scope_correct": 3,
+      "in_scope_exact_match": 0.3,
+      "in_scope_n": 10,
+      "n": 12,
+      "out_of_scope_n": 2,
+      "out_of_scope_refused": 2,
+      "tool_call_match": 3
+    },
+    "heldout": {
+      "accuracy": 0.6944444444,
+      "false_refusals": 0,
+      "in_scope_correct": 16,
+      "in_scope_exact_match": 0.6666666667,
+      "in_scope_n": 24,
+      "n": 36,
+      "out_of_scope_n": 12,
+      "out_of_scope_refused": 9,
+      "tool_call_match": 13
+    },
+    "heldout_unseen": {
+      "accuracy": 0.6764705882,
+      "false_refusals": 0,
+      "in_scope_correct": 16,
+      "in_scope_exact_match": 0.6666666667,
+      "in_scope_n": 24,
+      "n": 34,
+      "out_of_scope_n": 10,
+      "out_of_scope_refused": 7,
+      "tool_call_match": 13
+    },
+    "test": {
+      "accuracy": 0.5833333333,
+      "false_refusals": 1,
+      "in_scope_correct": 10,
+      "in_scope_exact_match": 0.5,
+      "in_scope_n": 20,
+      "n": 24,
+      "out_of_scope_n": 4,
+      "out_of_scope_refused": 4,
+      "tool_call_match": 10
+    }
+  },
+  "system": "deterministic keyword router (rebuilt from dev questions only)"
+}

@@ -1,0 +1,349 @@
+{
+  "bottleneck": [
+    "LITHO",
+    "DIFF",
+    "DIFF",
+    "DIFF",
+    "DIFF",
+    "DIFF",
+    "DIFF",
+    "LITHO"
+  ],
+  "buy": {
+    "DIFF": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "IMP": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "LITHO": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "capex_musd": 25.0,
+  "capex_pv_musd": 24.144363,
+  "demand": {
+    "Pa": [
+      36.0,
+      46.8,
+      50.4,
+      54.0,
+      57.6,
+      61.2,
+      64.8,
+      68.4
+    ],
+    "Pb": [
+      21.0,
+      27.6,
+      30.0,
+      32.4,
+      33.6,
+      36.0,
+      37.2,
+      39.6
+    ],
+    "Pc": [
+      0.0,
+      0.0,
+      2.4,
+      4.8,
+      7.2,
+      9.6,
+      12.0,
+      14.4
+    ],
+    "TW": [
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0,
+      3.0
+    ]
+  },
+  "hire": {
+    "operators": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "technicians": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "hires": [
+    {
+      "people": 1,
+      "quarter_available": "Q1",
+      "quarter_hired": "Q1",
+      "role": "technicians"
+    },
+    {
+      "people": 1,
+      "quarter_available": "Q3",
+      "quarter_hired": "Q3",
+      "role": "operators"
+    },
+    {
+      "people": 1,
+      "quarter_available": "Q8",
+      "quarter_hired": "Q8",
+      "role": "operators"
+    },
+    {
+      "people": 1,
+      "quarter_available": "Q8",
+      "quarter_hired": "Q8",
+      "role": "technicians"
+    }
+  ],
+  "hiring_lead_time_quarters": 0,
+  "installed": {
+    "DIFF": [
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      4
+    ],
+    "IMP": [
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      4
+    ],
+    "LITHO": [
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ]
+  },
+  "labour_constraints": true,
+  "labour_cost_musd": 0.89,
+  "labour_cost_pv_musd": 0.8186610294,
+  "lead_time_quarters": 1,
+  "objective": 24.96302403,
+  "operator_load_min_per_week": [
+    9216.3,
+    11884.0093,
+    13349.04,
+    14811.30186,
+    16085.09486,
+    17543.83037,
+    18814.81171,
+    20271.4371
+  ],
+  "overrides": {
+    "from_quarter": null,
+    "multiplier": null,
+    "pc_ramp_factor": null
+  },
+  "personnel_target_utilization": 0.85,
+  "personnel_utilization": {
+    "operators": [
+      0.6095436508,
+      0.7859794512,
+      0.5885820106,
+      0.6530556377,
+      0.70921935,
+      0.7735374941,
+      0.8295772358,
+      0.6703517561
+    ],
+    "technicians": [
+      0.4348684211,
+      0.4598684211,
+      0.6648026316,
+      0.6648026316,
+      0.6648026316,
+      0.6648026316,
+      0.6648026316,
+      0.5798245614
+    ]
+  },
+  "purchases": [
+    {
+      "cost_musd": 12.0,
+      "group": "LITHO",
+      "quarter_installed": "Q2",
+      "quarter_ordered": "Q1",
+      "tools": 1
+    },
+    {
+      "cost_musd": 2.5,
+      "group": "DIFF",
+      "quarter_installed": "Q3",
+      "quarter_ordered": "Q2",
+      "tools": 1
+    },
+    {
+      "cost_musd": 4.0,
+      "group": "IMP",
+      "quarter_installed": "Q3",
+      "quarter_ordered": "Q2",
+      "tools": 1
+    },
+    {
+      "cost_musd": 2.5,
+      "group": "DIFF",
+      "quarter_installed": "Q8",
+      "quarter_ordered": "Q7",
+      "tools": 1
+    },
+    {
+      "cost_musd": 4.0,
+      "group": "IMP",
+      "quarter_installed": "Q8",
+      "quarter_ordered": "Q7",
+      "tools": 1
+    }
+  ],
+  "quarters": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4",
+    "Q5",
+    "Q6",
+    "Q7",
+    "Q8"
+  ],
+  "scenario": "demand_plus_20",
+  "shortfall_lots_per_week": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "staff": {
+    "operators": [
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      4
+    ],
+    "technicians": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      3
+    ]
+  },
+  "status": "Optimal",
+  "target_utilization": 0.85,
+  "total_cost_pv_musd": 24.96302403,
+  "total_demand": [
+    60.0,
+    77.4,
+    85.8,
+    94.2,
+    101.4,
+    109.8,
+    117.0,
+    125.4
+  ],
+  "utilization": {
+    "DIFF": [
+      0.6279434851,
+      0.8100470958,
+      0.5986394558,
+      0.6572475144,
+      0.7074829932,
+      0.7660910518,
+      0.8163265306,
+      0.6562009419
+    ],
+    "IMP": [
+      0.5864197531,
+      0.7564814815,
+      0.567989418,
+      0.6316578483,
+      0.6875073486,
+      0.751175779,
+      0.8070252792,
+      0.6530202822
+    ],
+    "LITHO": [
+      0.7366770186,
+      0.4748969618,
+      0.5386149068,
+      0.6021895374,
+      0.6581829636,
+      0.7215750707,
+      0.7774229662,
+      0.8407058542
+    ]
+  },
+  "validation": {
+    "capex_musd_recomputed": 25.0,
+    "greedy_capex_pv_musd": 24.144363,
+    "greedy_equals_milp": true,
+    "greedy_feasible": true,
+    "greedy_labour_pv_musd": 0.8186610294,
+    "max_operator_utilization": 0.8295772358,
+    "max_technician_utilization": 0.6648026316,
+    "max_utilization": 0.8407058542,
+    "ok": true,
+    "problems": []
+  }
+}

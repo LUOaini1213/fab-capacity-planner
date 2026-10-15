@@ -1,0 +1,425 @@
+{
+  "points": [
+    {
+      "case": "machines_only_0.5",
+      "des_cycle_time_min": {
+        "half_width": 11.02555807,
+        "mean": 1881.328658,
+        "n": 10,
+        "sd": 15.41266741
+      },
+      "des_group_wait_min": {
+        "DIFF": 404.6559044,
+        "IMP": 44.91278497,
+        "LITHO": 67.23199325
+      },
+      "des_throughput_per_week": {
+        "half_width": 0.461191657,
+        "mean": 35.378,
+        "n": 10,
+        "sd": 0.6447014813
+      },
+      "des_x_factor": {
+        "half_width": 0.01304799772,
+        "mean": 2.226424447,
+        "n": 10,
+        "sd": 0.01823984309
+      },
+      "model_variant": "machines_only",
+      "queueing_cycle_time_min": 2077.11928,
+      "queueing_group_wait_min": {
+        "DIFF": 388.3747135,
+        "IMP": 64.98604707,
+        "LITHO": 40.54098483
+      },
+      "queueing_x_factor": 2.458129326,
+      "start_scale": 0.4851589574,
+      "starts_per_week": 40.75335242,
+      "static_bottleneck_utilization": 0.5,
+      "unstable_runs": 0
+    },
+    {
+      "case": "machines_only_0.6",
+      "des_cycle_time_min": {
+        "half_width": 8.976464242,
+        "mean": 1791.643511,
+        "n": 10,
+        "sd": 12.54823175
+      },
+      "des_group_wait_min": {
+        "DIFF": 340.1181477,
+        "IMP": 51.08616783,
+        "LITHO": 78.92291257
+      },
+      "des_throughput_per_week": {
+        "half_width": 0.5596186472,
+        "mean": 43.396,
+        "n": 10,
+        "sd": 0.7822929261
+      },
+      "des_x_factor": {
+        "half_width": 0.01062303461,
+        "mean": 2.120288179,
+        "n": 10,
+        "sd": 0.01484997841
+      },
+      "model_variant": "machines_only",
+      "queueing_cycle_time_min": 1997.202577,
+      "queueing_group_wait_min": {
+        "DIFF": 334.5448442,
+        "IMP": 79.43455788,
+        "LITHO": 59.19715271
+      },
+      "queueing_x_factor": 2.363553345,
+      "start_scale": 0.5821907488,
+      "starts_per_week": 48.9040229,
+      "static_bottleneck_utilization": 0.6,
+      "unstable_runs": 0
+    },
+    {
+      "case": "machines_only_0.7",
+      "des_cycle_time_min": {
+        "half_width": 4.65820771,
+        "mean": 1773.809569,
+        "n": 10,
+        "sd": 6.511725366
+      },
+      "des_group_wait_min": {
+        "DIFF": 302.9514989,
+        "IMP": 59.18454203,
+        "LITHO": 96.9699267
+      },
+      "des_throughput_per_week": {
+        "half_width": 0.6728450483,
+        "mean": 51.281,
+        "n": 10,
+        "sd": 0.9405725207
+      },
+      "des_x_factor": {
+        "half_width": 0.005512671847,
+        "mean": 2.099182922,
+        "n": 10,
+        "sd": 0.007706183865
+      },
+      "model_variant": "machines_only",
+      "queueing_cycle_time_min": 2006.901022,
+      "queueing_group_wait_min": {
+        "DIFF": 302.1275399,
+        "IMP": 99.34544378,
+        "LITHO": 90.29076584
+      },
+      "queueing_x_factor": 2.375030796,
+      "start_scale": 0.6792225403,
+      "starts_per_week": 57.05469339,
+      "static_bottleneck_utilization": 0.7,
+      "unstable_runs": 0
+    },
+    {
+      "case": "machines_only_0.8",
+      "des_cycle_time_min": {
+        "half_width": 6.688985197,
+        "mean": 1810.652318,
+        "n": 10,
+        "sd": 9.350556541
+      },
+      "des_group_wait_min": {
+        "DIFF": 279.2570574,
+        "IMP": 71.66412165,
+        "LITHO": 125.7385305
+      },
+      "des_throughput_per_week": {
+        "half_width": 0.5547509657,
+        "mean": 59.466,
+        "n": 10,
+        "sd": 0.7754883766
+      },
+      "des_x_factor": {
+        "half_width": 0.007915958812,
+        "mean": 2.142783808,
+        "n": 10,
+        "sd": 0.01106574739
+      },
+      "model_variant": "machines_only",
+      "queueing_cycle_time_min": 2139.156952,
+      "queueing_group_wait_min": {
+        "DIFF": 287.4912113,
+        "IMP": 128.22599,
+        "LITHO": 152.4779921
+      },
+      "queueing_x_factor": 2.531546688,
+      "start_scale": 0.7762543318,
+      "starts_per_week": 65.20536387,
+      "static_bottleneck_utilization": 0.8,
+      "unstable_runs": 0
+    },
+    {
+      "case": "machines_only_0.85",
+      "des_cycle_time_min": {
+        "half_width": 13.09110018,
+        "mean": 1864.560597,
+        "n": 10,
+        "sd": 18.30009618
+      },
+      "des_group_wait_min": {
+        "DIFF": 273.3695971,
+        "IMP": 78.37947543,
+        "LITHO": 151.5745423
+      },
+      "des_throughput_per_week": {
+        "half_width": 0.6676494131,
+        "mean": 63.56,
+        "n": 10,
+        "sd": 0.9333095235
+      },
+      "des_x_factor": {
+        "half_width": 0.01549242625,
+        "mean": 2.206580588,
+        "n": 10,
+        "sd": 0.02165691855
+      },
+      "model_variant": "machines_only",
+      "queueing_cycle_time_min": 2294.934551,
+      "queueing_group_wait_min": {
+        "DIFF": 287.5751831,
+        "IMP": 148.0862008,
+        "LITHO": 214.6652184
+      },
+      "queueing_x_factor": 2.715898877,
+      "start_scale": 0.8247702275,
+      "starts_per_week": 69.28069911,
+      "static_bottleneck_utilization": 0.85,
+      "unstable_runs": 0
+    },
+    {
+      "case": "machines_only_0.9",
+      "des_cycle_time_min": {
+        "half_width": 24.07920893,
+        "mean": 1975.605245,
+        "n": 10,
+        "sd": 33.66041305
+      },
+      "des_group_wait_min": {
+        "DIFF": 273.3193714,
+        "IMP": 86.65705632,
+        "LITHO": 198.5339898
+      },
+      "des_throughput_per_week": {
+        "half_width": 0.5987313661,
+        "mean": 67.745,
+        "n": 10,
+        "sd": 0.836968737
+      },
+      "des_x_factor": {
+        "half_width": 0.02849610524,
+        "mean": 2.337994373,
+        "n": 10,
+        "sd": 0.03983480834
+      },
+      "model_variant": "machines_only",
+      "queueing_cycle_time_min": 2600.689967,
+      "queueing_group_wait_min": {
+        "DIFF": 294.3495232,
+        "IMP": 173.5863242,
+        "LITHO": 339.0396709
+      },
+      "queueing_x_factor": 3.077739606,
+      "start_scale": 0.8732861232,
+      "starts_per_week": 73.35603435,
+      "static_bottleneck_utilization": 0.9,
+      "unstable_runs": 0
+    },
+    {
+      "case": "full_0.3",
+      "des_cycle_time_min": {
+        "half_width": 23.43152227,
+        "mean": 2615.06148,
+        "n": 10,
+        "sd": 32.75500953
+      },
+      "des_group_wait_min": {
+        "DIFF": 656.7213426,
+        "IMP": 33.53057073,
+        "LITHO": 86.45106914
+      },
+      "des_throughput_per_week": {
+        "half_width": 0.3547261519,
+        "mean": 20.283,
+        "n": 10,
+        "sd": 0.4958729676
+      },
+      "des_x_factor": {
+        "half_width": 0.02772961215,
+        "mean": 3.094747314,
+        "n": 10,
+        "sd": 0.03876332488
+      },
+      "model_variant": "full",
+      "queueing_cycle_time_min": 2580.720261,
+      "queueing_group_wait_min": {
+        "DIFF": 607.809735,
+        "IMP": 46.74091878,
+        "LITHO": 19.92774137
+      },
+      "queueing_x_factor": 3.054106818,
+      "start_scale": 0.3,
+      "starts_per_week": 25.2,
+      "static_bottleneck_utilization": 0.3091770186,
+      "unstable_runs": 0
+    },
+    {
+      "case": "full_0.4",
+      "des_cycle_time_min": {
+        "half_width": 17.29014841,
+        "mean": 2367.26164,
+        "n": 10,
+        "sd": 24.16996085
+      },
+      "des_group_wait_min": {
+        "DIFF": 489.611017,
+        "IMP": 37.73932142,
+        "LITHO": 113.0649677
+      },
+      "des_throughput_per_week": {
+        "half_width": 0.4141416076,
+        "mean": 28.396,
+        "n": 10,
+        "sd": 0.5789300476
+      },
+      "des_x_factor": {
+        "half_width": 0.0204617141,
+        "mean": 2.801493065,
+        "n": 10,
+        "sd": 0.02860350397
+      },
+      "model_variant": "full",
+      "queueing_cycle_time_min": 2232.472071,
+      "queueing_group_wait_min": {
+        "DIFF": 462.2636536,
+        "IMP": 55.34819961,
+        "LITHO": 29.39814843
+      },
+      "queueing_x_factor": 2.641978782,
+      "start_scale": 0.4,
+      "starts_per_week": 33.6,
+      "static_bottleneck_utilization": 0.4122360248,
+      "unstable_runs": 0
+    },
+    {
+      "case": "full_0.5",
+      "des_cycle_time_min": {
+        "half_width": 13.4724819,
+        "mean": 2347.057543,
+        "n": 10,
+        "sd": 18.83323105
+      },
+      "des_group_wait_min": {
+        "DIFF": 393.6713892,
+        "IMP": 48.8116413,
+        "LITHO": 174.2433279
+      },
+      "des_throughput_per_week": {
+        "half_width": 0.4679987129,
+        "mean": 36.68,
+        "n": 10,
+        "sd": 0.6542170894
+      },
+      "des_x_factor": {
+        "half_width": 0.01594376556,
+        "mean": 2.777582891,
+        "n": 10,
+        "sd": 0.0222878474
+      },
+      "model_variant": "full",
+      "queueing_cycle_time_min": 2058.934044,
+      "queueing_group_wait_min": {
+        "DIFF": 378.4117571,
+        "IMP": 66.92686039,
+        "LITHO": 42.89579186
+      },
+      "queueing_x_factor": 2.436608336,
+      "start_scale": 0.5,
+      "starts_per_week": 42.0,
+      "static_bottleneck_utilization": 0.5152950311,
+      "unstable_runs": 0
+    },
+    {
+      "case": "full_0.55",
+      "des_cycle_time_min": {
+        "half_width": 42.02103732,
+        "mean": 2455.044366,
+        "n": 10,
+        "sd": 58.74135968
+      },
+      "des_group_wait_min": {
+        "DIFF": 363.2811293,
+        "IMP": 55.69006203,
+        "LITHO": 244.3686511
+      },
+      "des_throughput_per_week": {
+        "half_width": 0.5182946051,
+        "mean": 40.786,
+        "n": 10,
+        "sd": 0.7245258986
+      },
+      "des_x_factor": {
+        "half_width": 0.04972903824,
+        "mean": 2.905377948,
+        "n": 10,
+        "sd": 0.06951640199
+      },
+      "model_variant": "full",
+      "queueing_cycle_time_min": 2013.829784,
+      "queueing_group_wait_min": {
+        "DIFF": 349.6600708,
+        "IMP": 74.1485502,
+        "LITHO": 52.05308398
+      },
+      "queueing_x_factor": 2.383230513,
+      "start_scale": 0.55,
+      "starts_per_week": 46.2,
+      "static_bottleneck_utilization": 0.5668245342,
+      "unstable_runs": 0
+    },
+    {
+      "case": "full_0.6",
+      "des_cycle_time_min": {
+        "half_width": 69.69849578,
+        "mean": 2679.562532,
+        "n": 10,
+        "sd": 97.43177873
+      },
+      "des_group_wait_min": {
+        "DIFF": 339.5704078,
+        "IMP": 67.91769019,
+        "LITHO": 360.6616327
+      },
+      "des_throughput_per_week": {
+        "half_width": 0.5978570347,
+        "mean": 44.955,
+        "n": 10,
+        "sd": 0.835746506
+      },
+      "des_x_factor": {
+        "half_width": 0.08248342695,
+        "mean": 3.171079919,
+        "n": 10,
+        "sd": 0.1153038802
+      },
+      "model_variant": "full",
+      "queueing_cycle_time_min": 1992.088498,
+      "queueing_group_wait_min": {
+        "DIFF": 327.1845001,
+        "IMP": 82.60622175,
+        "LITHO": 63.68319519
+      },
+      "queueing_x_factor": 2.357501181,
+      "start_scale": 0.6,
+      "starts_per_week": 50.4,
+      "static_bottleneck_utilization": 0.6183540373,
+      "unstable_runs": 0
+    }
+  ],
+  "settings": {
+    "reps": 10
+  }
+}

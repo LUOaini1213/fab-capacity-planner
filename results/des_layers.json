@@ -1,0 +1,1991 @@
+{
+  "failure_readings": {
+    "layers": "calendar clock, U(24 h, 76 h) after each repair = 2.95 failures/machine-week",
+    "layers_2_per_week": "calendar clock, TBF bounds x 1.5400 = 2 failures/machine-week (the specification's arithmetic)"
+  },
+  "layers": {
+    "0_no_setups_no_failures": {
+      "config": {
+        "conwip_wip": 40,
+        "due_xf": 3.0,
+        "failure_clock": "calendar",
+        "failures": false,
+        "op_priority_group": null,
+        "operators": false,
+        "pm": true,
+        "release": "conwip",
+        "rule": "FIFO",
+        "run_weeks": 100.0,
+        "setups": false,
+        "start_scale": 1.0,
+        "tbf_scale": 1.0,
+        "technician": false,
+        "transport": false,
+        "warmup_weeks": 20.0
+      },
+      "cycle_time_min": {
+        "half_width": 0.0,
+        "mean": 4382.672751,
+        "n": 10,
+        "sd": 0.0
+      },
+      "failures_per_imp_machine_week": {
+        "half_width": 0.0,
+        "mean": 0.0,
+        "n": 10,
+        "sd": 0.0
+      },
+      "good_plus_scrapped_per_week": {
+        "half_width": 1.071572893e-14,
+        "mean": 92.04,
+        "n": 10,
+        "sd": 1.497955613e-14
+      },
+      "groups": {
+        "DIFF": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 13,
+          "mean_wait_min": {
+            "half_width": 4.286291571e-14,
+            "mean": 282.1619933,
+            "n": 10,
+            "sd": 5.991822453e-14
+          },
+          "non_idle_fraction": {
+            "half_width": 0.0,
+            "mean": 0.9646602183,
+            "n": 10,
+            "sd": 0.0
+          },
+          "productive_fraction": {
+            "half_width": 8.371663225e-17,
+            "mean": 0.9125768849,
+            "n": 10,
+            "sd": 1.170277823e-16
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.0608531746,
+            "pm": 0.05208333333,
+            "repair": 0.0,
+            "run": 0.7300173611,
+            "setup": 0.0,
+            "unload": 0.1217063492,
+            "wait_operator": 0.0,
+            "wait_tech": 0.0
+          }
+        },
+        "IMP": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 8,
+          "mean_wait_min": {
+            "half_width": 5.357864464e-15,
+            "mean": 56.36040002,
+            "n": 10,
+            "sd": 7.489778066e-15
+          },
+          "non_idle_fraction": {
+            "half_width": 8.371663225e-17,
+            "mean": 0.8055109127,
+            "n": 10,
+            "sd": 1.170277823e-16
+          },
+          "productive_fraction": {
+            "half_width": 8.371663225e-17,
+            "mean": 0.638844246,
+            "n": 10,
+            "sd": 1.170277823e-16
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.1368973214,
+            "pm": 0.1666666667,
+            "repair": 0.0,
+            "run": 0.3650496032,
+            "setup": 0.0,
+            "unload": 0.1368973214,
+            "wait_operator": 0.0,
+            "wait_tech": 0.0
+          }
+        },
+        "LITHO": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 34,
+          "mean_wait_min": {
+            "half_width": 1.714516628e-13,
+            "mean": 1430.259211,
+            "n": 10,
+            "sd": 2.396728981e-13
+          },
+          "non_idle_fraction": {
+            "half_width": 8.371663225e-17,
+            "mean": 0.9999503968,
+            "n": 10,
+            "sd": 1.170277823e-16
+          },
+          "productive_fraction": {
+            "half_width": 1.674332645e-16,
+            "mean": 0.9582837302,
+            "n": 10,
+            "sd": 2.340555646e-16
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.1825595238,
+            "pm": 0.04166666667,
+            "repair": 0.0,
+            "run": 0.5931646825,
+            "setup": 0.0,
+            "unload": 0.1825595238,
+            "wait_operator": 0.0,
+            "wait_tech": 0.0
+          }
+        }
+      },
+      "litho_setup_min_per_week": {
+        "half_width": 0.0,
+        "mean": 0.0,
+        "n": 10,
+        "sd": 0.0
+      },
+      "scrapped_per_week": {
+        "half_width": 0.0,
+        "mean": 0.0,
+        "n": 10,
+        "sd": 0.0
+      },
+      "seeds": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "starts_per_week": {
+        "half_width": 1.071572893e-14,
+        "mean": 92.04,
+        "n": 10,
+        "sd": 1.497955613e-14
+      },
+      "throughput_by_seed": [
+        92.04,
+        92.04,
+        92.04,
+        92.04,
+        92.04,
+        92.04,
+        92.04,
+        92.04,
+        92.04,
+        92.04
+      ],
+      "throughput_per_week": {
+        "half_width": 1.071572893e-14,
+        "mean": 92.04,
+        "n": 10,
+        "sd": 1.497955613e-14
+      },
+      "throughput_range": [
+        92.04,
+        92.04
+      ],
+      "unstable_runs": 0,
+      "wip_mean": {
+        "half_width": 0.0,
+        "mean": 40.0,
+        "n": 10,
+        "sd": 0.0
+      },
+      "x_factor": {
+        "half_width": 0.0,
+        "mean": 5.186594972,
+        "n": 10,
+        "sd": 0.0
+      }
+    },
+    "1_machines_only": {
+      "config": {
+        "conwip_wip": 40,
+        "due_xf": 3.0,
+        "failure_clock": "calendar",
+        "failures": true,
+        "op_priority_group": null,
+        "operators": false,
+        "pm": true,
+        "release": "conwip",
+        "rule": "FIFO",
+        "run_weeks": 100.0,
+        "setups": true,
+        "start_scale": 1.0,
+        "tbf_scale": 1.0,
+        "technician": false,
+        "transport": false,
+        "warmup_weeks": 20.0
+      },
+      "cycle_time_min": {
+        "half_width": 2.523862133,
+        "mean": 4775.199761,
+        "n": 10,
+        "sd": 3.528115982
+      },
+      "failures_per_imp_machine_week": {
+        "half_width": 0.01920984532,
+        "mean": 2.924,
+        "n": 10,
+        "sd": 0.02685351208
+      },
+      "good_plus_scrapped_per_week": {
+        "half_width": 0.07466261054,
+        "mean": 88.176,
+        "n": 10,
+        "sd": 0.1043711327
+      },
+      "groups": {
+        "DIFF": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 18,
+          "mean_wait_min": {
+            "half_width": 2.468946856,
+            "mean": 272.4543432,
+            "n": 10,
+            "sd": 3.451349719
+          },
+          "non_idle_fraction": {
+            "half_width": 0.0006629745746,
+            "mean": 0.8963124634,
+            "n": 10,
+            "sd": 0.00092677455
+          },
+          "productive_fraction": {
+            "half_width": 0.0006629745746,
+            "mean": 0.8442291301,
+            "n": 10,
+            "sd": 0.00092677455
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.05638680875,
+            "pm": 0.05208333333,
+            "repair": 0.0,
+            "run": 0.6750759027,
+            "setup": 0.0,
+            "unload": 0.1127664187,
+            "wait_operator": 0.0,
+            "wait_tech": 0.0
+          }
+        },
+        "IMP": {
+          "failures_per_week": {
+            "half_width": 0.03841969064,
+            "mean": 5.848,
+            "n": 10,
+            "sd": 0.05370702416
+          },
+          "max_stocker_lots": 18,
+          "mean_wait_min": {
+            "half_width": 3.218054647,
+            "mean": 135.7762784,
+            "n": 10,
+            "sd": 4.498530202
+          },
+          "non_idle_fraction": {
+            "half_width": 0.000723023998,
+            "mean": 0.8771648568,
+            "n": 10,
+            "sd": 0.001010717856
+          },
+          "productive_fraction": {
+            "half_width": 0.0002337923702,
+            "mean": 0.5863637083,
+            "n": 10,
+            "sd": 0.0003268191979
+          },
+          "state_fraction": {
+            "failed_run": 0.002283210091,
+            "load": 0.1294379436,
+            "pm": 0.1666666667,
+            "repair": 0.1218512717,
+            "run": 0.3318406065,
+            "setup": 0.0,
+            "unload": 0.1250851583,
+            "wait_operator": 0.0,
+            "wait_tech": 0.0
+          }
+        },
+        "LITHO": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 35,
+          "mean_wait_min": {
+            "half_width": 5.688626052,
+            "mean": 1549.801227,
+            "n": 10,
+            "sd": 7.952150883
+          },
+          "non_idle_fraction": {
+            "half_width": 1.266445942e-05,
+            "mean": 0.9999804563,
+            "n": 10,
+            "sd": 1.770369352e-05
+          },
+          "productive_fraction": {
+            "half_width": 0.0002914824927,
+            "mean": 0.8832647817,
+            "n": 10,
+            "sd": 0.0004074644283
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.166775496,
+            "pm": 0.04166666667,
+            "repair": 0.0,
+            "run": 0.5497139881,
+            "setup": 0.07504900794,
+            "unload": 0.1667752976,
+            "wait_operator": 0.0,
+            "wait_tech": 0.0
+          }
+        }
+      },
+      "litho_setup_min_per_week": {
+        "half_width": 2.884200999,
+        "mean": 756.494,
+        "n": 10,
+        "sd": 4.031834983
+      },
+      "scrapped_per_week": {
+        "half_width": 0.03841969064,
+        "mean": 5.848,
+        "n": 10,
+        "sd": 0.05370702416
+      },
+      "seeds": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "starts_per_week": {
+        "half_width": 0.07466261054,
+        "mean": 88.176,
+        "n": 10,
+        "sd": 0.1043711327
+      },
+      "throughput_by_seed": [
+        82.42,
+        82.26,
+        82.31,
+        82.35,
+        82.34,
+        82.47,
+        82.32,
+        82.2,
+        82.26,
+        82.35
+      ],
+      "throughput_per_week": {
+        "half_width": 0.0563070665,
+        "mean": 82.328,
+        "n": 10,
+        "sd": 0.07871185143
+      },
+      "throughput_range": [
+        82.2,
+        82.47
+      ],
+      "unstable_runs": 0,
+      "wip_mean": {
+        "half_width": 3.788582295e-15,
+        "mean": 40.0,
+        "n": 10,
+        "sd": 5.29607286e-15
+      },
+      "x_factor": {
+        "half_width": 0.002986819092,
+        "mean": 5.651123978,
+        "n": 10,
+        "sd": 0.004175285186
+      }
+    },
+    "2_plus_transport": {
+      "config": {
+        "conwip_wip": 40,
+        "due_xf": 3.0,
+        "failure_clock": "calendar",
+        "failures": true,
+        "op_priority_group": null,
+        "operators": false,
+        "pm": true,
+        "release": "conwip",
+        "rule": "FIFO",
+        "run_weeks": 100.0,
+        "setups": true,
+        "start_scale": 1.0,
+        "tbf_scale": 1.0,
+        "technician": false,
+        "transport": true,
+        "warmup_weeks": 20.0
+      },
+      "cycle_time_min": {
+        "half_width": 2.936165736,
+        "mean": 4775.373159,
+        "n": 10,
+        "sd": 4.104476677
+      },
+      "failures_per_imp_machine_week": {
+        "half_width": 0.01993609559,
+        "mean": 2.924,
+        "n": 10,
+        "sd": 0.02786873995
+      },
+      "good_plus_scrapped_per_week": {
+        "half_width": 0.05239985945,
+        "mean": 88.171,
+        "n": 10,
+        "sd": 0.0732499526
+      },
+      "groups": {
+        "DIFF": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 22,
+          "mean_wait_min": {
+            "half_width": 1.370749571,
+            "mean": 259.8597844,
+            "n": 10,
+            "sd": 1.916175771
+          },
+          "non_idle_fraction": {
+            "half_width": 0.0005002702865,
+            "mean": 0.8962082722,
+            "n": 10,
+            "sd": 0.0006993296385
+          },
+          "productive_fraction": {
+            "half_width": 0.0005002702865,
+            "mean": 0.8441249389,
+            "n": 10,
+            "sd": 0.0006993296385
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.05637743056,
+            "pm": 0.05208333333,
+            "repair": 0.0,
+            "run": 0.6749943521,
+            "setup": 0.0,
+            "unload": 0.1127531563,
+            "wait_operator": 0.0,
+            "wait_tech": 0.0
+          }
+        },
+        "IMP": {
+          "failures_per_week": {
+            "half_width": 0.03987219118,
+            "mean": 5.848,
+            "n": 10,
+            "sd": 0.05573747991
+          },
+          "max_stocker_lots": 22,
+          "mean_wait_min": {
+            "half_width": 4.346222939,
+            "mean": 136.7264638,
+            "n": 10,
+            "sd": 6.075600729
+          },
+          "non_idle_fraction": {
+            "half_width": 0.0006861133565,
+            "mean": 0.8769849795,
+            "n": 10,
+            "sd": 0.0009591203367
+          },
+          "productive_fraction": {
+            "half_width": 0.0002845791463,
+            "mean": 0.586122453,
+            "n": 10,
+            "sd": 0.0003978142154
+          },
+          "state_fraction": {
+            "failed_run": 0.002332102383,
+            "load": 0.129377381,
+            "pm": 0.1666666667,
+            "repair": 0.1218637575,
+            "run": 0.3317164542,
+            "setup": 0.0,
+            "unload": 0.1250286178,
+            "wait_operator": 0.0,
+            "wait_tech": 0.0
+          }
+        },
+        "LITHO": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 35,
+          "mean_wait_min": {
+            "half_width": 8.129468751,
+            "mean": 1416.542905,
+            "n": 10,
+            "sd": 11.3642137
+          },
+          "non_idle_fraction": {
+            "half_width": 1.302261291e-05,
+            "mean": 0.9999866071,
+            "n": 10,
+            "sd": 1.820435757e-05
+          },
+          "productive_fraction": {
+            "half_width": 0.0003683583297,
+            "mean": 0.882584127,
+            "n": 10,
+            "sd": 0.0005149294382
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.1666771825,
+            "pm": 0.04166666667,
+            "repair": 0.0,
+            "run": 0.5492293651,
+            "setup": 0.07573581349,
+            "unload": 0.1666775794,
+            "wait_operator": 0.0,
+            "wait_tech": 0.0
+          }
+        }
+      },
+      "litho_setup_min_per_week": {
+        "half_width": 3.731471573,
+        "mean": 763.413,
+        "n": 10,
+        "sd": 5.216237576
+      },
+      "scrapped_per_week": {
+        "half_width": 0.03987219118,
+        "mean": 5.848,
+        "n": 10,
+        "sd": 0.05573747991
+      },
+      "seeds": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "starts_per_week": {
+        "half_width": 0.05239985945,
+        "mean": 88.171,
+        "n": 10,
+        "sd": 0.0732499526
+      },
+      "throughput_by_seed": [
+        82.35,
+        82.17,
+        82.24,
+        82.35,
+        82.47,
+        82.31,
+        82.34,
+        82.25,
+        82.35,
+        82.4
+      ],
+      "throughput_per_week": {
+        "half_width": 0.06117126545,
+        "mean": 82.323,
+        "n": 10,
+        "sd": 0.08551153269
+      },
+      "throughput_range": [
+        82.17,
+        82.47
+      ],
+      "unstable_runs": 0,
+      "wip_mean": {
+        "half_width": 1.123875131e-14,
+        "mean": 40.0,
+        "n": 10,
+        "sd": 1.571069101e-14
+      },
+      "x_factor": {
+        "half_width": 0.003474752351,
+        "mean": 5.651329182,
+        "n": 10,
+        "sd": 0.004857368848
+      }
+    },
+    "3_plus_technician": {
+      "config": {
+        "conwip_wip": 40,
+        "due_xf": 3.0,
+        "failure_clock": "calendar",
+        "failures": true,
+        "op_priority_group": null,
+        "operators": false,
+        "pm": true,
+        "release": "conwip",
+        "rule": "FIFO",
+        "run_weeks": 100.0,
+        "setups": true,
+        "start_scale": 1.0,
+        "tbf_scale": 1.0,
+        "technician": true,
+        "transport": true,
+        "warmup_weeks": 20.0
+      },
+      "cycle_time_min": {
+        "half_width": 16.84360798,
+        "mean": 5234.536302,
+        "n": 10,
+        "sd": 23.54574036
+      },
+      "failures_per_imp_machine_week": {
+        "half_width": 0.0181951763,
+        "mean": 2.8555,
+        "n": 10,
+        "sd": 0.0254351026
+      },
+      "good_plus_scrapped_per_week": {
+        "half_width": 0.2587190994,
+        "mean": 80.763,
+        "n": 10,
+        "sd": 0.3616643625
+      },
+      "groups": {
+        "DIFF": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 27,
+          "mean_wait_min": {
+            "half_width": 3.546725835,
+            "mean": 291.407983,
+            "n": 10,
+            "sd": 4.957980842
+          },
+          "non_idle_fraction": {
+            "half_width": 0.003150840283,
+            "mean": 0.8651143678,
+            "n": 10,
+            "sd": 0.004404571
+          },
+          "productive_fraction": {
+            "half_width": 0.002538759002,
+            "mean": 0.7713517161,
+            "n": 10,
+            "sd": 0.003548940369
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.05152380952,
+            "pm": 0.05089657738,
+            "repair": 0.0,
+            "run": 0.6167824692,
+            "setup": 0.0,
+            "unload": 0.1030454373,
+            "wait_operator": 0.0,
+            "wait_tech": 0.04286607435
+          }
+        },
+        "IMP": {
+          "failures_per_week": {
+            "half_width": 0.0363903526,
+            "mean": 5.711,
+            "n": 10,
+            "sd": 0.05087020521
+          },
+          "max_stocker_lots": 30,
+          "mean_wait_min": {
+            "half_width": 3.96139999,
+            "mean": 150.3725462,
+            "n": 10,
+            "sd": 5.537655339
+          },
+          "non_idle_fraction": {
+            "half_width": 0.001585187487,
+            "mean": 0.8744100583,
+            "n": 10,
+            "sd": 0.002215939308
+          },
+          "productive_fraction": {
+            "half_width": 0.001663016257,
+            "mean": 0.5349867759,
+            "n": 10,
+            "sd": 0.002324736426
+          },
+          "state_fraction": {
+            "failed_run": 0.002214097957,
+            "load": 0.1183247973,
+            "pm": 0.1539457248,
+            "repair": 0.1189401512,
+            "run": 0.3025879985,
+            "setup": 0.0,
+            "unload": 0.1140739802,
+            "wait_operator": 0.0,
+            "wait_tech": 0.06432330839
+          }
+        },
+        "LITHO": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 39,
+          "mean_wait_min": {
+            "half_width": 14.08592957,
+            "mean": 1614.642078,
+            "n": 10,
+            "sd": 19.69077177
+          },
+          "non_idle_fraction": {
+            "half_width": 2.110593823e-05,
+            "mean": 0.999972158,
+            "n": 10,
+            "sd": 2.950406721e-05
+          },
+          "productive_fraction": {
+            "half_width": 0.002418403188,
+            "mean": 0.8058405718,
+            "n": 10,
+            "sd": 0.003380694542
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.1521230159,
+            "pm": 0.03833928571,
+            "repair": 0.0,
+            "run": 0.5015951142,
+            "setup": 0.06838232467,
+            "unload": 0.1521224417,
+            "wait_operator": 0.0,
+            "wait_tech": 0.0874099758
+          }
+        }
+      },
+      "litho_setup_min_per_week": {
+        "half_width": 2.539756017,
+        "mean": 689.295,
+        "n": 10,
+        "sd": 3.5503341
+      },
+      "scrapped_per_week": {
+        "half_width": 0.0363903526,
+        "mean": 5.711,
+        "n": 10,
+        "sd": 0.05087020521
+      },
+      "seeds": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "starts_per_week": {
+        "half_width": 0.2587190994,
+        "mean": 80.763,
+        "n": 10,
+        "sd": 0.3616643625
+      },
+      "throughput_by_seed": [
+        75.31,
+        75.01,
+        75.01,
+        74.78,
+        74.79,
+        74.83,
+        74.43,
+        75.24,
+        75.75,
+        75.37
+      ],
+      "throughput_per_week": {
+        "half_width": 0.2689927987,
+        "mean": 75.052,
+        "n": 10,
+        "sd": 0.3760260038
+      },
+      "throughput_range": [
+        74.43,
+        75.75
+      ],
+      "unstable_runs": 0,
+      "wip_mean": {
+        "half_width": 1.651404736e-14,
+        "mean": 40.0,
+        "n": 10,
+        "sd": 2.30850464e-14
+      },
+      "x_factor": {
+        "half_width": 0.01993326388,
+        "mean": 6.194717517,
+        "n": 10,
+        "sd": 0.0278647815
+      }
+    },
+    "4_plus_operators_full": {
+      "config": {
+        "conwip_wip": 40,
+        "due_xf": 3.0,
+        "failure_clock": "calendar",
+        "failures": true,
+        "op_priority_group": null,
+        "operators": true,
+        "pm": true,
+        "release": "conwip",
+        "rule": "FIFO",
+        "run_weeks": 100.0,
+        "setups": true,
+        "start_scale": 1.0,
+        "tbf_scale": 1.0,
+        "technician": true,
+        "transport": true,
+        "warmup_weeks": 20.0
+      },
+      "cycle_time_min": {
+        "half_width": 14.54096983,
+        "mean": 7060.625104,
+        "n": 10,
+        "sd": 20.32687419
+      },
+      "failures_per_imp_machine_week": {
+        "half_width": 0.01689901892,
+        "mean": 2.8295,
+        "n": 10,
+        "sd": 0.02362319952
+      },
+      "good_plus_scrapped_per_week": {
+        "half_width": 0.1033602028,
+        "mean": 60.929,
+        "n": 10,
+        "sd": 0.1444876004
+      },
+      "groups": {
+        "DIFF": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 19,
+          "mean_wait_min": {
+            "half_width": 2.015709044,
+            "mean": 304.2280395,
+            "n": 10,
+            "sd": 2.817766945
+          },
+          "non_idle_fraction": {
+            "half_width": 0.002024479641,
+            "mean": 0.7247211768,
+            "n": 10,
+            "sd": 0.002830027395
+          },
+          "productive_fraction": {
+            "half_width": 0.001042569771,
+            "mean": 0.5748435261,
+            "n": 10,
+            "sd": 0.001457412045
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.03841830357,
+            "pm": 0.05161830357,
+            "repair": 0.0,
+            "run": 0.4595876333,
+            "setup": 0.0,
+            "unload": 0.07683758923,
+            "wait_operator": 0.07705472882,
+            "wait_tech": 0.02120461828
+          }
+        },
+        "IMP": {
+          "failures_per_week": {
+            "half_width": 0.03379803784,
+            "mean": 5.659,
+            "n": 10,
+            "sd": 0.04724639904
+          },
+          "max_stocker_lots": 21,
+          "mean_wait_min": {
+            "half_width": 2.038894649,
+            "mean": 137.0114094,
+            "n": 10,
+            "sd": 2.850178186
+          },
+          "non_idle_fraction": {
+            "half_width": 0.00103291098,
+            "mean": 0.8148667461,
+            "n": 10,
+            "sd": 0.001443909985
+          },
+          "productive_fraction": {
+            "half_width": 0.0008335480894,
+            "mean": 0.3973797156,
+            "n": 10,
+            "sd": 0.001165219882
+          },
+          "state_fraction": {
+            "failed_run": 0.001692572316,
+            "load": 0.08879856151,
+            "pm": 0.1541511266,
+            "repair": 0.1179064254,
+            "run": 0.2239926124,
+            "setup": 0.0,
+            "unload": 0.08458854167,
+            "wait_operator": 0.07966050448,
+            "wait_tech": 0.06407640179
+          }
+        },
+        "LITHO": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 40,
+          "mean_wait_min": {
+            "half_width": 6.831351975,
+            "mean": 2496.458789,
+            "n": 10,
+            "sd": 9.549571574
+          },
+          "non_idle_fraction": {
+            "half_width": 1.176517508e-05,
+            "mean": 0.9999786675,
+            "n": 10,
+            "sd": 1.64465807e-05
+          },
+          "productive_fraction": {
+            "half_width": 0.001249949557,
+            "mean": 0.5990346219,
+            "n": 10,
+            "sd": 0.001747308996
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.1127756028,
+            "pm": 0.03793452381,
+            "repair": 0.0,
+            "run": 0.3734842175,
+            "setup": 0.04863998016,
+            "unload": 0.1127748016,
+            "wait_operator": 0.2138619897,
+            "wait_tech": 0.1005075519
+          }
+        }
+      },
+      "litho_setup_min_per_week": {
+        "half_width": 2.313743001,
+        "mean": 490.291,
+        "n": 10,
+        "sd": 3.23438969
+      },
+      "scrapped_per_week": {
+        "half_width": 0.03379803784,
+        "mean": 5.659,
+        "n": 10,
+        "sd": 0.04724639904
+      },
+      "seeds": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "starts_per_week": {
+        "half_width": 0.1033602028,
+        "mean": 60.929,
+        "n": 10,
+        "sd": 0.1444876004
+      },
+      "throughput_by_seed": [
+        55.08,
+        55.22,
+        55.14,
+        55.05,
+        55.47,
+        55.4,
+        55.23,
+        55.47,
+        55.32,
+        55.32
+      ],
+      "throughput_per_week": {
+        "half_width": 0.1085940163,
+        "mean": 55.27,
+        "n": 10,
+        "sd": 0.1518039672
+      },
+      "throughput_range": [
+        55.05,
+        55.47
+      ],
+      "unstable_runs": 0,
+      "wip_mean": {
+        "half_width": 1.173849291e-14,
+        "mean": 40.0,
+        "n": 10,
+        "sd": 1.640928159e-14
+      },
+      "x_factor": {
+        "half_width": 0.01720824832,
+        "mean": 8.355769353,
+        "n": 10,
+        "sd": 0.02405547241
+      }
+    }
+  },
+  "layers_2_per_week": {
+    "1_machines_only": {
+      "config": {
+        "conwip_wip": 40,
+        "due_xf": 3.0,
+        "failure_clock": "calendar",
+        "failures": true,
+        "op_priority_group": null,
+        "operators": false,
+        "pm": true,
+        "release": "conwip",
+        "rule": "FIFO",
+        "run_weeks": 100.0,
+        "setups": true,
+        "start_scale": 1.0,
+        "tbf_scale": 1.54,
+        "technician": false,
+        "transport": false,
+        "warmup_weeks": 20.0
+      },
+      "cycle_time_min": {
+        "half_width": 2.342783784,
+        "mean": 4768.67198,
+        "n": 10,
+        "sd": 3.274985905
+      },
+      "failures_per_imp_machine_week": {
+        "half_width": 0.016438515,
+        "mean": 1.9915,
+        "n": 10,
+        "sd": 0.02297945943
+      },
+      "good_plus_scrapped_per_week": {
+        "half_width": 0.0540819073,
+        "mean": 87.116,
+        "n": 10,
+        "sd": 0.07560129335
+      },
+      "groups": {
+        "DIFF": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 17,
+          "mean_wait_min": {
+            "half_width": 2.488815008,
+            "mean": 265.5278926,
+            "n": 10,
+            "sd": 3.479123479
+          },
+          "non_idle_fraction": {
+            "half_width": 0.0005044613538,
+            "mean": 0.8955435384,
+            "n": 10,
+            "sd": 0.0007051883467
+          },
+          "productive_fraction": {
+            "half_width": 0.0005044613538,
+            "mean": 0.8434602051,
+            "n": 10,
+            "sd": 0.0007051883467
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.0563015873,
+            "pm": 0.05208333333,
+            "repair": 0.0,
+            "run": 0.6745487037,
+            "setup": 0.0,
+            "unload": 0.112609914,
+            "wait_operator": 0.0,
+            "wait_tech": 0.0
+          }
+        },
+        "IMP": {
+          "failures_per_week": {
+            "half_width": 0.03287702999,
+            "mean": 3.983,
+            "n": 10,
+            "sd": 0.04595891885
+          },
+          "max_stocker_lots": 19,
+          "mean_wait_min": {
+            "half_width": 2.132231745,
+            "mean": 105.3749696,
+            "n": 10,
+            "sd": 2.98065445
+          },
+          "non_idle_fraction": {
+            "half_width": 0.0006099116921,
+            "mean": 0.8384619928,
+            "n": 10,
+            "sd": 0.000852597755
+          },
+          "productive_fraction": {
+            "half_width": 0.0002443603049,
+            "mean": 0.587236812,
+            "n": 10,
+            "sd": 0.0003415921518
+          },
+          "state_fraction": {
+            "failed_run": 0.001490846477,
+            "load": 0.1284166667,
+            "pm": 0.1666666667,
+            "repair": 0.08306766765,
+            "run": 0.3333695997,
+            "setup": 0.0,
+            "unload": 0.1254505456,
+            "wait_operator": 0.0,
+            "wait_tech": 0.0
+          }
+        },
+        "LITHO": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 35,
+          "mean_wait_min": {
+            "half_width": 5.257997168,
+            "mean": 1585.10115,
+            "n": 10,
+            "sd": 7.350173213
+          },
+          "non_idle_fraction": {
+            "half_width": 7.87428025e-06,
+            "mean": 0.9999890873,
+            "n": 10,
+            "sd": 1.100748477e-05
+          },
+          "productive_fraction": {
+            "half_width": 0.0002919973284,
+            "mean": 0.8833919643,
+            "n": 10,
+            "sd": 0.0004081841189
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.167272619,
+            "pm": 0.04166666667,
+            "repair": 0.0,
+            "run": 0.5488477183,
+            "setup": 0.07493045635,
+            "unload": 0.167271627,
+            "wait_operator": 0.0,
+            "wait_tech": 0.0
+          }
+        }
+      },
+      "litho_setup_min_per_week": {
+        "half_width": 2.964952782,
+        "mean": 755.29,
+        "n": 10,
+        "sd": 4.144718192
+      },
+      "scrapped_per_week": {
+        "half_width": 0.03287702999,
+        "mean": 3.983,
+        "n": 10,
+        "sd": 0.04595891885
+      },
+      "seeds": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "starts_per_week": {
+        "half_width": 0.0540819073,
+        "mean": 87.116,
+        "n": 10,
+        "sd": 0.07560129335
+      },
+      "throughput_by_seed": [
+        83.16,
+        83.15,
+        83.12,
+        83.09,
+        83.04,
+        83.22,
+        83.13,
+        83.07,
+        83.13,
+        83.22
+      ],
+      "throughput_per_week": {
+        "half_width": 0.04185500215,
+        "mean": 83.133,
+        "n": 10,
+        "sd": 0.05850925853
+      },
+      "throughput_range": [
+        83.04,
+        83.22
+      ],
+      "unstable_runs": 0,
+      "wip_mean": {
+        "half_width": 3.38861102e-15,
+        "mean": 40.0,
+        "n": 10,
+        "sd": 4.736951572e-15
+      },
+      "x_factor": {
+        "half_width": 0.002772525188,
+        "mean": 5.643398792,
+        "n": 10,
+        "sd": 0.003875722965
+      }
+    },
+    "2_plus_transport": {
+      "config": {
+        "conwip_wip": 40,
+        "due_xf": 3.0,
+        "failure_clock": "calendar",
+        "failures": true,
+        "op_priority_group": null,
+        "operators": false,
+        "pm": true,
+        "release": "conwip",
+        "rule": "FIFO",
+        "run_weeks": 100.0,
+        "setups": true,
+        "start_scale": 1.0,
+        "tbf_scale": 1.54,
+        "technician": false,
+        "transport": true,
+        "warmup_weeks": 20.0
+      },
+      "cycle_time_min": {
+        "half_width": 2.287306006,
+        "mean": 4769.815413,
+        "n": 10,
+        "sd": 3.197433319
+      },
+      "failures_per_imp_machine_week": {
+        "half_width": 0.01592461527,
+        "mean": 1.992,
+        "n": 10,
+        "sd": 0.02226107714
+      },
+      "good_plus_scrapped_per_week": {
+        "half_width": 0.05258941049,
+        "mean": 87.084,
+        "n": 10,
+        "sd": 0.07351492668
+      },
+      "groups": {
+        "DIFF": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 21,
+          "mean_wait_min": {
+            "half_width": 1.241947195,
+            "mean": 253.6046902,
+            "n": 10,
+            "sd": 1.736122465
+          },
+          "non_idle_fraction": {
+            "half_width": 0.000361860897,
+            "mean": 0.8952001064,
+            "n": 10,
+            "sd": 0.0005058466535
+          },
+          "productive_fraction": {
+            "half_width": 0.000361860897,
+            "mean": 0.8431167731,
+            "n": 10,
+            "sd": 0.0005058466535
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.05628110119,
+            "pm": 0.05208333333,
+            "repair": 0.0,
+            "run": 0.6742805067,
+            "setup": 0.0,
+            "unload": 0.1125551652,
+            "wait_operator": 0.0,
+            "wait_tech": 0.0
+          }
+        },
+        "IMP": {
+          "failures_per_week": {
+            "half_width": 0.03184923054,
+            "mean": 3.984,
+            "n": 10,
+            "sd": 0.04452215429
+          },
+          "max_stocker_lots": 22,
+          "mean_wait_min": {
+            "half_width": 3.449014876,
+            "mean": 104.3240618,
+            "n": 10,
+            "sd": 4.82139034
+          },
+          "non_idle_fraction": {
+            "half_width": 0.0006038422935,
+            "mean": 0.8381040645,
+            "n": 10,
+            "sd": 0.0008441133208
+          },
+          "productive_fraction": {
+            "half_width": 0.0002552665211,
+            "mean": 0.5869623719,
+            "n": 10,
+            "sd": 0.0003568379908
+          },
+          "state_fraction": {
+            "failed_run": 0.001477578193,
+            "load": 0.1283543362,
+            "pm": 0.1666666667,
+            "repair": 0.08299744774,
+            "run": 0.3332179563,
+            "setup": 0.0,
+            "unload": 0.1253900794,
+            "wait_operator": 0.0,
+            "wait_tech": 0.0
+          }
+        },
+        "LITHO": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 35,
+          "mean_wait_min": {
+            "half_width": 7.479769488,
+            "mean": 1455.949933,
+            "n": 10,
+            "sd": 10.45599676
+          },
+          "non_idle_fraction": {
+            "half_width": 1.022447571e-05,
+            "mean": 0.9999883929,
+            "n": 10,
+            "sd": 1.429283149e-05
+          },
+          "productive_fraction": {
+            "half_width": 0.0004581907,
+            "mean": 0.8828249008,
+            "n": 10,
+            "sd": 0.0006405064328
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.1671739087,
+            "pm": 0.04166666667,
+            "repair": 0.0,
+            "run": 0.5484731151,
+            "setup": 0.0754968254,
+            "unload": 0.167177877,
+            "wait_operator": 0.0,
+            "wait_tech": 0.0
+          }
+        }
+      },
+      "litho_setup_min_per_week": {
+        "half_width": 4.624811504,
+        "mean": 761.032,
+        "n": 10,
+        "sd": 6.465040689
+      },
+      "scrapped_per_week": {
+        "half_width": 0.03184923054,
+        "mean": 3.984,
+        "n": 10,
+        "sd": 0.04452215429
+      },
+      "seeds": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "starts_per_week": {
+        "half_width": 0.05258941049,
+        "mean": 87.084,
+        "n": 10,
+        "sd": 0.07351492668
+      },
+      "throughput_by_seed": [
+        83.11,
+        83.16,
+        83.09,
+        83.07,
+        83.01,
+        83.07,
+        82.98,
+        83.16,
+        83.19,
+        83.16
+      ],
+      "throughput_per_week": {
+        "half_width": 0.04967597321,
+        "mean": 83.1,
+        "n": 10,
+        "sd": 0.06944222219
+      },
+      "throughput_range": [
+        82.98,
+        83.19
+      ],
+      "unstable_runs": 0,
+      "wip_mean": {
+        "half_width": 4.792219662e-15,
+        "mean": 40.0,
+        "n": 10,
+        "sd": 6.699061157e-15
+      },
+      "x_factor": {
+        "half_width": 0.002706871013,
+        "mean": 5.644751968,
+        "n": 10,
+        "sd": 0.003783944757
+      }
+    },
+    "3_plus_technician": {
+      "config": {
+        "conwip_wip": 40,
+        "due_xf": 3.0,
+        "failure_clock": "calendar",
+        "failures": true,
+        "op_priority_group": null,
+        "operators": false,
+        "pm": true,
+        "release": "conwip",
+        "rule": "FIFO",
+        "run_weeks": 100.0,
+        "setups": true,
+        "start_scale": 1.0,
+        "tbf_scale": 1.54,
+        "technician": true,
+        "transport": true,
+        "warmup_weeks": 20.0
+      },
+      "cycle_time_min": {
+        "half_width": 7.013303884,
+        "mean": 5002.163187,
+        "n": 10,
+        "sd": 9.803922804
+      },
+      "failures_per_imp_machine_week": {
+        "half_width": 0.01635181336,
+        "mean": 1.9635,
+        "n": 10,
+        "sd": 0.0228582589
+      },
+      "good_plus_scrapped_per_week": {
+        "half_width": 0.1057422373,
+        "mean": 83.195,
+        "n": 10,
+        "sd": 0.147817455
+      },
+      "groups": {
+        "DIFF": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 20,
+          "mean_wait_min": {
+            "half_width": 1.299816287,
+            "mean": 255.5806702,
+            "n": 10,
+            "sd": 1.817017878
+          },
+          "non_idle_fraction": {
+            "half_width": 0.001302028996,
+            "mean": 0.8721152769,
+            "n": 10,
+            "sd": 0.001820111032
+          },
+          "productive_fraction": {
+            "half_width": 0.001158878229,
+            "mean": 0.8047436999,
+            "n": 10,
+            "sd": 0.001620000058
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.05371865564,
+            "pm": 0.05180585455,
+            "repair": 0.0,
+            "run": 0.6435873741,
+            "setup": 0.0,
+            "unload": 0.1074376702,
+            "wait_operator": 0.0,
+            "wait_tech": 0.01556572242
+          }
+        },
+        "IMP": {
+          "failures_per_week": {
+            "half_width": 0.03270362673,
+            "mean": 3.927,
+            "n": 10,
+            "sd": 0.0457165178
+          },
+          "max_stocker_lots": 25,
+          "mean_wait_min": {
+            "half_width": 2.802712943,
+            "mean": 99.30587392,
+            "n": 10,
+            "sd": 3.917922536
+          },
+          "non_idle_fraction": {
+            "half_width": 0.0009758299407,
+            "mean": 0.8353944251,
+            "n": 10,
+            "sd": 0.001364116195
+          },
+          "productive_fraction": {
+            "half_width": 0.0007652142248,
+            "mean": 0.5599907509,
+            "n": 10,
+            "sd": 0.001069695726
+          },
+          "state_fraction": {
+            "failed_run": 0.001491010467,
+            "load": 0.1225333014,
+            "pm": 0.1620502033,
+            "repair": 0.08186192424,
+            "run": 0.3178443542,
+            "setup": 0.0,
+            "unload": 0.1196130952,
+            "wait_operator": 0.0,
+            "wait_tech": 0.03000053625
+          }
+        },
+        "LITHO": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 40,
+          "mean_wait_min": {
+            "half_width": 5.966604841,
+            "mean": 1582.683518,
+            "n": 10,
+            "sd": 8.340738436
+          },
+          "non_idle_fraction": {
+            "half_width": 1.494567938e-05,
+            "mean": 0.999980987,
+            "n": 10,
+            "sd": 2.089261913e-05
+          },
+          "productive_fraction": {
+            "half_width": 0.001102667013,
+            "mean": 0.8422311642,
+            "n": 10,
+            "sd": 0.001541422195
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.1594819419,
+            "pm": 0.04014880952,
+            "repair": 0.0,
+            "run": 0.5232657045,
+            "setup": 0.07122410714,
+            "unload": 0.1594835178,
+            "wait_operator": 0.0,
+            "wait_tech": 0.04637690606
+          }
+        }
+      },
+      "litho_setup_min_per_week": {
+        "half_width": 2.72688625,
+        "mean": 717.949,
+        "n": 10,
+        "sd": 3.811924128
+      },
+      "scrapped_per_week": {
+        "half_width": 0.03270362673,
+        "mean": 3.927,
+        "n": 10,
+        "sd": 0.0457165178
+      },
+      "seeds": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "starts_per_week": {
+        "half_width": 0.1057422373,
+        "mean": 83.195,
+        "n": 10,
+        "sd": 0.147817455
+      },
+      "throughput_by_seed": [
+        79.2,
+        79.18,
+        79.42,
+        79.53,
+        79.14,
+        79.19,
+        79.22,
+        79.26,
+        79.46,
+        79.08
+      ],
+      "throughput_per_week": {
+        "half_width": 0.1069479176,
+        "mean": 79.268,
+        "n": 10,
+        "sd": 0.1495028799
+      },
+      "throughput_range": [
+        79.08,
+        79.53
+      ],
+      "unstable_runs": 0,
+      "wip_mean": {
+        "half_width": 1.879075711e-14,
+        "mean": 40.0,
+        "n": 10,
+        "sd": 2.626766717e-14
+      },
+      "x_factor": {
+        "half_width": 0.00829976791,
+        "mean": 5.919719748,
+        "n": 10,
+        "sd": 0.01160227551
+      }
+    },
+    "4_plus_operators_full": {
+      "config": {
+        "conwip_wip": 40,
+        "due_xf": 3.0,
+        "failure_clock": "calendar",
+        "failures": true,
+        "op_priority_group": null,
+        "operators": true,
+        "pm": true,
+        "release": "conwip",
+        "rule": "FIFO",
+        "run_weeks": 100.0,
+        "setups": true,
+        "start_scale": 1.0,
+        "tbf_scale": 1.54,
+        "technician": true,
+        "transport": true,
+        "warmup_weeks": 20.0
+      },
+      "cycle_time_min": {
+        "half_width": 11.86236522,
+        "mean": 6747.166774,
+        "n": 10,
+        "sd": 16.58244314
+      },
+      "failures_per_imp_machine_week": {
+        "half_width": 0.01540280056,
+        "mean": 1.9505,
+        "n": 10,
+        "sd": 0.02153163048
+      },
+      "good_plus_scrapped_per_week": {
+        "half_width": 0.1431905577,
+        "mean": 62.33,
+        "n": 10,
+        "sd": 0.2001665973
+      },
+      "groups": {
+        "DIFF": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 20,
+          "mean_wait_min": {
+            "half_width": 1.071035558,
+            "mean": 289.5143796,
+            "n": 10,
+            "sd": 1.497204472
+          },
+          "non_idle_fraction": {
+            "half_width": 0.001948577411,
+            "mean": 0.7380360664,
+            "n": 10,
+            "sd": 0.002723923394
+          },
+          "productive_fraction": {
+            "half_width": 0.001236471765,
+            "mean": 0.598094357,
+            "n": 10,
+            "sd": 0.001728468342
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.03993824405,
+            "pm": 0.05199032738,
+            "repair": 0.0,
+            "run": 0.4782771447,
+            "setup": 0.0,
+            "unload": 0.07987896825,
+            "wait_operator": 0.08061305707,
+            "wait_tech": 0.007338324877
+          }
+        },
+        "IMP": {
+          "failures_per_week": {
+            "half_width": 0.03080560112,
+            "mean": 3.901,
+            "n": 10,
+            "sd": 0.04306326096
+          },
+          "max_stocker_lots": 24,
+          "mean_wait_min": {
+            "half_width": 4.751912657,
+            "mean": 96.85767074,
+            "n": 10,
+            "sd": 6.642715849
+          },
+          "non_idle_fraction": {
+            "half_width": 0.002181804058,
+            "mean": 0.7791469357,
+            "n": 10,
+            "sd": 0.003049951765
+          },
+          "productive_fraction": {
+            "half_width": 0.0007121437635,
+            "mean": 0.4155312954,
+            "n": 10,
+            "sd": 0.0009955083366
+          },
+          "state_fraction": {
+            "failed_run": 0.001100747241,
+            "load": 0.09156622024,
+            "pm": 0.1617424107,
+            "repair": 0.0812560107,
+            "run": 0.2353020068,
+            "setup": 0.0,
+            "unload": 0.08866306834,
+            "wait_operator": 0.08820565291,
+            "wait_tech": 0.03131081873
+          }
+        },
+        "LITHO": {
+          "failures_per_week": {
+            "half_width": 0.0,
+            "mean": 0.0,
+            "n": 10,
+            "sd": 0.0
+          },
+          "max_stocker_lots": 40,
+          "mean_wait_min": {
+            "half_width": 10.40527859,
+            "mean": 2394.607814,
+            "n": 10,
+            "sd": 14.54557649
+          },
+          "non_idle_fraction": {
+            "half_width": 0.0001501109625,
+            "mean": 0.9999116411,
+            "n": 10,
+            "sd": 0.0002098406561
+          },
+          "productive_fraction": {
+            "half_width": 0.001046667517,
+            "mean": 0.6256763351,
+            "n": 10,
+            "sd": 0.001463140298
+          },
+          "state_fraction": {
+            "failed_run": 0.0,
+            "load": 0.118203869,
+            "pm": 0.03993154762,
+            "repair": 0.0,
+            "run": 0.389268101,
+            "setup": 0.04974990079,
+            "unload": 0.1182043651,
+            "wait_operator": 0.2282916439,
+            "wait_tech": 0.05626221373
+          }
+        }
+      },
+      "litho_setup_min_per_week": {
+        "half_width": 5.181147071,
+        "mean": 501.479,
+        "n": 10,
+        "sd": 7.242744185
+      },
+      "scrapped_per_week": {
+        "half_width": 0.03080560112,
+        "mean": 3.901,
+        "n": 10,
+        "sd": 0.04306326096
+      },
+      "seeds": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "starts_per_week": {
+        "half_width": 0.1431905577,
+        "mean": 62.33,
+        "n": 10,
+        "sd": 0.2001665973
+      },
+      "throughput_by_seed": [
+        58.4,
+        58.26,
+        58.32,
+        58.47,
+        58.43,
+        58.83,
+        58.65,
+        58.35,
+        58.14,
+        58.44
+      ],
+      "throughput_per_week": {
+        "half_width": 0.1395485946,
+        "mean": 58.429,
+        "n": 10,
+        "sd": 0.195075484
+      },
+      "throughput_range": [
+        58.14,
+        58.83
+      ],
+      "unstable_runs": 0,
+      "wip_mean": {
+        "half_width": 8.47152755e-15,
+        "mean": 40.0,
+        "n": 10,
+        "sd": 1.184237893e-14
+      },
+      "x_factor": {
+        "half_width": 0.01403830203,
+        "mean": 7.98481275,
+        "n": 10,
+        "sd": 0.01962419307
+      }
+    }
+  },
+  "settings": {
+    "conwip_wip": 40,
+    "reps": 10
+  },
+  "static_max_starts_per_week": {
+    "kempf_no_setups_spec_em": 92.0,
+    "no_em_no_setups": 92.0,
+    "renewal_em_with_setups": 81.50670484,
+    "spec_em_with_setups": 81.50670484
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "Intel Five-Machine Six-Step Mini-Fab",
+  "provenance": "Parameters transcribed from Kempf's Mini-Fab specification (archived copy) and cross-checked against McGinnis (2023) and van den Berk (2004). See docs/sources.md [S1]-[S3].",
+  "time_unit": "minute",
+  "calendar": {"week": 10080, "day": 1440, "shift": 720},
+  "products": {
+    "Pa": {"kind": "product", "starts_per_week": 51, "route": ["S1", "S2", "S3", "S4", "S5", "S6"]},
+    "Pb": {"kind": "product", "starts_per_week": 30, "route": ["S1", "S2", "S3", "S4", "S5", "S6"]},
+    "TW": {"kind": "test", "starts_per_week": 3, "route": ["S1", "S2", "S3", "S4", "S5", "S6"]}
+  },
+  "steps": {
+    "S1": {"group": "DIFF", "load": 20, "run": 225, "unload": 40, "batch_rule": "mix_products"},
+    "S2": {"group": "IMP", "load": 15, "run": 30, "unload": 15},
+    "S3": {"group": "LITHO", "load": 10, "run": 55, "unload": 10},
+    "S4": {"group": "IMP", "load": 15, "run": 50, "unload": 15},
+    "S5": {"group": "DIFF", "load": 20, "run": 255, "unload": 40, "batch_rule": "no_product_mix"},
+    "S6": {"group": "LITHO", "load": 10, "run": 10, "unload": 10}
+  },
+  "groups": {
+    "DIFF": {
+      "tools": 2, "machine_names": ["Ma", "Mb"], "cell": 1, "batch_size": 3,
+      "pm": {"minutes": 75, "period": "day"}
+    },
+    "IMP": {
+      "tools": 2, "machine_names": ["Mc", "Md"], "cell": 3, "batch_size": 1,
+      "pm": {"minutes": 120, "period": "shift"},
+      "em": {"tbf_min": 1440, "tbf_max": 4560, "repair_min": 360, "repair_max": 480,
+             "spec_events_per_week": 2, "scrap_lot_in_process": true}
+    },
+    "LITHO": {
+      "tools": 1, "machine_names": ["Me"], "cell": 2, "batch_size": 1,
+      "pm": {"minutes": 30, "period": "shift"},
+      "setup": {"step_change": 10, "product_change": 5, "both_change": 12}
+    }
+  },
+  "test_lots": {"max_per_batch": 1, "avoid_same_machine_twice": true},
+  "personnel": {
+    "operators": {
+      "PO1": {"groups": ["DIFF", "IMP"]},
+      "PO2": {"groups": ["IMP", "LITHO"]}
+    },
+    "operator_off_time_per_shift": [60, 60, 60],
+    "technicians": {"MT1": {}},
+    "technician_off_time_per_shift": [45, 45, 30],
+    "move_time_adjacent_cell": 1
+  },
+  "transport": {
+    "positions": {"STARTS": 0, "DIFF": 1, "LITHO": 2, "IMP": 3, "OUTS": 4},
+    "travel_adjacent": 4, "load": 1, "unload": 1, "vehicles": 1
+  },
+  "stockers": {"DIFF": 18, "LITHO": 12, "IMP": 12}
+}

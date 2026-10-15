@@ -1,0 +1,47 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          python -m pip install -e . --no-deps
+      - name: Unit tests (LLM tests are skipped: no Ollama in CI)
+        run: python -m pytest -q
+      - name: Static stages reproduce byte-identically
+        run: |
+          mkdir -p /tmp/results
+          # the agent tools read two DES result files; reuse the committed ones as inputs, and do not
+          # count them in the comparison (they would trivially match themselves)
+          cp results/whatif.json results/des_rules.json /tmp/results/
+          python scripts/reproduce.py --stages static,agent --out /tmp/results
+          python scripts/compare_results.py results /tmp/results --exclude whatif.json,des_rules.json
+
+  reproduce-des:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: |
+          python -m pip install -r requirements.txt
+          python -m pip install -e . --no-deps
+      - name: Full DES stage reproduces byte-identically
+        env:
+          FABCAP_WORKERS: "4"
+        run: |
+          python scripts/reproduce.py --stages des --out /tmp/results
+          python scripts/compare_results.py results /tmp/results --only des_
+          python scripts/compare_results.py results /tmp/results --only whatif
+          python scripts/compare_results.py results /tmp/results --only plan_vs_des

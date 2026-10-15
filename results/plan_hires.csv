@@ -1,0 +1,9 @@
+scenario,quarter_hired,quarter_available,role,people
+base,Q1,Q1,technicians,1
+base,Q5,Q5,operators,1
+demand_plus_20,Q1,Q1,technicians,1
+demand_plus_20,Q3,Q3,operators,1
+demand_plus_20,Q8,Q8,operators,1
+demand_plus_20,Q8,Q8,technicians,1
+mix_shift_pc,Q1,Q1,technicians,1
+mix_shift_pc,Q5,Q5,operators,1

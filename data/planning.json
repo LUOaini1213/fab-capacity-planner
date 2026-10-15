@@ -1,0 +1,48 @@
+{
+  "label": "ILLUSTRATIVE planning layer (not part of Kempf's Mini-Fab specification)",
+  "note": "Tool prices, lead time, utilisation cap, discount rate, demand forecast and the extra product Pc are invented for demonstration. They are not market data.",
+  "extra_products": {
+    "Pc": {"kind": "product", "route": ["S1", "S2", "S3", "S4", "S3X", "S4X", "S5", "S6"]}
+  },
+  "extra_steps": {
+    "S3X": {"group": "LITHO", "load": 10, "run": 55, "unload": 10},
+    "S4X": {"group": "IMP", "load": 15, "run": 50, "unload": 15}
+  },
+  "tool_price_musd": {"DIFF": 2.5, "IMP": 4.0, "LITHO": 12.0},
+  "lead_time_quarters": 1,
+  "weeks_per_quarter": 13,
+  "target_utilization": 0.85,
+  "discount_rate_per_quarter": 0.02,
+  "shortfall_penalty_musd_per_lot": 1.0,
+  "labour": {
+    "note": "ILLUSTRATIVE labour layer, invented for demonstration: loaded cost per extra head per quarter, hiring lead time, utilisation cap for people, and the qualification of new hires.",
+    "operator_cost_musd_per_quarter": 0.05,
+    "technician_cost_musd_per_quarter": 0.06,
+    "hiring_lead_time_quarters": 0,
+    "target_utilization": 0.85,
+    "new_operator_groups": ["DIFF", "IMP", "LITHO"]
+  },
+  "quarters": ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6", "Q7", "Q8"],
+  "demand_base": {
+    "Pa": [36, 39, 42, 45, 48, 51, 54, 57],
+    "Pb": [21, 23, 25, 27, 28, 30, 31, 33],
+    "Pc": [0, 0, 2, 4, 6, 8, 10, 12],
+    "TW": [3, 3, 3, 3, 3, 3, 3, 3]
+  },
+  "scenarios": {
+    "base": {"description": "Base forecast"},
+    "demand_plus_20": {"description": "All product demand +20% from Q2 onward (TW unchanged)", "multiplier": 1.2, "from_quarter": 2},
+    "mix_shift_pc": {"description": "Pc ramps twice as fast; Pa reduced by the same number of lots (total unchanged)", "pc_ramp_factor": 2.0}
+  },
+  "whatif_costs_musd": {
+    "add_DIFF": 2.5,
+    "add_IMP": 4.0,
+    "add_LITHO": 12.0,
+    "halve_litho_setup": 0.5,
+    "halve_imp_repair": 1.0,
+    "litho_pm_30_to_20": 0.3,
+    "add_operator_imp_litho": 0.6,
+    "operators_litho_first": 0.0
+  },
+  "whatif_cost_note": "One-off illustrative costs. add_operator_imp_litho is a 3-year loaded labour cost, operators_litho_first is a dispatching policy change with no capex."
+}

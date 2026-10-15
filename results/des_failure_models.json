@@ -1,0 +1,391 @@
+{
+  "add_IMP_gain_range": [
+    -12.153,
+    -3.254
+  ],
+  "models": {
+    "calendar_dist": {
+      "baseline_capacity_lots_per_week": {
+        "half_width": 0.1085940163,
+        "mean": 55.27,
+        "n": 10,
+        "sd": 0.1518039672
+      },
+      "baseline_imp_failures_per_machine_week": 2.8295,
+      "baseline_litho_wait_tech_fraction": 0.1005075519,
+      "baseline_release_rate_per_week": {
+        "half_width": 0.1033602028,
+        "mean": 60.929,
+        "n": 10,
+        "sd": 0.1444876004
+      },
+      "baseline_scrapped_per_week": 5.659,
+      "description": "calendar clock, 2.95/machine-week (the stated distribution; default)",
+      "failure_clock": "calendar",
+      "open84": {
+        "good_lots_per_week_avg": 41.459,
+        "good_plus_scrapped_per_week_avg": 47.162,
+        "imp_failures_per_machine_week": 2.8515,
+        "scrapped_per_week_avg": 5.703,
+        "unstable_runs": 10
+      },
+      "options": {
+        "add_DIFF": {
+          "gain_half_width_paired": 0.1223332354,
+          "gain_lots_per_week": -1.3,
+          "imp_failures_per_machine_week": 2.8075,
+          "litho_wait_tech_fraction": 0.1265348357,
+          "scrapped_per_week": 5.615,
+          "starts_per_week": 59.585
+        },
+        "add_IMP": {
+          "gain_half_width_paired": 0.2065897131,
+          "gain_lots_per_week": -12.153,
+          "imp_failures_per_machine_week": 2.652333333,
+          "litho_wait_tech_fraction": 0.2967067073,
+          "scrapped_per_week": 7.957,
+          "starts_per_week": 51.074
+        },
+        "add_LITHO": {
+          "gain_half_width_paired": 0.1934611007,
+          "gain_lots_per_week": 11.776,
+          "imp_failures_per_machine_week": 2.857,
+          "litho_wait_tech_fraction": 0.1142632941,
+          "scrapped_per_week": 5.714,
+          "starts_per_week": 72.76
+        },
+        "add_operator_imp_litho": {
+          "gain_half_width_paired": 0.2400315877,
+          "gain_lots_per_week": 14.869,
+          "imp_failures_per_machine_week": 2.847,
+          "litho_wait_tech_fraction": 0.09266037976,
+          "scrapped_per_week": 5.694,
+          "starts_per_week": 75.833
+        },
+        "halve_imp_repair": {
+          "gain_half_width_paired": 0.1270326524,
+          "gain_lots_per_week": 4.587,
+          "imp_failures_per_machine_week": 3.031,
+          "litho_wait_tech_fraction": 0.01667778405,
+          "scrapped_per_week": 6.062,
+          "starts_per_week": 65.919
+        },
+        "halve_litho_setup": {
+          "gain_half_width_paired": 0.1295149458,
+          "gain_lots_per_week": 1.603,
+          "imp_failures_per_machine_week": 2.832,
+          "litho_wait_tech_fraction": 0.1007590581,
+          "scrapped_per_week": 5.664,
+          "starts_per_week": 62.537
+        },
+        "litho_pm_30_to_20": {
+          "gain_half_width_paired": 0.1819689496,
+          "gain_lots_per_week": 0.832,
+          "imp_failures_per_machine_week": 2.8325,
+          "litho_wait_tech_fraction": 0.09928750477,
+          "scrapped_per_week": 5.665,
+          "starts_per_week": 61.767
+        },
+        "operators_litho_first": {
+          "gain_half_width_paired": 0.1796101503,
+          "gain_lots_per_week": 3.522,
+          "imp_failures_per_machine_week": 2.8435,
+          "litho_wait_tech_fraction": 0.09288251576,
+          "scrapped_per_week": 5.687,
+          "starts_per_week": 64.479
+        }
+      },
+      "tbf_scale": 1.0
+    },
+    "calendar_spec": {
+      "baseline_capacity_lots_per_week": {
+        "half_width": 0.1395485946,
+        "mean": 58.429,
+        "n": 10,
+        "sd": 0.195075484
+      },
+      "baseline_imp_failures_per_machine_week": 1.9505,
+      "baseline_litho_wait_tech_fraction": 0.05626221373,
+      "baseline_release_rate_per_week": {
+        "half_width": 0.1431905577,
+        "mean": 62.33,
+        "n": 10,
+        "sd": 0.2001665973
+      },
+      "baseline_scrapped_per_week": 3.901,
+      "description": "calendar clock, 2/machine-week (the specification's arithmetic)",
+      "failure_clock": "calendar",
+      "open84": {
+        "good_lots_per_week_avg": 45.196,
+        "good_plus_scrapped_per_week_avg": 49.118,
+        "imp_failures_per_machine_week": 1.961,
+        "scrapped_per_week_avg": 3.922,
+        "unstable_runs": 10
+      },
+      "options": {
+        "add_DIFF": {
+          "gain_half_width_paired": 0.2612429705,
+          "gain_lots_per_week": -0.789,
+          "imp_failures_per_machine_week": 1.9365,
+          "litho_wait_tech_fraction": 0.07645834796,
+          "scrapped_per_week": 3.873,
+          "starts_per_week": 61.513
+        },
+        "add_IMP": {
+          "gain_half_width_paired": 0.2956087331,
+          "gain_lots_per_week": -9.295,
+          "imp_failures_per_machine_week": 1.891333333,
+          "litho_wait_tech_fraction": 0.207145694,
+          "scrapped_per_week": 5.674,
+          "starts_per_week": 54.808
+        },
+        "add_LITHO": {
+          "gain_half_width_paired": 0.1949717609,
+          "gain_lots_per_week": 14.412,
+          "imp_failures_per_machine_week": 1.9675,
+          "litho_wait_tech_fraction": 0.07187649024,
+          "scrapped_per_week": 3.935,
+          "starts_per_week": 76.776
+        },
+        "add_operator_imp_litho": {
+          "gain_half_width_paired": 0.2206283065,
+          "gain_lots_per_week": 15.739,
+          "imp_failures_per_machine_week": 1.9625,
+          "litho_wait_tech_fraction": 0.04921880635,
+          "scrapped_per_week": 3.925,
+          "starts_per_week": 78.093
+        },
+        "halve_imp_repair": {
+          "gain_half_width_paired": 0.1564363415,
+          "gain_lots_per_week": 2.55,
+          "imp_failures_per_machine_week": 2.0435,
+          "litho_wait_tech_fraction": 0.009566980088,
+          "scrapped_per_week": 4.087,
+          "starts_per_week": 65.066
+        },
+        "halve_litho_setup": {
+          "gain_half_width_paired": 0.1750717386,
+          "gain_lots_per_week": 1.775,
+          "imp_failures_per_machine_week": 1.955,
+          "litho_wait_tech_fraction": 0.0557030269,
+          "scrapped_per_week": 3.91,
+          "starts_per_week": 64.114
+        },
+        "litho_pm_30_to_20": {
+          "gain_half_width_paired": 0.1642103816,
+          "gain_lots_per_week": 0.886,
+          "imp_failures_per_machine_week": 1.9545,
+          "litho_wait_tech_fraction": 0.05607234552,
+          "scrapped_per_week": 3.909,
+          "starts_per_week": 63.224
+        },
+        "operators_litho_first": {
+          "gain_half_width_paired": 0.2595134585,
+          "gain_lots_per_week": 3.735,
+          "imp_failures_per_machine_week": 1.958,
+          "litho_wait_tech_fraction": 0.05028788577,
+          "scrapped_per_week": 3.916,
+          "starts_per_week": 66.08
+        }
+      },
+      "tbf_scale": 1.54
+    },
+    "run_dist": {
+      "baseline_capacity_lots_per_week": {
+        "half_width": 0.1492642844,
+        "mean": 57.484,
+        "n": 10,
+        "sd": 0.2086570818
+      },
+      "baseline_imp_failures_per_machine_week": 2.103,
+      "baseline_litho_wait_tech_fraction": 0.0678866354,
+      "baseline_release_rate_per_week": {
+        "half_width": 0.1747385237,
+        "mean": 61.69,
+        "n": 10,
+        "sd": 0.2442676128
+      },
+      "baseline_scrapped_per_week": 4.206,
+      "description": "run-time clock, 2.95/machine-week at 84 starts",
+      "failure_clock": "run",
+      "open84": {
+        "good_lots_per_week_avg": 43.129,
+        "good_plus_scrapped_per_week_avg": 47.936,
+        "imp_failures_per_machine_week": 2.4035,
+        "scrapped_per_week_avg": 4.807,
+        "unstable_runs": 10
+      },
+      "options": {
+        "add_DIFF": {
+          "gain_half_width_paired": 0.2019973911,
+          "gain_lots_per_week": -0.757,
+          "imp_failures_per_machine_week": 2.0615,
+          "litho_wait_tech_fraction": 0.08498855309,
+          "scrapped_per_week": 4.123,
+          "starts_per_week": 60.85
+        },
+        "add_IMP": {
+          "gain_half_width_paired": 0.2245266167,
+          "gain_lots_per_week": -3.977,
+          "imp_failures_per_machine_week": 1.305,
+          "litho_wait_tech_fraction": 0.1401217435,
+          "scrapped_per_week": 3.915,
+          "starts_per_week": 57.422
+        },
+        "add_LITHO": {
+          "gain_half_width_paired": 0.3115943009,
+          "gain_lots_per_week": 11.172,
+          "imp_failures_per_machine_week": 2.5105,
+          "litho_wait_tech_fraction": 0.09525571731,
+          "scrapped_per_week": 5.021,
+          "starts_per_week": 73.677
+        },
+        "add_operator_imp_litho": {
+          "gain_half_width_paired": 0.3116353561,
+          "gain_lots_per_week": 13.657,
+          "imp_failures_per_machine_week": 2.5975,
+          "litho_wait_tech_fraction": 0.07995810071,
+          "scrapped_per_week": 5.195,
+          "starts_per_week": 76.336
+        },
+        "halve_imp_repair": {
+          "gain_half_width_paired": 0.2249099506,
+          "gain_lots_per_week": 3.026,
+          "imp_failures_per_machine_week": 2.2125,
+          "litho_wait_tech_fraction": 0.01211138903,
+          "scrapped_per_week": 4.425,
+          "starts_per_week": 64.935
+        },
+        "halve_litho_setup": {
+          "gain_half_width_paired": 0.1595315403,
+          "gain_lots_per_week": 1.44,
+          "imp_failures_per_machine_week": 2.157,
+          "litho_wait_tech_fraction": 0.07026779188,
+          "scrapped_per_week": 4.314,
+          "starts_per_week": 63.238
+        },
+        "litho_pm_30_to_20": {
+          "gain_half_width_paired": 0.2744004823,
+          "gain_lots_per_week": 0.746,
+          "imp_failures_per_machine_week": 2.1285,
+          "litho_wait_tech_fraction": 0.06850108054,
+          "scrapped_per_week": 4.257,
+          "starts_per_week": 62.487
+        },
+        "operators_litho_first": {
+          "gain_half_width_paired": 0.2019129276,
+          "gain_lots_per_week": 3.367,
+          "imp_failures_per_machine_week": 2.2285,
+          "litho_wait_tech_fraction": 0.06385767587,
+          "scrapped_per_week": 4.457,
+          "starts_per_week": 65.308
+        }
+      },
+      "tbf_scale": 0.38
+    },
+    "run_spec": {
+      "baseline_capacity_lots_per_week": {
+        "half_width": 0.160428965,
+        "mean": 59.735,
+        "n": 10,
+        "sd": 0.2242642291
+      },
+      "baseline_imp_failures_per_machine_week": 1.4605,
+      "baseline_litho_wait_tech_fraction": 0.03910400744,
+      "baseline_release_rate_per_week": {
+        "half_width": 0.1926364044,
+        "mean": 62.656,
+        "n": 10,
+        "sd": 0.2692871247
+      },
+      "baseline_scrapped_per_week": 2.921,
+      "description": "run-time clock, 2/machine-week at 84 starts",
+      "failure_clock": "run",
+      "open84": {
+        "good_lots_per_week_avg": 46.084,
+        "good_plus_scrapped_per_week_avg": 49.417,
+        "imp_failures_per_machine_week": 1.6665,
+        "scrapped_per_week_avg": 3.333,
+        "unstable_runs": 10
+      },
+      "options": {
+        "add_DIFF": {
+          "gain_half_width_paired": 0.2355252184,
+          "gain_lots_per_week": -0.68,
+          "imp_failures_per_machine_week": 1.4375,
+          "litho_wait_tech_fraction": 0.05539747387,
+          "scrapped_per_week": 2.875,
+          "starts_per_week": 61.93
+        },
+        "add_IMP": {
+          "gain_half_width_paired": 0.1904396589,
+          "gain_lots_per_week": -3.254,
+          "imp_failures_per_machine_week": 0.9176666667,
+          "litho_wait_tech_fraction": 0.0984592887,
+          "scrapped_per_week": 2.753,
+          "starts_per_week": 59.234
+        },
+        "add_LITHO": {
+          "gain_half_width_paired": 0.2048970001,
+          "gain_lots_per_week": 13.792,
+          "imp_failures_per_machine_week": 1.802,
+          "litho_wait_tech_fraction": 0.06216557077,
+          "scrapped_per_week": 3.604,
+          "starts_per_week": 77.131
+        },
+        "add_operator_imp_litho": {
+          "gain_half_width_paired": 0.3019120673,
+          "gain_lots_per_week": 14.679,
+          "imp_failures_per_machine_week": 1.823,
+          "litho_wait_tech_fraction": 0.04555127178,
+          "scrapped_per_week": 3.646,
+          "starts_per_week": 78.06
+        },
+        "halve_imp_repair": {
+          "gain_half_width_paired": 0.2238976964,
+          "gain_lots_per_week": 1.665,
+          "imp_failures_per_machine_week": 1.5025,
+          "litho_wait_tech_fraction": 0.008058916724,
+          "scrapped_per_week": 3.005,
+          "starts_per_week": 64.405
+        },
+        "halve_litho_setup": {
+          "gain_half_width_paired": 0.1896617892,
+          "gain_lots_per_week": 1.546,
+          "imp_failures_per_machine_week": 1.5,
+          "litho_wait_tech_fraction": 0.04111701196,
+          "scrapped_per_week": 3.0,
+          "starts_per_week": 64.281
+        },
+        "litho_pm_30_to_20": {
+          "gain_half_width_paired": 0.1918985549,
+          "gain_lots_per_week": 0.625,
+          "imp_failures_per_machine_week": 1.477,
+          "litho_wait_tech_fraction": 0.04033347619,
+          "scrapped_per_week": 2.954,
+          "starts_per_week": 63.314
+        },
+        "operators_litho_first": {
+          "gain_half_width_paired": 0.2280544153,
+          "gain_lots_per_week": 3.459,
+          "imp_failures_per_machine_week": 1.545,
+          "litho_wait_tech_fraction": 0.03718920182,
+          "scrapped_per_week": 3.09,
+          "starts_per_week": 66.284
+        }
+      },
+      "tbf_scale": 0.56
+    }
+  },
+  "settings": {
+    "conwip_wip": 40,
+    "reps": 10,
+    "rule": "FIFO"
+  },
+  "van_den_berk_S3": {
+    "failures_per_machine_week": 2.0,
+    "fifo_max_release_rate": 57.5,
+    "fifo_throughput_at_84_released": 47.4,
+    "note": "S3 throughput = lots finished + lots lost to breakdowns (App. D); S3 tunes failures to 400 downs per 100 weeks, only while processing (App. B)"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "compared": 18,
+  "files": [
+    {
+      "file": "agent_eval_router.json",
+      "identical": true,
+      "sha256": "81247eda0072dd46f89dbae2b50fbcddb85fa2c2b06911f03ebe59ed8834bb2a"
+    },
+    {
+      "file": "capacity.json",
+      "identical": true,
+      "sha256": "bc3bac7095f522c148ec63d622bfbe78516877837410c91dedae06e95ef73a47"
+    },
+    {
+      "file": "capacity_by_group.csv",
+      "identical": true,
+      "sha256": "f130e2d266b4d0f6bd482c9a98ba8ff8dc22d81a408ab4b81b0e7241c6135313"
+    },
+    {
+      "file": "capacity_mix_sensitivity.json",
+      "identical": true,
+      "sha256": "1c6a84946ed918f9260331c7295174af655274fe4a43e66b04daab3d90b07fe6"
+    },
+    {
+      "file": "des_failure_models.json",
+      "identical": true,
+      "sha256": "fda0aef6a8846531ac625d55cb65e77a5b50b858078af5d36aa3d94e34b02841"
+    },
+    {
+      "file": "des_layers.json",
+      "identical": true,
+      "sha256": "2300cddc358ad291cc40c2c906d4055406f2c0c517223ed056837aa06ee556a0"
+    },
+    {
+      "file": "des_rules.json",
+      "identical": true,
+      "sha256": "88cc97aa2388ba0cba4b13b9a18dfd3a521404e519b597b6b73984e5105479a4"
+    },
+    {
+      "file": "des_validation.json",
+      "identical": true,
+      "sha256": "876ced67e60f88e8cf8bf84f7c05092f70977299dafe6586b00ee681170708c6"
+    },
+    {
+      "file": "des_xfactor.json",
+      "identical": true,
+      "sha256": "9bda72d6015a1e6664a0cde9dacd104a38cbb4759849e0e5ae5d35cc5b1344d2"
+    },
+    {
+      "file": "plan_base.json",
+      "identical": true,
+      "sha256": "d9d4fcbb3629b8177a2fa7257bfae02a2be8afb09148926cab031043379b84b5"
+    },
+    {
+      "file": "plan_demand_plus_20.json",
+      "identical": true,
+      "sha256": "1c540a1e8b55b606e71dcd74046167f12dd5ecb2f97fc7b64e3b1e1da5b8ffcf"
+    },
+    {
+      "file": "plan_hires.csv",
+      "identical": true,
+      "sha256": "a2a973d231023f2f3bbdba1e1c2c42be76a89e2da173ca88a5ba91bb6ada6340"
+    },
+    {
+      "file": "plan_mix_shift_pc.json",
+      "identical": true,
+      "sha256": "b78fb06e0b3a67319df506bb10b5bcdbd56417b0c6c1b430eef6cd529e7a58ae"
+    },
+    {
+      "file": "plan_purchases.csv",
+      "identical": true,
+      "sha256": "15533572e140ea94f84cfa06e76402e8cb7d49fccfbd8a5ba491bac5eb4b5023"
+    },
+    {
+      "file": "plan_vs_des.json",
+      "identical": true,
+      "sha256": "426365330a4e0a3079311d0df91fd238a0b242d2fea1c3a2a396c6eef30107e2"
+    },
+    {
+      "file": "queueing.json",
+      "identical": true,
+      "sha256": "7948f0ce14c72f3d1f9a1e09f41aee6749997a85e7efffe883020eaaec383170"
+    },
+    {
+      "file": "whatif.json",
+      "identical": true,
+      "sha256": "a720ee7193907754e6a7f480e9f864372844881c8c55d62e6974cb45304daf92"
+    },
+    {
+      "file": "xfactor_curve_model.csv",
+      "identical": true,
+      "sha256": "9816ed91e206f4589b8e4290b90dfb8088af1049b36f944ea2ec157e36d6e386"
+    }
+  ],
+  "identical": 18,
+  "label": "Ubuntu 24.04 (WSL2) Python 3.11.16 vs Windows 11 Python 3.11.5"
+}

@@ -1,0 +1,360 @@
+{
+  "fab": "Intel Five-Machine Six-Step Mini-Fab",
+  "kempf_reproduction": {
+    "DIFF": {
+      "kempf_available_min_per_shift": 1365,
+      "kempf_required_min_per_shift": 1200,
+      "kempf_utilization_published": 0.879,
+      "matches_to_0_1_pct": true,
+      "model_available_min_per_shift": 1365.0,
+      "model_required_min_per_shift": 1200.0,
+      "model_utilization": 0.8791208791
+    },
+    "IMP": {
+      "kempf_available_min_per_shift": 1080,
+      "kempf_required_min_per_shift": 840,
+      "kempf_utilization_published": 0.778,
+      "matches_to_0_1_pct": true,
+      "model_available_min_per_shift": 1080.0,
+      "model_required_min_per_shift": 840.0,
+      "model_utilization": 0.7777777778
+    },
+    "LITHO": {
+      "kempf_available_min_per_shift": 690,
+      "kempf_required_min_per_shift": 630,
+      "kempf_utilization_published": 0.913,
+      "matches_to_0_1_pct": true,
+      "model_available_min_per_shift": 690.0,
+      "model_required_min_per_shift": 630.0,
+      "model_utilization": 0.9130434783
+    }
+  },
+  "litho_expected_setup_min_per_job": 6.758928571,
+  "litho_setup_distribution": [
+    [
+      0.0,
+      0.2487244898
+    ],
+    [
+      5.0,
+      0.2512755102
+    ],
+    [
+      10.0,
+      0.2487244898
+    ],
+    [
+      12.0,
+      0.2512755102
+    ]
+  ],
+  "main": {
+    "bottleneck": "LITHO",
+    "bottleneck_utilization": 1.030590062,
+    "description": "renewal EM accounting + expected litho setups (independent sequence)",
+    "max_starts_per_week": 81.50670484,
+    "max_starts_per_week_at_85pct_cap": 69.28069911,
+    "utilization": {
+      "DIFF": 0.8791208791,
+      "IMP": 0.8209876543,
+      "LITHO": 1.030590062
+    }
+  },
+  "personnel_at_84_starts": {
+    "by_group": {
+      "DIFF": {
+        "operator_min_per_week": 3360.0,
+        "technician_min_per_week": 1050.0
+      },
+      "IMP": {
+        "operator_min_per_week": 5040.0,
+        "technician_min_per_week": 5835.789474
+      },
+      "LITHO": {
+        "operator_min_per_week": 4495.5,
+        "technician_min_per_week": 420.0
+      }
+    },
+    "operator_available_min_per_week": 15120.0,
+    "operator_load_min_per_week": 12895.5,
+    "operator_utilization": 0.8528769841,
+    "operators": 2,
+    "technician_available_min_per_week": 8400.0,
+    "technician_load_min_per_week": 7305.789474,
+    "technician_utilization": 0.8697368421
+  },
+  "variants": {
+    "renewal_nosetups": {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 0.9130434783,
+      "em_mode": "renewal",
+      "feasible": true,
+      "groups": {
+        "DIFF": {
+          "availability": 0.9479166667,
+          "available_min_per_tool": 9555.0,
+          "available_min_per_week": 19110.0,
+          "calendar_min_per_tool": 10080.0,
+          "em_min_per_tool": 0.0,
+          "jobs_per_week": 56.0,
+          "load_min_per_week": 16800.0,
+          "loaded_fraction_of_calendar": 0.8333333333,
+          "lot_visits_per_week": 168.0,
+          "max_starts_per_week": 95.55,
+          "pm_min_per_tool": 525.0,
+          "process_min_per_week": 16800.0,
+          "setup_min_per_week": 0.0,
+          "tools": 2,
+          "utilization": 0.8791208791
+        },
+        "IMP": {
+          "availability": 0.7105263158,
+          "available_min_per_tool": 7162.105263,
+          "available_min_per_week": 14324.21053,
+          "calendar_min_per_tool": 10080.0,
+          "em_min_per_tool": 1237.894737,
+          "jobs_per_week": 168.0,
+          "load_min_per_week": 11760.0,
+          "loaded_fraction_of_calendar": 0.5833333333,
+          "lot_visits_per_week": 168.0,
+          "max_starts_per_week": 102.3157895,
+          "pm_min_per_tool": 1680.0,
+          "process_min_per_week": 11760.0,
+          "setup_min_per_week": 0.0,
+          "tools": 2,
+          "utilization": 0.8209876543
+        },
+        "LITHO": {
+          "availability": 0.9583333333,
+          "available_min_per_tool": 9660.0,
+          "available_min_per_week": 9660.0,
+          "calendar_min_per_tool": 10080.0,
+          "em_min_per_tool": 0.0,
+          "jobs_per_week": 168.0,
+          "load_min_per_week": 8820.0,
+          "loaded_fraction_of_calendar": 0.875,
+          "lot_visits_per_week": 168.0,
+          "max_starts_per_week": 92.0,
+          "pm_min_per_tool": 420.0,
+          "process_min_per_week": 8820.0,
+          "setup_min_per_week": 0.0,
+          "tools": 1,
+          "utilization": 0.9130434783
+        }
+      },
+      "include_setups": false,
+      "max_starts_per_week": 92.0,
+      "starts_per_week": {
+        "Pa": 51.0,
+        "Pb": 30.0,
+        "TW": 3.0
+      },
+      "total_starts_per_week": 84.0,
+      "util_cap": 1.0
+    },
+    "renewal_setups": {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.030590062,
+      "em_mode": "renewal",
+      "feasible": false,
+      "groups": {
+        "DIFF": {
+          "availability": 0.9479166667,
+          "available_min_per_tool": 9555.0,
+          "available_min_per_week": 19110.0,
+          "calendar_min_per_tool": 10080.0,
+          "em_min_per_tool": 0.0,
+          "jobs_per_week": 56.0,
+          "load_min_per_week": 16800.0,
+          "loaded_fraction_of_calendar": 0.8333333333,
+          "lot_visits_per_week": 168.0,
+          "max_starts_per_week": 95.55,
+          "pm_min_per_tool": 525.0,
+          "process_min_per_week": 16800.0,
+          "setup_min_per_week": 0.0,
+          "tools": 2,
+          "utilization": 0.8791208791
+        },
+        "IMP": {
+          "availability": 0.7105263158,
+          "available_min_per_tool": 7162.105263,
+          "available_min_per_week": 14324.21053,
+          "calendar_min_per_tool": 10080.0,
+          "em_min_per_tool": 1237.894737,
+          "jobs_per_week": 168.0,
+          "load_min_per_week": 11760.0,
+          "loaded_fraction_of_calendar": 0.5833333333,
+          "lot_visits_per_week": 168.0,
+          "max_starts_per_week": 102.3157895,
+          "pm_min_per_tool": 1680.0,
+          "process_min_per_week": 11760.0,
+          "setup_min_per_week": 0.0,
+          "tools": 2,
+          "utilization": 0.8209876543
+        },
+        "LITHO": {
+          "availability": 0.9583333333,
+          "available_min_per_tool": 9660.0,
+          "available_min_per_week": 9660.0,
+          "calendar_min_per_tool": 10080.0,
+          "em_min_per_tool": 0.0,
+          "jobs_per_week": 168.0,
+          "load_min_per_week": 9955.5,
+          "loaded_fraction_of_calendar": 0.9876488095,
+          "lot_visits_per_week": 168.0,
+          "max_starts_per_week": 81.50670484,
+          "pm_min_per_tool": 420.0,
+          "process_min_per_week": 8820.0,
+          "setup_min_per_week": 1135.5,
+          "tools": 1,
+          "utilization": 1.030590062
+        }
+      },
+      "include_setups": true,
+      "max_starts_per_week": 81.50670484,
+      "starts_per_week": {
+        "Pa": 51.0,
+        "Pb": 30.0,
+        "TW": 3.0
+      },
+      "total_starts_per_week": 84.0,
+      "util_cap": 1.0
+    },
+    "spec_nosetups": {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 0.9130434783,
+      "em_mode": "spec",
+      "feasible": true,
+      "groups": {
+        "DIFF": {
+          "availability": 0.9479166667,
+          "available_min_per_tool": 9555.0,
+          "available_min_per_week": 19110.0,
+          "calendar_min_per_tool": 10080.0,
+          "em_min_per_tool": 0.0,
+          "jobs_per_week": 56.0,
+          "load_min_per_week": 16800.0,
+          "loaded_fraction_of_calendar": 0.8333333333,
+          "lot_visits_per_week": 168.0,
+          "max_starts_per_week": 95.55,
+          "pm_min_per_tool": 525.0,
+          "process_min_per_week": 16800.0,
+          "setup_min_per_week": 0.0,
+          "tools": 2,
+          "utilization": 0.8791208791
+        },
+        "IMP": {
+          "availability": 0.75,
+          "available_min_per_tool": 7560.0,
+          "available_min_per_week": 15120.0,
+          "calendar_min_per_tool": 10080.0,
+          "em_min_per_tool": 840.0,
+          "jobs_per_week": 168.0,
+          "load_min_per_week": 11760.0,
+          "loaded_fraction_of_calendar": 0.5833333333,
+          "lot_visits_per_week": 168.0,
+          "max_starts_per_week": 108.0,
+          "pm_min_per_tool": 1680.0,
+          "process_min_per_week": 11760.0,
+          "setup_min_per_week": 0.0,
+          "tools": 2,
+          "utilization": 0.7777777778
+        },
+        "LITHO": {
+          "availability": 0.9583333333,
+          "available_min_per_tool": 9660.0,
+          "available_min_per_week": 9660.0,
+          "calendar_min_per_tool": 10080.0,
+          "em_min_per_tool": 0.0,
+          "jobs_per_week": 168.0,
+          "load_min_per_week": 8820.0,
+          "loaded_fraction_of_calendar": 0.875,
+          "lot_visits_per_week": 168.0,
+          "max_starts_per_week": 92.0,
+          "pm_min_per_tool": 420.0,
+          "process_min_per_week": 8820.0,
+          "setup_min_per_week": 0.0,
+          "tools": 1,
+          "utilization": 0.9130434783
+        }
+      },
+      "include_setups": false,
+      "max_starts_per_week": 92.0,
+      "starts_per_week": {
+        "Pa": 51.0,
+        "Pb": 30.0,
+        "TW": 3.0
+      },
+      "total_starts_per_week": 84.0,
+      "util_cap": 1.0
+    },
+    "spec_setups": {
+      "bottleneck": "LITHO",
+      "bottleneck_utilization": 1.030590062,
+      "em_mode": "spec",
+      "feasible": false,
+      "groups": {
+        "DIFF": {
+          "availability": 0.9479166667,
+          "available_min_per_tool": 9555.0,
+          "available_min_per_week": 19110.0,
+          "calendar_min_per_tool": 10080.0,
+          "em_min_per_tool": 0.0,
+          "jobs_per_week": 56.0,
+          "load_min_per_week": 16800.0,
+          "loaded_fraction_of_calendar": 0.8333333333,
+          "lot_visits_per_week": 168.0,
+          "max_starts_per_week": 95.55,
+          "pm_min_per_tool": 525.0,
+          "process_min_per_week": 16800.0,
+          "setup_min_per_week": 0.0,
+          "tools": 2,
+          "utilization": 0.8791208791
+        },
+        "IMP": {
+          "availability": 0.75,
+          "available_min_per_tool": 7560.0,
+          "available_min_per_week": 15120.0,
+          "calendar_min_per_tool": 10080.0,
+          "em_min_per_tool": 840.0,
+          "jobs_per_week": 168.0,
+          "load_min_per_week": 11760.0,
+          "loaded_fraction_of_calendar": 0.5833333333,
+          "lot_visits_per_week": 168.0,
+          "max_starts_per_week": 108.0,
+          "pm_min_per_tool": 1680.0,
+          "process_min_per_week": 11760.0,
+          "setup_min_per_week": 0.0,
+          "tools": 2,
+          "utilization": 0.7777777778
+        },
+        "LITHO": {
+          "availability": 0.9583333333,
+          "available_min_per_tool": 9660.0,
+          "available_min_per_week": 9660.0,
+          "calendar_min_per_tool": 10080.0,
+          "em_min_per_tool": 0.0,
+          "jobs_per_week": 168.0,
+          "load_min_per_week": 9955.5,
+          "loaded_fraction_of_calendar": 0.9876488095,
+          "lot_visits_per_week": 168.0,
+          "max_starts_per_week": 81.50670484,
+          "pm_min_per_tool": 420.0,
+          "process_min_per_week": 8820.0,
+          "setup_min_per_week": 1135.5,
+          "tools": 1,
+          "utilization": 1.030590062
+        }
+      },
+      "include_setups": true,
+      "max_starts_per_week": 81.50670484,
+      "starts_per_week": {
+        "Pa": 51.0,
+        "Pb": 30.0,
+        "TW": 3.0
+      },
+      "total_starts_per_week": 84.0,
+      "util_cap": 1.0
+    }
+  }
+}

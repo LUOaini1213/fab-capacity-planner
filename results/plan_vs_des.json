@@ -1,0 +1,130 @@
+{
+  "Q4_plus_one_operator": {
+    "des_capacity_conwip60": {
+      "good_lots_per_week": {
+        "half_width": 0.1184606461,
+        "mean": 86.59,
+        "n": 10,
+        "sd": 0.1655965646
+      },
+      "release_rate_per_week": {
+        "half_width": 0.09145197594,
+        "mean": 92.459,
+        "n": 10,
+        "sd": 0.1278410471
+      }
+    },
+    "des_open_release": {
+      "good_lots_per_week_avg": 73.166,
+      "unstable_runs": 0
+    },
+    "operators": 3
+  },
+  "quarters": {
+    "Q4": {
+      "demand_starts_per_week": 79.0,
+      "des_capacity_conwip60": {
+        "good_lots_per_week": {
+          "half_width": 0.07924728267,
+          "mean": 70.245,
+          "n": 10,
+          "sd": 0.1107800624
+        },
+        "release_rate_per_week": {
+          "half_width": 0.08343786443,
+          "mean": 76.096,
+          "n": 10,
+          "sd": 0.1166380917
+        },
+        "scrapped_per_week": 5.851,
+        "wait_operator_fraction": {
+          "DIFF": 0.1268908602,
+          "IMP": 0.1907263026,
+          "LITHO": 0.3154083566
+        },
+        "wait_tech_fraction": {
+          "DIFF": 0.0009909433654,
+          "IMP": 0.002631977028,
+          "LITHO": 0.001008482121
+        }
+      },
+      "des_open_release": {
+        "good_lots_per_week_avg": 68.844,
+        "released_per_week": 79.0,
+        "scrapped_per_week_avg": 5.851,
+        "unstable_runs": 10
+      },
+      "gap_release_rate_minus_demand": -2.904,
+      "operators": 2,
+      "plan_operator_utilization": 0.8215951401,
+      "plan_technician_utilization": 0.4598684211,
+      "plan_tool_utilization": {
+        "DIFF": 0.8267922554,
+        "IMP": 0.7944591417,
+        "LITHO": 0.5050475424
+      },
+      "static_max_starts_per_week": 95.55,
+      "technicians": 2,
+      "tools": {
+        "DIFF": 2,
+        "IMP": 2,
+        "LITHO": 2
+      }
+    },
+    "Q8": {
+      "demand_starts_per_week": 105.0,
+      "des_capacity_conwip60": {
+        "good_lots_per_week": {
+          "half_width": 0.05680972838,
+          "mean": 105.982,
+          "n": 10,
+          "sd": 0.07941452428
+        },
+        "release_rate_per_week": {
+          "half_width": 0.07223176413,
+          "mean": 114.682,
+          "n": 10,
+          "sd": 0.1009730437
+        },
+        "scrapped_per_week": 8.7,
+        "wait_operator_fraction": {
+          "DIFF": 0.05702898447,
+          "IMP": 0.1198660682,
+          "LITHO": 0.2180600996
+        },
+        "wait_tech_fraction": {
+          "DIFF": 0.000994537549,
+          "IMP": 0.008573977891,
+          "LITHO": 0.003697319999
+        }
+      },
+      "des_open_release": {
+        "good_lots_per_week_avg": 96.31,
+        "released_per_week": 105.0,
+        "scrapped_per_week_avg": 8.672,
+        "unstable_runs": 0
+      },
+      "gap_release_rate_minus_demand": 9.682,
+      "operators": 3,
+      "plan_operator_utilization": 0.7483483483,
+      "plan_technician_utilization": 0.6648026316,
+      "plan_tool_utilization": {
+        "DIFF": 0.7326007326,
+        "IMP": 0.7288359788,
+        "LITHO": 0.7038064462
+      },
+      "static_max_starts_per_week": 143.325,
+      "technicians": 2,
+      "tools": {
+        "DIFF": 3,
+        "IMP": 3,
+        "LITHO": 2
+      }
+    }
+  },
+  "settings": {
+    "conwip_wip": 60,
+    "reps": 10,
+    "rule": "FIFO"
+  }
+}

@@ -1,0 +1,13 @@
+variant,group,tools,load_min_per_week,available_min_per_week,utilization,max_starts_per_week
+spec_nosetups,DIFF,2,16800.0,19110.0,0.8791208791,95.55
+spec_nosetups,IMP,2,11760.0,15120.0,0.7777777778,108.0
+spec_nosetups,LITHO,1,8820.0,9660.0,0.9130434783,92.0
+spec_setups,DIFF,2,16800.0,19110.0,0.8791208791,95.55
+spec_setups,IMP,2,11760.0,15120.0,0.7777777778,108.0
+spec_setups,LITHO,1,9955.5,9660.0,1.030590062,81.50670484
+renewal_nosetups,DIFF,2,16800.0,19110.0,0.8791208791,95.55
+renewal_nosetups,IMP,2,11760.0,14324.21053,0.8209876543,102.3157895
+renewal_nosetups,LITHO,1,8820.0,9660.0,0.9130434783,92.0
+renewal_setups,DIFF,2,16800.0,19110.0,0.8791208791,95.55
+renewal_setups,IMP,2,11760.0,14324.21053,0.8209876543,102.3157895
+renewal_setups,LITHO,1,9955.5,9660.0,1.030590062,81.50670484
