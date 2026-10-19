@@ -84,7 +84,7 @@ MUTANTS = [
     ("M61", "capacity.py", "rate *= run_minutes_per_tool(fab, group) / run_minutes_per_tool(ref, group)", "rate *= 1.0", "run-clock EM ignores run time"),
     ("M62", "capacity.py", 'return (fab.week / rate - (em["repair_min"] + em["repair_max"]) / 2.0) / mean_tbf', "return (fab.week / rate) / mean_tbf", "calendar TBF scale ignores repair time"),
     ("M63", "planning.py", 'pulp.lpSum(pc["maint_min_per_tool"][g] * tools_expr(g, q) for g in groups)', 'pulp.lpSum(pc["maint_min_per_tool"][g] * fab.groups[g].tools for g in groups)', "technician load ignores purchased tools"),
-    ("M64", "planning.py", 'prob += (ol - (ol / D) * s[q] <= cap_p * pc["operator_min_per_person"]', 'prob += (ol - (ol / D) * s[q] <= pc["operator_min_per_person"]', "people cap dropped for operators"),
+    ("M64", "planning.py", 'prob += (ol - (ol / D if D else 0.0) * s[q] <= cap_p * pc["operator_min_per_person"]', 'prob += (ol - (ol / D if D else 0.0) * s[q] <= pc["operator_min_per_person"]', "people cap dropped for operators"),
     ("M65", "planning.py", "+ (labour_cost if labour else 0))", "+ 0)", "labour cost left out of the objective"),
     ("M66", "validate.py", "if u > cap_p + 1e-7:", "if u > cap_p + 1.0:", "validator ignores the people cap"),
     ("M67", "validate.py", "labour_pv += sum(wage[r] * (staff[q] - base[r]) / (1 + d) ** q for q in range(T))", "labour_pv += 0.0", "greedy ignores labour cost"),

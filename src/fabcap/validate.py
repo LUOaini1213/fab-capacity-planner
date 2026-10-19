@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import math
+from numbers import Real
 from typing import Any
 
 from .fab import DATA_DIR
@@ -117,9 +118,108 @@ def base_staff() -> dict[str, int]:
     return {"operators": len(pers["operators"]), "technicians": len(pers.get("technicians", {})) or 1}
 
 
+def _finite_nonnegative(value: Any) -> bool:
+    if isinstance(value, bool) or not isinstance(value, Real):
+        return False
+    try:
+        return math.isfinite(value) and value >= 0
+    except OverflowError:
+        return False
+
+
+def _plan_input_problems(plan: Any, data: dict, planning: dict) -> list[str]:
+    """Check the reference-plan contract before arithmetic can hide NaNs or fail on malformed rows."""
+    problems: list[str] = []
+    if not isinstance(plan, dict):
+        return ["plan must be an object"]
+    if plan.get("status") != "Optimal":
+        problems.append("solver status must be Optimal before validating an optimal plan")
+    if plan.get("quarters") != planning["quarters"]:
+        problems.append("quarters must match the reference planning horizon")
+    T = len(planning["quarters"])
+
+    def vector(name: str, values: Any, integer: bool = False) -> None:
+        if not isinstance(values, list) or len(values) != T:
+            problems.append(f"{name} must contain exactly {T} quarterly values")
+            return
+        for q, value in enumerate(values):
+            valid = (isinstance(value, int) and _finite_nonnegative(value)
+                     if integer else _finite_nonnegative(value))
+            if not valid:
+                kind = "nonnegative integer" if integer else "finite nonnegative number"
+                problems.append(f"{name}[{q}] must be a {kind}")
+
+    def matrix(name: str, keys: Any, integer: bool = False) -> None:
+        values = plan.get(name)
+        if not isinstance(values, dict) or set(values) != set(keys):
+            problems.append(f"{name} must contain exactly the reference groups or roles")
+            return
+        for key in keys:
+            vector(f"{name}.{key}", values[key], integer)
+
+    groups = data["fab"]["groups"]
+    for name in ("buy", "installed"):
+        matrix(name, groups, integer=True)
+    for name in ("hire", "staff"):
+        matrix(name, ROLES, integer=True)
+    matrix("utilization", groups)
+    matrix("personnel_utilization", ROLES)
+    demand = plan.get("demand")
+    if not isinstance(demand, dict) or not demand or set(demand) - set(data["routes"]):
+        problems.append("demand must contain known products with quarterly quantities")
+    else:
+        for product, values in demand.items():
+            vector(f"demand.{product}", values)
+    for name in ("total_demand", "shortfall_lots_per_week", "operator_load_min_per_week"):
+        vector(name, plan.get(name))
+    for name in ("target_utilization", "personnel_target_utilization", "capex_musd", "capex_pv_musd",
+                 "labour_cost_musd", "labour_cost_pv_musd", "total_cost_pv_musd", "objective"):
+        if not _finite_nonnegative(plan.get(name)):
+            problems.append(f"{name} must be a finite nonnegative number")
+    cap = plan.get("target_utilization")
+    if _finite_nonnegative(cap) and not 0 < cap <= 1:
+        problems.append("target_utilization must be greater than zero and at most one")
+    if not isinstance(plan.get("labour_constraints"), bool):
+        problems.append("labour_constraints must be a boolean")
+    for name, expected in (("lead_time_quarters", planning["lead_time_quarters"]),
+                           ("hiring_lead_time_quarters", planning["labour"]["hiring_lead_time_quarters"]),
+                           ("personnel_target_utilization", planning["labour"]["target_utilization"])):
+        if isinstance(plan.get(name), bool) or plan.get(name) != expected:
+            problems.append(f"{name} must match the reference planning data")
+    if problems:
+        return problems
+    for q in range(T):
+        total = sum(values[q] for values in demand.values())
+        if not _finite_nonnegative(total):
+            problems.append(f"total demand in {planning['quarters'][q]} must be finite")
+            continue
+        if not math.isclose(total, plan["total_demand"][q], rel_tol=1e-9, abs_tol=TOL):
+            problems.append(f"total demand mismatch in {planning['quarters'][q]}")
+        if plan["shortfall_lots_per_week"][q] > total + TOL:
+            problems.append(f"shortfall exceeds demand in {planning['quarters'][q]}")
+    return problems
+
+
+def _invalid_report(problems: list[str]) -> dict[str, Any]:
+    return {"ok": False, "problems": problems, "max_utilization": None,
+            "max_operator_utilization": None, "max_technician_utilization": None,
+            "capex_musd_recomputed": None}
+
+
 def check_plan(plan: dict[str, Any]) -> dict[str, Any]:
-    """Return a report; ``ok`` is True only if every check passes."""
+    """Check a reference-fab plan; reject invalid inputs before feasibility or cost arithmetic."""
     data, planning = _raw()
+    problems = _plan_input_problems(plan, data, planning)
+    if problems:
+        return _invalid_report(problems)
+    try:
+        return _check_plan(plan, data, planning)
+    except (OverflowError, ZeroDivisionError):
+        return _invalid_report(["plan arithmetic exceeds the finite computable range"])
+
+
+def _check_plan(plan: dict[str, Any], data: dict, planning: dict) -> dict[str, Any]:
+    problems: list[str] = []
     groups = list(data["fab"]["groups"])
     quarters = plan["quarters"]
     T = len(quarters)
@@ -131,20 +231,21 @@ def check_plan(plan: dict[str, Any]) -> dict[str, Any]:
     labour = bool(plan.get("labour_constraints", False))
     price = planning["tool_price_musd"]
     base = base_staff()
-    problems: list[str] = []
     for g in groups:
         for q in range(T):
             b = plan["buy"][g][q]
-            if not isinstance(b, int) or b < 0:
-                problems.append(f"non-integer or negative purchase {g} {quarters[q]}: {b}")
             if b and q + L >= T:
                 problems.append(f"order {g} in {quarters[q]} arrives after the horizon")
+    for r in ROLES:
+        for q, count in enumerate(plan["hire"][r]):
+            if count and (not labour or q + LH >= T):
+                problems.append(f"hire {r} in {quarters[q]} is disabled or arrives after the horizon")
     worst = {}
     worst_people = {}
     for q in range(T):
         starts = {p: plan["demand"][p][q] for p in plan["demand"]}
         total = sum(starts.values())
-        served = 1.0 - plan["shortfall_lots_per_week"][q] / total
+        served = 1.0 - plan["shortfall_lots_per_week"][q] / total if total else 1.0
         loads = independent_loads(starts)
         tools = {}
         for g in groups:
@@ -153,21 +254,25 @@ def check_plan(plan: dict[str, Any]) -> dict[str, Any]:
                 problems.append(f"installed count mismatch {g} {quarters[q]}")
             u = loads[g] * served / (tools[g] * available_per_tool(g))
             worst[(g, q)] = u
+            if not math.isclose(u, plan["utilization"][g][q], rel_tol=1e-9, abs_tol=1e-7):
+                problems.append(f"utilisation report mismatch {g} {quarters[q]}")
             if u > cap + 1e-7:
                 problems.append(f"utilisation {u:.4f} > cap {cap} for {g} in {quarters[q]}")
+        staff = {}
+        for r in ROLES:
+            staff[r] = base[r] + sum(plan["hire"][r][qq] for qq in range(T) if qq + LH <= q)
+            if staff[r] != plan["staff"][r][q]:
+                problems.append(f"staff count mismatch {r} {quarters[q]}")
+        operator_load = independent_operator_load(starts)
+        if not math.isclose(operator_load, plan["operator_load_min_per_week"][q], rel_tol=1e-9, abs_tol=1e-7):
+            problems.append(f"operator load report mismatch {quarters[q]}")
+        uo = operator_load * served / (person_minutes("operators") * staff["operators"])
+        ut = (sum(technician_min_per_tool(g) * tools[g] for g in groups)
+              / (person_minutes("technicians") * staff["technicians"]))
+        for r, u in (("operators", uo), ("technicians", ut)):
+            if not math.isclose(u, plan["personnel_utilization"][r][q], rel_tol=1e-9, abs_tol=1e-7):
+                problems.append(f"personnel utilisation report mismatch {r} {quarters[q]}")
         if labour:
-            staff = {}
-            for r in ROLES:
-                for qq in range(T):
-                    hv = plan["hire"][r][qq]
-                    if q == 0 and (not isinstance(hv, int) or hv < 0):
-                        problems.append(f"non-integer or negative hire {r} {quarters[qq]}: {hv}")
-                staff[r] = base[r] + sum(plan["hire"][r][qq] for qq in range(T) if qq + LH <= q)
-                if staff[r] != plan["staff"][r][q]:
-                    problems.append(f"staff count mismatch {r} {quarters[q]}")
-            uo = independent_operator_load(starts) * served / (person_minutes("operators") * staff["operators"])
-            ut = (sum(technician_min_per_tool(g) * tools[g] for g in groups)
-                  / (person_minutes("technicians") * staff["technicians"]))
             worst_people[("operators", q)] = uo
             worst_people[("technicians", q)] = ut
             for r, u in (("operators", uo), ("technicians", ut)):
@@ -176,6 +281,23 @@ def check_plan(plan: dict[str, Any]) -> dict[str, Any]:
     capex = sum(price[g] * plan["buy"][g][q] for g in groups for q in range(T))
     if abs(capex - plan["capex_musd"]) > 1e-6:
         problems.append(f"capex mismatch {capex} vs {plan['capex_musd']}")
+    discount = [1.0 / (1.0 + planning["discount_rate_per_quarter"]) ** q for q in range(T)]
+    capex_pv = sum(price[g] * plan["buy"][g][q] * discount[q] for g in groups for q in range(T))
+    wage = {"operators": lab["operator_cost_musd_per_quarter"],
+            "technicians": lab["technician_cost_musd_per_quarter"]}
+    extra = {r: [sum(plan["hire"][r][qq] for qq in range(T) if qq + LH <= q) for q in range(T)] for r in ROLES}
+    labour_cost = sum(wage[r] * extra[r][q] for r in ROLES for q in range(T))
+    labour_pv = sum(wage[r] * extra[r][q] * discount[q] for r in ROLES for q in range(T))
+    shortfall_cost = (planning["shortfall_penalty_musd_per_lot"] * planning["weeks_per_quarter"]
+                      * sum(plan["shortfall_lots_per_week"][q] * discount[q] for q in range(T)))
+    for name, expected in (("capex_pv_musd", capex_pv), ("labour_cost_musd", labour_cost),
+                           ("labour_cost_pv_musd", labour_pv), ("total_cost_pv_musd", capex_pv + labour_pv),
+                           ("objective", capex_pv + (labour_pv if labour else 0) + shortfall_cost)):
+        if not math.isclose(plan[name], expected, rel_tol=1e-9, abs_tol=1e-6):
+            problems.append(f"{name} mismatch: expected {expected}, got {plan[name]}")
+    computed = [*worst.values(), *worst_people.values(), capex, capex_pv, labour_cost, labour_pv, shortfall_cost]
+    if any(not math.isfinite(value) for value in computed):
+        return _invalid_report(problems + ["plan arithmetic produced a non-finite value"])
     report = {
         "ok": not problems,
         "problems": problems,
@@ -184,7 +306,7 @@ def check_plan(plan: dict[str, Any]) -> dict[str, Any]:
         "max_technician_utilization": max((v for (r, _), v in worst_people.items() if r == "technicians"), default=None),
         "capex_musd_recomputed": capex,
     }
-    if all(s <= TOL for s in plan["shortfall_lots_per_week"]):
+    if not problems and all(s <= TOL for s in plan["shortfall_lots_per_week"]):
         greedy = greedy_plan(plan["demand"], cap, labour=labour)
         report["greedy_capex_pv_musd"] = greedy["capex_pv_musd"]
         report["greedy_labour_pv_musd"] = greedy["labour_pv_musd"]
