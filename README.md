@@ -473,18 +473,28 @@ independent validator's reported-cost/load and understaffing checks; the
 review's adversarial validator cases; a scripted fake LLM that invents numbers and must be repaired or
 replaced.
 
-`tools/mutation_test.py` applies one source mutation at a time and runs the whole suite. The committed full-run
-results below predate the plan-boundary hardening; they are not a new full mutation run of this revision:
+`tools/mutation_test.py` applies one source mutation at a time and runs the offline suite.
+It returns a nonzero exit status for a surviving non-equivalent mutant, a missing source anchor,
+an inconclusive test run, or a supposedly equivalent mutant that is detected. Only pytest's test-failure
+exit code with JUnit test-failure evidence and no errors counts as a kill; fixture errors,
+timeouts, collection/usage errors and no executed tests do not.
+Each subprocess uses a fresh bytecode-cache location, so equal-length edits cannot reuse a baseline
+module from the same filesystem timestamp tick. Source bytes are restored even on interruption.
+The harness tests exercise real passing, failing and invalid mini-suites; configured live-model tests
+are always excluded from mutation runs. CI runs the complete mutation gate separately from DES reproduction.
+
+The committed full-run results below predate the plan-boundary and harness hardening; they are
+historical evidence, not a new full mutation run of this revision:
 
 | Mutation testing | Value | Source |
 |---|---|---|
 | Mutants killed | 69 | `mutation.json#killed` |
 | Mutants applied (non-equivalent) | 69 | `mutation.json#total` |
 
-The list covers the new code of this revision (failure clock and TBF scale, run-clock EM accounting, the
+The list covers the failure clock and TBF scale, run-clock EM accounting, the
 operator hold, the second technician, labour constraints and the validator's labour check, the router's
 scope rules, and each new validator rule: error payloads, argument-derived outputs, dotted numbers, narrow
-queue names, quarter names). Two documented **equivalent** mutants are excluded from the score
+queue names and quarter names. Two documented **equivalent** mutants are excluded from the score
 (`results/mutation.json#equivalent`): `next_fail <= run_start` vs `<` (the next branch yields the same failure
 time) and dropping the explicit zero case in result rounding (the general path already maps 0.0 and -0.0 to 0.0).
 

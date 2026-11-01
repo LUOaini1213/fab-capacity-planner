@@ -9,9 +9,12 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
+import tempfile
 import time
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -98,16 +101,44 @@ MUTANTS = [
 ]
 
 
-def run_tests(timeout: int) -> tuple[bool, float, str]:
-    t = time.time()
+def run_tests(timeout: int) -> tuple[str, float, str]:
+    """Require test failures, not fixture errors, to establish detection.
+
+    Collection/usage errors, missing tests, interrupts and timeouts are failed
+    validation runs, not evidence that the suite detected a planted defect.
+    """
+    t = time.monotonic()
     try:
-        p = subprocess.run([sys.executable, "-m", "pytest", "-q", "-x", "-p", "no:cacheprovider"], cwd=ROOT,
-                           capture_output=True, text=True, timeout=timeout)
-        failed = p.returncode != 0
-        tail = (p.stdout or "").strip().splitlines()[-1:] if p.stdout else []
-        return failed, time.time() - t, " ".join(tail)
+        # Equal-length mutations within one filesystem timestamp tick must not
+        # reuse baseline .pyc files. A fresh prefix also isolates pre-existing
+        # caches; -B alone only disables writes, not reads of cached bytecode.
+        with tempfile.TemporaryDirectory(prefix="fabcap-mutation-cache-") as cache:
+            env = {**os.environ, "PYTHONPYCACHEPREFIX": cache}
+            junit = Path(cache) / "pytest.xml"
+            p = subprocess.run([sys.executable, "-B", "-m", "pytest", "-q", "-x", "-m", "not llm",
+                                f"--junitxml={junit}",
+                                "-p", "no:cacheprovider"], cwd=ROOT, env=env,
+                               capture_output=True, text=True, timeout=timeout)
+            status = "error"
+            if p.returncode in (0, 1):
+                try:
+                    report = ET.parse(junit).getroot()
+                    executed = [case for case in report.iter("testcase") if case.find("skipped") is None]
+                    errors = list(report.iter("error"))
+                    failures = list(report.iter("failure"))
+                    if executed and not errors:
+                        if p.returncode == 0 and not failures:
+                            status = "passed"
+                        elif p.returncode == 1 and failures:
+                            status = "failed"
+                except (OSError, ET.ParseError):
+                    pass  # Missing or corrupt evidence cannot establish a kill.
+        tail = (p.stdout or p.stderr or "").strip().splitlines()[-1:]
+        return status, time.monotonic() - t, f"exit={p.returncode} " + " ".join(tail)
     except subprocess.TimeoutExpired:
-        return True, time.time() - t, "timeout"
+        return "error", time.monotonic() - t, "timeout"
+    except OSError as exc:
+        return "error", time.monotonic() - t, f"could not start pytest: {exc}"
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -116,14 +147,17 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--timeout", type=int, default=900)
     ap.add_argument("--out", default=str(ROOT / "results" / "mutation.json"))
     a = ap.parse_args(argv)
-    ok, _, tail = run_tests(a.timeout)
-    if ok:  # "failed" is True -> baseline broken
+    if a.timeout <= 0:
+        ap.error("--timeout must be positive")
+    selected = [m for m in MUTANTS if a.only is None or m[0] == a.only]
+    if not selected:
+        ap.error(f"no mutants selected: {a.only!r}")
+    baseline, _, tail = run_tests(a.timeout)
+    if baseline != "passed":
         print("baseline test suite fails; fix it first:", tail)
         return 2
     rows = []
-    for mid, rel, orig, repl, what in MUTANTS:
-        if a.only and mid != a.only:
-            continue
+    for mid, rel, orig, repl, what in selected:
         path = SRC / rel
         src = path.read_bytes()
         text = src.decode("utf-8")
@@ -134,22 +168,28 @@ def main(argv: list[str] | None = None) -> int:
             continue
         try:
             path.write_bytes(text.replace(orig, repl).encode("utf-8"))
-            killed, secs, tail = run_tests(a.timeout)
+            outcome, secs, tail = run_tests(a.timeout)
         finally:
             path.write_bytes(src)
-        status = "killed" if killed else "SURVIVED"
-        if mid.startswith("E"):
-            status = "equivalent (survived, as expected)" if not killed else "killed: NOT equivalent, reclassify"
+        if outcome == "error":
+            status = "INCONCLUSIVE"
+        elif mid.startswith("E"):
+            status = "equivalent (survived, as expected)" if outcome == "passed" else "killed: NOT equivalent, reclassify"
+        else:
+            status = "killed" if outcome == "failed" else "SURVIVED"
         rows.append({"id": mid, "file": rel, "what": what, "status": status, "seconds": round(secs, 1), "pytest": tail})
         print(mid, status, f"{secs:.1f}s", what, flush=True)
-    applied = [r for r in rows if r["status"] in ("killed", "SURVIVED")]
+    applied = [r for r in rows if not r["id"].startswith("E") and not r["status"].startswith("NOT APPLIED")]
     killed = sum(r["status"] == "killed" for r in applied)
+    passed = all(r["status"] in {"killed", "equivalent (survived, as expected)"} for r in rows)
     out = {"killed": killed, "total": len(applied), "equivalent": [r for r in rows if r["id"].startswith("E")],
-           "not_applied": [r["id"] for r in rows if r["status"].startswith("NOT APPLIED")], "mutants": rows}
+           "not_applied": [r["id"] for r in rows if r["status"].startswith("NOT APPLIED")],
+           "inconclusive": [r["id"] for r in rows if r["status"] == "INCONCLUSIVE"],
+           "passed": passed, "mutants": rows}
     if not a.only:
         Path(a.out).write_text(json.dumps(out, indent=2) + "\n", encoding="ascii", newline="\n")
     print(f"killed {killed}/{len(applied)}")
-    return 0
+    return 0 if passed else 1
 
 
 if __name__ == "__main__":
