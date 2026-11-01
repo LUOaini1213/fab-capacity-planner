@@ -19,6 +19,7 @@ check in ``experiments.run_plan_vs_des`` keeps it).
 """
 from __future__ import annotations
 
+import math
 from typing import Any
 
 import pulp
@@ -31,6 +32,11 @@ def scenario_demand(planning: dict[str, Any], scenario: str = "base", multiplier
                     from_quarter: int | None = None, pc_ramp_factor: float | None = None) -> dict[str, list[float]]:
     """Quarterly demand (lots/week) per product for a named scenario or explicit overrides."""
     base = {p: [float(v) for v in vals] for p, vals in planning["demand_base"].items()}
+    T = len(planning["quarters"])
+    if not T or not base or any(len(vals) != T for vals in base.values()):
+        raise ValueError("demand must contain one value per product and planning quarter")
+    if any(not math.isfinite(v) or v < 0 for vals in base.values() for v in vals):
+        raise ValueError("demand must contain finite nonnegative quantities")
     spec = dict(planning["scenarios"].get(scenario, {})) if scenario else {}
     if scenario and scenario not in planning["scenarios"]:
         raise KeyError(f"unknown scenario {scenario!r}")
@@ -44,6 +50,8 @@ def scenario_demand(planning: dict[str, Any], scenario: str = "base", multiplier
     out = {p: list(v) for p, v in base.items()}
     if "pc_ramp_factor" in spec and "Pc" in out:
         f = float(spec["pc_ramp_factor"])
+        if not math.isfinite(f) or f < 0:
+            raise ValueError("pc_ramp_factor must be finite and >= 0")
         for i, v in enumerate(base["Pc"]):
             extra = v * (f - 1.0)
             extra = min(extra, out["Pa"][i])
@@ -51,13 +59,19 @@ def scenario_demand(planning: dict[str, Any], scenario: str = "base", multiplier
             out["Pa"][i] = out["Pa"][i] - extra
     if "multiplier" in spec:
         mult = float(spec["multiplier"])
-        q0 = int(spec.get("from_quarter", 1))
-        if mult < 0:
-            raise ValueError("multiplier must be >= 0")
+        raw_q0 = spec.get("from_quarter", 1)
+        if (isinstance(raw_q0, bool) or not isinstance(raw_q0, (int, float))
+                or not math.isfinite(raw_q0) or int(raw_q0) != raw_q0 or not 1 <= raw_q0 <= T):
+            raise ValueError("from_quarter must be a whole planning quarter within the horizon")
+        q0 = int(raw_q0)
+        if not math.isfinite(mult) or mult < 0:
+            raise ValueError("multiplier must be finite and >= 0")
         for p in out:
             if p == "TW":
                 continue
             out[p] = [v * mult if (i + 1) >= q0 else v for i, v in enumerate(out[p])]
+    if any(not math.isfinite(v) or v < 0 for vals in out.values() for v in vals):
+        raise ValueError("scenario demand must contain finite nonnegative quantities")
     return out
 
 
@@ -96,6 +110,8 @@ def solve_plan(scenario: str = "base", multiplier: float | None = None, from_qua
     T = len(quarters)
     L = int(planning["lead_time_quarters"])
     cap = float(target_utilization if target_utilization is not None else planning["target_utilization"])
+    if not math.isfinite(cap) or not 0 < cap <= 1:
+        raise ValueError("target_utilization must be finite, greater than zero and at most one")
     d = float(planning["discount_rate_per_quarter"])
     price = planning["tool_price_musd"]
     penalty = float(planning["shortfall_penalty_musd_per_lot"]) * planning["weeks_per_quarter"]
@@ -133,10 +149,10 @@ def solve_plan(scenario: str = "base", multiplier: float | None = None, from_qua
         D = loads[q]["total"]
         for g in groups:
             ld = loads[q]["load"][g]
-            prob += ld - (ld / D) * s[q] <= cap * avail[g] * tools_expr(g, q), f"cap_{g}_{q}"
+            prob += ld - (ld / D if D else 0.0) * s[q] <= cap * avail[g] * tools_expr(g, q), f"cap_{g}_{q}"
         if labour:
             ol = loads[q]["operator_load"]
-            prob += (ol - (ol / D) * s[q] <= cap_p * pc["operator_min_per_person"]
+            prob += (ol - (ol / D if D else 0.0) * s[q] <= cap_p * pc["operator_min_per_person"]
                      * (base_staff["operators"] + extra_staff_expr("operators", q))), f"ops_{q}"
             prob += (pulp.lpSum(pc["maint_min_per_tool"][g] * tools_expr(g, q) for g in groups)
                      <= cap_p * pc["technician_min_per_person"]
@@ -151,13 +167,16 @@ def solve_plan(scenario: str = "base", multiplier: float | None = None, from_qua
                 prob += h[r, q] == 0, f"latehire_{r}_{q}"
     status = prob.solve(pulp.PULP_CBC_CMD(msg=0))
     status_name = pulp.LpStatus[status]
+    if status_name != "Optimal":
+        raise RuntimeError(f"planning solver did not return an optimal plan: {status_name}")
     buys = {g: [int(round(x[g, q].value() or 0)) for q in range(T)] for g in groups}
     hires = {r: [int(round(h[r, q].value() or 0)) for q in range(T)] for r in roles}
     short = [max(0.0, float(s[q].value() or 0.0)) for q in range(T)]
     installed = {g: [fab.groups[g].tools + sum(buys[g][qq] for qq in range(T) if qq + L <= q) for q in range(T)]
                  for g in groups}
     staff = {r: [base_staff[r] + sum(hires[r][qq] for qq in range(T) if qq + LH <= q) for q in range(T)] for r in roles}
-    served = [1 - short[q] / loads[q]["total"] for q in range(T)]
+    # A quarter with no demand has zero load/shortfall; installed tools still need maintenance.
+    served = [1 - short[q] / loads[q]["total"] if loads[q]["total"] else 1.0 for q in range(T)]
     util = {g: [loads[q]["load"][g] * served[q] / (avail[g] * installed[g][q]) for q in range(T)] for g in groups}
     putil = {
         "operators": [loads[q]["operator_load"] * served[q] / (pc["operator_min_per_person"] * staff["operators"][q])

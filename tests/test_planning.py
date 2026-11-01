@@ -131,3 +131,39 @@ def test_lower_cap_costs_more():
     a = solve_plan("base", target_utilization=0.85)
     b = solve_plan("base", target_utilization=0.75)
     assert b["capex_pv_musd"] > a["capex_pv_musd"]
+
+
+@pytest.mark.parametrize("kwargs", [
+    {"multiplier": 1.2, "from_quarter": 9},
+    {"multiplier": 1.2, "from_quarter": True},
+])
+def test_invalid_scenario_inputs_are_rejected_before_solving(kwargs):
+    with pytest.raises(ValueError):
+        scenario_demand(load_planning(), **kwargs)
+
+
+@pytest.mark.parametrize("cap", [0, -1, 1.1, float("nan"), float("inf")])
+def test_invalid_target_utilization_is_rejected(cap):
+    with pytest.raises(ValueError, match="target_utilization"):
+        solve_plan(target_utilization=cap)
+
+
+@pytest.mark.parametrize("status", [0, -1, -2, -3])
+def test_solver_failure_cannot_be_presented_as_a_plan(monkeypatch, status):
+    import pulp
+
+    monkeypatch.setattr(pulp.LpProblem, "solve", lambda *args, **kwargs: status)
+    with pytest.raises(RuntimeError, match="did not return an optimal plan"):
+        solve_plan()
+
+
+def test_sum_of_finite_demands_cannot_overflow_the_validation_report(plans):
+    import json
+
+    plan = copy.deepcopy(plans["base"])
+    for values in plan["demand"].values():
+        values[0] = 10 ** 308
+    report = check_plan(plan)
+    assert report["ok"] is False
+    assert any("demand" in issue and "finite" in issue for issue in report["problems"])
+    json.dumps(report, allow_nan=False)

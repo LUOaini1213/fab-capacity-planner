@@ -171,6 +171,13 @@ from DIFF to IMP but not the purchases. The labour constraints add hires but do 
 with separate code and confirms the MILP cost equals a greedy plan that is optimal when nothing is left
 unserved (`plan_*.json#validation.greedy_equals_milp` is true in all three scenarios).
 
+The checker validates plans against the reference fab and planning data. It rejects malformed quarterly
+arrays, non-finite or negative quantities, invalid counts, shortfalls above demand, and non-optimal solver
+statuses before evaluating feasibility. Purchase, hiring and shortfall costs are recomputed separately.
+Zero-demand quarters are supported: production and operator loads are zero, while installed tools retain
+their scheduled PM and expected repair workload. An invalid plan returns `ok: false` with reasons;
+uncomputed validation metrics are `null` rather than a reassuring zero.
+
 **The plan against the simulation.** The base plan's Q4 and Q8 configurations (demand mix, tools and people)
 were run through the full DES (FIFO, 10 replications, calendar failure clock as in the plan; hired operators
 assumed qualified on all three groups):
@@ -455,17 +462,19 @@ What this says:
 
 ## Tests and mutation testing
 
-85 unit/property/regression tests (`tests/`; one needs Ollama and is skipped by default) plus one
+Unit/property/regression tests (`tests/`; one needs Ollama and is skipped by default) plus one
 parametrised check per number quoted in this README.
 Test values are deliberately asymmetric (e.g. a toy fab with 30/12 starts, 3 tools of batch 2, 5/100/15-minute
 steps) so that swapped or dropped terms change the answer. Highlights: exact reproduction of Kempf's three
 capacity tables; DES = static model in the deterministic limit; lot conservation; batching, test-lot and
 setup rules on hand-built queues; the run-time failure clock ageing only while running; one operator held from
-setup through load; the MILP's labour constraints and the independent validator's understaffing check; the
+setup through load; the MILP's labour constraints, zero-demand quarters, malformed-plan rejection and the
+independent validator's reported-cost/load and understaffing checks; the
 review's adversarial validator cases; a scripted fake LLM that invents numbers and must be repaired or
 replaced.
 
-`tools/mutation_test.py` applies one source mutation at a time and runs the whole suite:
+`tools/mutation_test.py` applies one source mutation at a time and runs the whole suite. The committed full-run
+results below predate the plan-boundary hardening; they are not a new full mutation run of this revision:
 
 | Mutation testing | Value | Source |
 |---|---|---|
