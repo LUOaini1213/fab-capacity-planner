@@ -92,11 +92,24 @@ MUTANTS = [
     ("M66", "validate.py", "if u > cap_p + 1e-7:", "if u > cap_p + 1.0:", "validator ignores the people cap"),
     ("M67", "validate.py", "labour_pv += sum(wage[r] * (staff[q] - base[r]) / (1 + d) ** q for q in range(T))", "labour_pv += 0.0", "greedy ignores labour cost"),
     ("M71", "capacity.py", 'maint = g.tools * (av["pm_min_per_tool"] + em_minutes_per_tool(fab, name, em_mode, clock, ref))', 'maint = g.tools * (av["pm_min_per_tool"] + av["em_min_per_tool"])', "personnel load ignores the failure clock"),
+    # plan input contract and arithmetic guards added with the plan-boundary change (validate.py)
+    ("M72", "validate.py", 'if plan.get("status") != "Optimal":', "if False:", "non-optimal solver status accepted"),
+    ("M73", "validate.py", "return math.isfinite(value) and value >= 0", "return math.isfinite(value) and value >= -1", "negative plan values accepted"),
+    ("M74", "validate.py", "if isinstance(value, bool) or not isinstance(value, Real):", "if not isinstance(value, Real):", "booleans accepted as plan numbers"),
+    ("M75", "validate.py", 'if plan["shortfall_lots_per_week"][q] > total + TOL:', "if False:", "shortfall above demand accepted"),
+    ("M76", "validate.py", "if _finite_nonnegative(cap) and not 0 < cap <= 1:", "if _finite_nonnegative(cap) and not 0 <= cap:", "utilisation target outside (0, 1] accepted"),
+    ("M78", "validate.py", "if any(not math.isfinite(value) for value in computed):", "if False:", "non-finite plan arithmetic not rejected"),
     # equivalent mutants (documented, excluded from the score): they cannot change any observable output
     ("E01", "des.py", "if m.next_fail <= run_start:", "if m.next_fail < run_start:",
      "EQUIVALENT: when next_fail == run_start the elif branch sets fail_at = next_fail = run_start, same behaviour"),
     ("E02", "io.py", "    if x == 0.0:\n        return 0.0\n", "",
      "EQUIVALENT: f'{0.0:.10g}' is '0' and the final line maps -0.0 to 0.0 anyway"),
+    ("E03", "validate.py", 'served = 1.0 - plan["shortfall_lots_per_week"][q] / total if total else 1.0',
+     'served = 1.0 - plan["shortfall_lots_per_week"][q] / total if total else 0.0',
+     "EQUIVALENT: with zero demand the tool and operator loads that multiply `served` are zero, so u = 0 either way"),
+    ("E04", "planning.py", 'served = [1 - short[q] / loads[q]["total"] if loads[q]["total"] else 1.0 for q in range(T)]',
+     'served = [1 - short[q] / loads[q]["total"] if loads[q]["total"] else 0.0 for q in range(T)]',
+     "EQUIVALENT: with zero demand loads[q] is zero, so every product with `served` is zero either way"),
     ("M38", "des.py", "self._acc(g, \"run\", run_start, self.env.now)", "self._acc(g, \"load\", run_start, self.env.now)", "run time booked as load (accounting)"),
 ]
 

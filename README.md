@@ -1,7 +1,23 @@
 # fab-capacity-planner
 
-Capacity planning for a small **re-entrant semiconductor fab**, done four ways and checked against each
-other, plus a tool-calling agent that answers capacity questions from numbers the models produce.
+Capacity planning for the Intel Mini-Fab teaching case (a 5-machine re-entrant semiconductor fab), done four
+ways - static model, G/G/m queueing, capex/staffing MILP, SimPy discrete-event simulation (DES) - and
+cross-checked, plus a tool-calling agent whose numbers are checked by a validator. Main finding: people, not
+machines, set the capacity; the static model and the MILP plan, which see personnel only as average load, both
+overstate it. Main limits: a teaching case with invented planning costs, an assumed control policy, and a
+small single-author agent evaluation ([Limitations](#limitations)).
+
+| Findings at a glance | Value | Source |
+|---|---|---|
+| DES capacity with Kempf's assumptions (no setups, failures or personnel), starts/week | 92.04 | `des_layers.json#layers.0_no_setups_no_failures.starts_per_week.mean` |
+| Static model max starts/week (machines only, bottleneck at 100 %) | 81.5 | `capacity.json#main.max_starts_per_week` |
+| DES capacity of the full model (with technician and two operators), starts/week ([section 4](#4-simulation-vs-the-models-where-the-static-model-is-wrong)) | 60.93 | `des_layers.json#layers.4_plus_operators_full.starts_per_week.mean` |
+| MILP plan's Q4 configuration in the DES: saturation release rate, starts/week, vs 79 demanded ([section 3](#3-capital-and-staffing-plan-milp-illustrative-data)) | 76.1 | `plan_vs_des.json#quarters.Q4.des_capacity_conwip60.release_rate_per_week.mean` |
+| Buying a third implanter, change in good lots/week (DES, default failure model; [section 5](#5-debottlenecking-static-ranking-vs-simulated-ranking)) | -12.15 | `whatif.json#des.options.7.gain_lots_per_week` |
+| Keyword router, held-out in-scope questions correct, of 24 ([section 6](#6-agent)) | 16 | `agent_eval_router.json#summary.heldout.in_scope_correct` |
+| qwen3.5:4b + validator, same 24 held-out questions | 24 | `agent_eval_llm_qwen3.5_4b.json#summary_final.heldout.in_scope_correct` |
+
+What is in it:
 
 1. **Static capacity model** - load, availability, utilisation, bottleneck, maximum starts, product-mix sensitivity.
 2. **Queueing approximation** - G/G/m (Kingman / Sakasegawa form) cycle time per tool group and an X-factor curve.
@@ -45,14 +61,18 @@ product **Pc** with one more litho/implant loop) is **invented for illustration*
 python -m venv .venv && . .venv/bin/activate      # Windows: .venv\Scripts\activate
 pip install -r requirements.txt && pip install -e . --no-deps
 pytest -q                                          # unit tests + README checks; LLM test skipped
-python scripts/reproduce.py                        # all results/ files (about 30-60 min on 4-6 cores)
+python scripts/reproduce.py                        # all results/ files (about 25 min on a 4-core CI runner)
 python scripts/reproduce.py --stages static       # static + queueing + MILP only (seconds)
 python -m fabcap.agent.evaluate --llm qwen3.5:4b   # optional: needs a local Ollama server
-python tools/mutation_test.py                      # mutation testing (about 30 min)
+python tools/mutation_test.py                      # mutation testing (about 6 min on Linux CI, slower on Windows)
 ```
 
+Environment variables: `FABCAP_WORKERS=N` sets the number of processes for DES replications (default 4);
+`FABCAP_LLM_MODEL=qwen3.5:4b` enables the one Ollama-backed test (skipped when unset).
+
 `results/*.json|csv` are byte-identical between Windows 11 (Python 3.11.5) and Ubuntu 24.04 under WSL
-(Python 3.11.16); see [Determinism](#determinism). Figures are regenerated but not byte-compared.
+(Python 3.11.16); see [Determinism](#determinism). `.gitattributes` checks text files out with LF on every OS,
+so the byte-compare also holds on a default Windows clone (`core.autocrlf=true`). Figures are regenerated but not byte-compared.
 
 ## Results
 
@@ -228,7 +248,7 @@ both readings of the failure rate (calendar clock in both columns).
 | Good lots/week of the full model (starts minus scrap) | 55.27 | `des_layers.json#layers.4_plus_operators_full.throughput_per_week.mean` | 58.43 | `des_layers.json#layers_2_per_week.4_plus_operators_full.throughput_per_week.mean` |
 
 (The CONWIP start count includes the replacements of scrapped lots, so in the machines-only layers the start
-rate is slightly higher with 2.95 failures/week even though good output is lower: 82.3 vs 83.1 lots/week.)
+rate is slightly higher with 2.95 failures/week even though good output is lower: 82.3<!--src: des_layers.json#layers.1_machines_only.throughput_per_week.mean--> vs 83.1<!--src: des_layers.json#layers_2_per_week.1_machines_only.throughput_per_week.mean--> lots/week.)
 
 Findings, each backed by the files cited:
 
@@ -259,10 +279,10 @@ Findings, each backed by the files cited:
    | per machine-week, renewal formula | 2.95 | `des_validation.json#imp_failures_per_machine_week.renewal_from_distribution` |
    | scrapped lots/week, DES (literal reading) | 5.9 | `des_validation.json#runs.FIFO_deterministic.scrapped_per_week.mean` |
 
-4. **People, not machines, set the capacity.** The technician costs 7.4 starts/week and the two operators
-   another 19.8 (literal failure reading). Kempf's personnel table (77.8 % operator, 77.5 % technician load) and
+4. **People, not machines, set the capacity.** The technician costs 7.4<!--src: des_layers.json#layers.2_plus_transport.starts_per_week.mean - des_layers.json#layers.3_plus_technician.starts_per_week.mean--> starts/week and the two operators
+   another 19.8<!--src: des_layers.json#layers.3_plus_technician.starts_per_week.mean - des_layers.json#layers.4_plus_operators_full.starts_per_week.mean--> (literal failure reading). Kempf's personnel table (77.8 % operator, 77.5 % technician load) and
    ours (85.3 %, 87.0 %) both look comfortable on average, but in the full model the bottleneck waits for
-   people (31.4 % of its time) almost as long as it runs (37.3 %; table below).
+   people (31.4<!--src: (des_rules.json#runs.FIFO_conwip40.groups.LITHO.state_fraction.wait_operator + des_rules.json#runs.FIFO_conwip40.groups.LITHO.state_fraction.wait_tech) * 100--> % of its time) almost as long as it runs (37.3 %; table below).
 
    | Full model, FIFO, CONWIP | Value | Source |
    |---|---|---|
@@ -288,7 +308,7 @@ Findings, each backed by the files cited:
    | this DES, CONWIP 40 release rate, run-time clock, 2/week at 84 starts | 62.7 | `des_failure_models.json#models.run_spec.baseline_release_rate_per_week.mean` |
 
    At 84 released, with the same throughput definition, the results agree within about 4 %; the maximum
-   release rate here is 8-9 % higher than S3's. The two capacity measures are not identical (CONWIP with 40 lots vs
+   release rate here is 8<!--src: (des_failure_models.json#models.calendar_spec.baseline_release_rate_per_week.mean / des_failure_models.json#van_den_berk_S3.fifo_max_release_rate - 1) * 100-->-9<!--src: (des_failure_models.json#models.run_spec.baseline_release_rate_per_week.mean / des_failure_models.json#van_den_berk_S3.fifo_max_release_rate - 1) * 100--> % higher than S3's. The two capacity measures are not identical (CONWIP with 40 lots vs
    S3's search for the open release rate at which WIP stops growing), and the models differ in control
    details (break timing, PM and operator dispatching), so the agreement is approximate.
 
@@ -371,8 +391,8 @@ brackets.
 
 The static model ranks litho levers only (litho is its bottleneck) and calls everything else worthless. The
 simulation ranks a $0 operator-priority policy and a third operator first under every failure model (the
-third operator gains 13.7-15.7 lots/week across the four), and buying an implanter **reduces** good output
-under every failure model, by 3.3 to 12.2 lots/week. How much depends on the failure clock: with a calendar
+third operator gains 13.7<!--src: des_failure_models.json#models.run_dist.options.add_operator_imp_litho.gain_lots_per_week-->-15.7<!--src: des_failure_models.json#models.calendar_spec.options.add_operator_imp_litho.gain_lots_per_week--> lots/week across the four), and buying an implanter **reduces** good output
+under every failure model, by 3.3<!--src: -des_failure_models.json#models.run_spec.options.add_IMP.gain_lots_per_week--> to 12.2<!--src: -des_failure_models.json#models.calendar_dist.options.add_IMP.gain_lots_per_week--> lots/week. How much depends on the failure clock: with a calendar
 clock a lightly used third implanter still fails about as often as the others, so more lots are scrapped
 (7.96 instead of 5.66 per week); with a run-time clock the same lots cause the same failures and scrap does
 not rise. What remains in every model is PM: each implanter brings 4 h of PM per day to a single technician,
@@ -483,8 +503,9 @@ module from the same filesystem timestamp tick. Source bytes are restored even o
 The harness tests exercise real passing, failing and invalid mini-suites; configured live-model tests
 are always excluded from mutation runs. CI runs the complete mutation gate separately from DES reproduction.
 
-The committed full-run results below predate the plan-boundary and harness hardening; they are
-historical evidence, not a new full mutation run of this revision:
+CI re-runs the full gate on every push and uploads its `mutation.json` as an artifact; the committed
+`results/mutation.json` is the artifact of the run that added mutants M72-M79 for the plan-input contract,
+the non-finite guards and the zero-demand branches (`validate.py`, `planning.py`):
 
 | Mutation testing | Value | Source |
 |---|---|---|
@@ -494,9 +515,12 @@ historical evidence, not a new full mutation run of this revision:
 The list covers the failure clock and TBF scale, run-clock EM accounting, the
 operator hold, the second technician, labour constraints and the validator's labour check, the router's
 scope rules, and each new validator rule: error payloads, argument-derived outputs, dotted numbers, narrow
-queue names and quarter names. Two documented **equivalent** mutants are excluded from the score
+queue names and quarter names. Four documented **equivalent** mutants are excluded from the score
 (`results/mutation.json#equivalent`): `next_fail <= run_start` vs `<` (the next branch yields the same failure
-time) and dropping the explicit zero case in result rounding (the general path already maps 0.0 and -0.0 to 0.0).
+time), dropping the explicit zero case in result rounding (the general path already maps 0.0 and -0.0 to 0.0),
+and the zero-demand `served` fallback in the validator and in the MILP report (1.0 vs 0.0; with zero demand
+every load it multiplies is zero). Mutants M73, M75 and M76 first survived because later consistency checks
+also reject the corrupted plans; `tests/test_plan_boundaries.py` now asserts the input contract's own message.
 
 ## Determinism
 

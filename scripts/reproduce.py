@@ -1,7 +1,7 @@
 """Regenerate every file in results/ (except the optional LLM evaluation).
 
 Usage:
-    python scripts/reproduce.py                 # everything (about 10-20 min on 4 cores)
+    python scripts/reproduce.py                 # everything (about 25 min on a 4-core CI runner)
     python scripts/reproduce.py --stages static # capacity + queueing + planning only (seconds)
     python scripts/reproduce.py --quick         # short DES runs into a temp dir (smoke test)
 """

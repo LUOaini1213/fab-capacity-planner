@@ -1,0 +1,4 @@
+# Check out text as LF on every OS so results/ byte-compares hold on Windows (core.autocrlf=true).
+* text=auto eol=lf
+*.png binary
+*.pdf binary

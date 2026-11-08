@@ -27,6 +27,31 @@ jobs:
           python scripts/reproduce.py --stages static,agent --out /tmp/results
           python scripts/compare_results.py results /tmp/results --exclude whatif.json,des_rules.json
 
+  static-windows:
+    # a default Windows checkout (core.autocrlf=true) must still byte-compare; guarded by .gitattributes
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install pinned dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          python -m pip install -e . --no-deps
+      - name: README number checks
+        run: python -m pytest -q tests/test_readme_numbers.py
+      - name: Static stages reproduce byte-identically on Windows
+        run: |
+          git config --get core.autocrlf || true
+          mkdir -p "$RUNNER_TEMP/results"
+          cp results/whatif.json results/des_rules.json "$RUNNER_TEMP/results/"
+          python scripts/reproduce.py --stages static,agent --out "$RUNNER_TEMP/results"
+          python scripts/compare_results.py results "$RUNNER_TEMP/results" --exclude whatif.json,des_rules.json
+
   mutation:
     runs-on: ubuntu-latest
     steps:
