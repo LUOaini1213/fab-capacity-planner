@@ -204,3 +204,25 @@ def test_valid_shortfall_and_regular_plans_remain_accepted_without_mutation(labo
                    zip(plan["shortfall_lots_per_week"], plan["total_demand"]))
         assert (plan["shortfall_lots_per_week"][0] > 0) == (multiplier == 2)
         json.dumps(report, allow_nan=False)
+
+
+# The input contract must name the broken field itself. Later consistency checks also reject most of
+# these plans, so asserting only `ok is False` would let a weakened contract guard go unnoticed.
+@pytest.mark.parametrize(("path", "message"), [
+    (("capex_musd",), "capex_musd must be a finite nonnegative number"),
+    (("shortfall_lots_per_week", 0), "shortfall_lots_per_week[0] must be a finite nonnegative number"),
+    (("demand", "Pc", 0), "demand.Pc[0] must be a finite nonnegative number"),
+])
+def test_small_negative_quantities_are_named_by_the_input_contract(base_plan, path, message):
+    assert message in assert_rejected(replaced(base_plan, path, -0.25))["problems"]
+
+
+def test_shortfall_above_demand_is_named_by_the_input_contract(base_plan):
+    bad = replaced(base_plan, ("shortfall_lots_per_week", 0), base_plan["total_demand"][0] + 1)
+    assert f"shortfall exceeds demand in {base_plan['quarters'][0]}" in assert_rejected(bad)["problems"]
+
+
+@pytest.mark.parametrize("value", [0, 1.01])
+def test_capacity_target_outside_unit_interval_is_named_by_the_input_contract(base_plan, value):
+    problems = assert_rejected(replaced(base_plan, ("target_utilization",), value))["problems"]
+    assert "target_utilization must be greater than zero and at most one" in problems

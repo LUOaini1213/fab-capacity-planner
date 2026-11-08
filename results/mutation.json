@@ -1,593 +1,675 @@
 {
-  "killed": 69,
-  "total": 69,
+  "killed": 75,
+  "total": 75,
   "equivalent": [
     {
       "id": "E01",
       "file": "des.py",
       "what": "EQUIVALENT: when next_fail == run_start the elif branch sets fail_at = next_fail = run_start, same behaviour",
       "status": "equivalent (survived, as expected)",
-      "seconds": 19.7,
-      "pytest": "239 passed, 1 skipped in 18.33s"
+      "seconds": 11.3,
+      "pytest": "exit=0 394 passed, 1 deselected in 10.84s"
     },
     {
       "id": "E02",
       "file": "io.py",
       "what": "EQUIVALENT: f'{0.0:.10g}' is '0' and the final line maps -0.0 to 0.0 anyway",
       "status": "equivalent (survived, as expected)",
-      "seconds": 19.7,
-      "pytest": "239 passed, 1 skipped in 18.25s"
+      "seconds": 11.6,
+      "pytest": "exit=0 394 passed, 1 deselected in 11.05s"
+    },
+    {
+      "id": "E03",
+      "file": "validate.py",
+      "what": "EQUIVALENT: with zero demand the tool and operator loads that multiply `served` are zero, so u = 0 either way",
+      "status": "equivalent (survived, as expected)",
+      "seconds": 11.6,
+      "pytest": "exit=0 394 passed, 1 deselected in 11.09s"
+    },
+    {
+      "id": "E04",
+      "file": "planning.py",
+      "what": "EQUIVALENT: with zero demand loads[q] is zero, so every product with `served` is zero either way",
+      "status": "equivalent (survived, as expected)",
+      "seconds": 11.4,
+      "pytest": "exit=0 394 passed, 1 deselected in 10.88s"
     }
   ],
   "not_applied": [],
+  "inconclusive": [],
+  "passed": true,
   "mutants": [
     {
       "id": "M01",
       "file": "fab.py",
       "what": "occupancy drops unload",
       "status": "killed",
-      "seconds": 7.5,
-      "pytest": "1 failed, 4 passed in 5.99s"
+      "seconds": 1.7,
+      "pytest": "exit=1 1 failed, 4 passed, 1 deselected in 1.13s"
     },
     {
       "id": "M02",
       "file": "capacity.py",
       "what": "batching ignored in load",
       "status": "killed",
-      "seconds": 7.4,
-      "pytest": "1 failed, 4 passed in 5.38s"
+      "seconds": 1.6,
+      "pytest": "exit=1 1 failed, 4 passed, 1 deselected in 1.13s"
     },
     {
       "id": "M03",
       "file": "capacity.py",
       "what": "wrong setup for step change",
       "status": "killed",
-      "seconds": 8.9,
-      "pytest": "1 failed, 4 passed in 6.74s"
+      "seconds": 1.6,
+      "pytest": "exit=1 1 failed, 4 passed, 1 deselected in 1.15s"
     },
     {
       "id": "M04",
       "file": "capacity.py",
       "what": "wrong setup for both change",
       "status": "killed",
-      "seconds": 9.5,
-      "pytest": "1 failed, 4 passed in 7.20s"
+      "seconds": 1.6,
+      "pytest": "exit=1 1 failed, 4 passed, 1 deselected in 1.11s"
     },
     {
       "id": "M05",
       "file": "capacity.py",
       "what": "PM period ignored",
       "status": "killed",
-      "seconds": 11.2,
-      "pytest": "1 failed, 19 passed in 9.07s"
+      "seconds": 1.9,
+      "pytest": "exit=1 1 failed, 19 passed, 1 deselected in 1.42s"
     },
     {
       "id": "M06",
       "file": "capacity.py",
       "what": "renewal EM fraction wrong",
       "status": "killed",
-      "seconds": 10.4,
-      "pytest": "1 failed, 24 passed, 1 skipped in 8.92s"
+      "seconds": 1.9,
+      "pytest": "exit=1 1 failed, 24 passed, 1 deselected in 1.45s"
     },
     {
       "id": "M07",
       "file": "capacity.py",
       "what": "spec EM uses max repair",
       "status": "killed",
-      "seconds": 10.5,
-      "pytest": "1 failed, 22 passed, 1 skipped in 8.59s"
+      "seconds": 1.9,
+      "pytest": "exit=1 1 failed, 22 passed, 1 deselected in 1.43s"
     },
     {
       "id": "M08",
       "file": "capacity.py",
       "what": "util cap ignored",
       "status": "killed",
-      "seconds": 8.4,
-      "pytest": "1 failed, 26 passed, 1 skipped in 6.90s"
+      "seconds": 2.0,
+      "pytest": "exit=1 1 failed, 26 passed, 1 deselected in 1.46s"
     },
     {
       "id": "M09",
       "file": "capacity.py",
       "what": "bottleneck = least loaded",
       "status": "killed",
-      "seconds": 9.3,
-      "pytest": "1 failed, 15 passed in 7.81s"
+      "seconds": 1.9,
+      "pytest": "exit=1 1 failed, 15 passed, 1 deselected in 1.37s"
     },
     {
       "id": "M10",
       "file": "capacity.py",
       "what": "setups dropped from utilisation",
       "status": "killed",
-      "seconds": 6.2,
-      "pytest": "1 failed, 4 passed in 4.51s"
+      "seconds": 1.6,
+      "pytest": "exit=1 1 failed, 4 passed, 1 deselected in 1.08s"
     },
     {
       "id": "M11",
       "file": "queueing.py",
       "what": "Sakasegawa exponent off by one",
       "status": "killed",
-      "seconds": 8.6,
-      "pytest": "1 failed, 18 passed in 7.65s"
+      "seconds": 1.9,
+      "pytest": "exit=1 1 failed, 18 passed, 1 deselected in 1.38s"
     },
     {
       "id": "M12",
       "file": "queueing.py",
       "what": "G/G/m drops 1/m",
       "status": "killed",
-      "seconds": 9.0,
-      "pytest": "1 failed, 18 passed in 7.72s"
+      "seconds": 1.8,
+      "pytest": "exit=1 1 failed, 18 passed, 1 deselected in 1.31s"
     },
     {
       "id": "M13",
       "file": "queueing.py",
       "what": "outage variance term wrong",
       "status": "killed",
-      "seconds": 10.5,
-      "pytest": "1 failed, 18 passed in 8.78s"
+      "seconds": 1.8,
+      "pytest": "exit=1 1 failed, 18 passed, 1 deselected in 1.30s"
     },
     {
       "id": "M14",
       "file": "queueing.py",
       "what": "batch-formation wait wrong",
       "status": "killed",
-      "seconds": 10.1,
-      "pytest": "1 failed, 18 passed in 8.60s"
+      "seconds": 1.8,
+      "pytest": "exit=1 1 failed, 18 passed, 1 deselected in 1.31s"
     },
     {
       "id": "M15",
       "file": "queueing.py",
       "what": "batch arrival SCV not divided",
       "status": "killed",
-      "seconds": 9.5,
-      "pytest": "1 failed, 18 passed in 7.76s"
+      "seconds": 1.8,
+      "pytest": "exit=1 1 failed, 18 passed, 1 deselected in 1.30s"
     },
     {
       "id": "M16",
       "file": "planning.py",
       "what": "lead time off by one in MILP",
       "status": "killed",
-      "seconds": 9.5,
-      "pytest": "1 failed, 19 passed in 8.12s"
+      "seconds": 1.8,
+      "pytest": "exit=1 1 failed, 19 passed, 1 deselected in 1.34s"
     },
     {
       "id": "M17",
       "file": "planning.py",
       "what": "no discounting",
       "status": "killed",
-      "seconds": 20.2,
-      "pytest": "1 failed, 59 passed, 1 skipped in 18.19s"
+      "seconds": 10.8,
+      "pytest": "exit=1 1 failed, 159 passed, 1 deselected in 10.36s"
     },
     {
       "id": "M18",
       "file": "planning.py",
       "what": "utilisation cap dropped from MILP",
       "status": "killed",
-      "seconds": 11.0,
-      "pytest": "1 failed, 19 passed in 9.69s"
+      "seconds": 1.8,
+      "pytest": "exit=1 1 failed, 19 passed, 1 deselected in 1.30s"
     },
     {
       "id": "M19",
       "file": "validate.py",
       "what": "validator ignores cap",
       "status": "killed",
-      "seconds": 18.7,
-      "pytest": "1 failed, 61 passed, 1 skipped in 16.72s"
+      "seconds": 11.1,
+      "pytest": "exit=1 1 failed, 185 passed, 1 deselected in 10.63s"
     },
     {
       "id": "M20",
       "file": "validate.py",
       "what": "greedy rounds tools down",
       "status": "killed",
-      "seconds": 19.7,
-      "pytest": "1 failed, 59 passed, 1 skipped in 18.17s"
+      "seconds": 10.8,
+      "pytest": "exit=1 1 failed, 159 passed, 1 deselected in 10.32s"
     },
     {
       "id": "M21",
       "file": "des.py",
       "what": "S5 batches may mix products",
       "status": "killed",
-      "seconds": 13.1,
-      "pytest": "1 failed, 39 passed, 1 skipped in 10.93s"
+      "seconds": 2.7,
+      "pytest": "exit=1 1 failed, 39 passed, 1 deselected in 2.20s"
     },
     {
       "id": "M22",
       "file": "des.py",
       "what": "two test lots per batch",
       "status": "killed",
-      "seconds": 12.1,
-      "pytest": "1 failed, 39 passed, 1 skipped in 11.02s"
+      "seconds": 2.8,
+      "pytest": "exit=1 1 failed, 39 passed, 1 deselected in 2.31s"
     },
     {
       "id": "M23",
       "file": "des.py",
       "what": "test lot may reuse machine",
       "status": "killed",
-      "seconds": 14.6,
-      "pytest": "1 failed, 41 passed, 1 skipped in 12.96s"
+      "seconds": 2.6,
+      "pytest": "exit=1 1 failed, 41 passed, 1 deselected in 2.19s"
     },
     {
       "id": "M24",
       "file": "des.py",
       "what": "failures only at run start",
       "status": "killed",
-      "seconds": 14.8,
-      "pytest": "1 failed, 44 passed, 1 skipped in 13.39s"
+      "seconds": 2.7,
+      "pytest": "exit=1 1 failed, 44 passed, 1 deselected in 2.21s"
     },
     {
       "id": "M25",
       "file": "des.py",
       "what": "scrapped lots stay in WIP",
       "status": "killed",
-      "seconds": 16.0,
-      "pytest": "1 failed, 37 passed, 1 skipped in 13.95s"
+      "seconds": 2.4,
+      "pytest": "exit=1 1 failed, 37 passed, 1 deselected in 1.96s"
     },
     {
       "id": "M26",
       "file": "des.py",
       "what": "SA rule degenerates to FIFO",
       "status": "killed",
-      "seconds": 13.1,
-      "pytest": "1 failed, 42 passed, 1 skipped in 11.18s"
+      "seconds": 2.7,
+      "pytest": "exit=1 1 failed, 42 passed, 1 deselected in 2.23s"
     },
     {
       "id": "M27",
       "file": "des.py",
       "what": "PM gap rule dropped",
       "status": "killed",
-      "seconds": 14.4,
-      "pytest": "1 failed, 43 passed, 1 skipped in 12.12s"
+      "seconds": 2.7,
+      "pytest": "exit=1 1 failed, 43 passed, 1 deselected in 2.24s"
     },
     {
       "id": "M28",
       "file": "des.py",
       "what": "CR sorted backwards",
       "status": "killed",
-      "seconds": 10.2,
-      "pytest": "1 failed, 42 passed, 1 skipped in 9.27s"
+      "seconds": 2.7,
+      "pytest": "exit=1 1 failed, 42 passed, 1 deselected in 2.23s"
     },
     {
       "id": "M29",
       "file": "des.py",
       "what": "litho setup state never updated",
       "status": "killed",
-      "seconds": 14.3,
-      "pytest": "1 failed, 45 passed, 1 skipped in 13.27s"
+      "seconds": 2.7,
+      "pytest": "exit=1 1 failed, 45 passed, 1 deselected in 2.18s"
     },
     {
       "id": "M30",
       "file": "agent/validator.py",
       "what": "validator tolerates +-1",
       "status": "killed",
-      "seconds": 4.5,
-      "pytest": "1 failed, 1 passed in 3.17s"
+      "seconds": 1.6,
+      "pytest": "exit=1 1 failed, 1 passed, 1 deselected in 1.12s"
     },
     {
       "id": "M45",
       "file": "agent/llm.py",
       "what": "refusal after a tool call not recognised",
       "status": "killed",
-      "seconds": 7.7,
-      "pytest": "1 failed, 21 passed in 6.70s"
+      "seconds": 1.9,
+      "pytest": "exit=1 1 failed, 21 passed, 1 deselected in 1.37s"
     },
     {
       "id": "M42",
       "file": "agent/validator.py",
       "what": "tool-argument laundering allowed",
       "status": "killed",
-      "seconds": 4.5,
-      "pytest": "1 failed, 2 passed in 3.19s"
+      "seconds": 1.5,
+      "pytest": "exit=1 1 failed, 2 passed, 1 deselected in 1.06s"
     },
     {
       "id": "M43",
       "file": "agent/validator.py",
       "what": "numbers glued to letters / leading dot escape",
       "status": "killed",
-      "seconds": 5.5,
-      "pytest": "1 failed in 4.49s"
+      "seconds": 1.5,
+      "pytest": "exit=1 1 failed, 1 deselected in 1.05s"
     },
     {
       "id": "M44",
       "file": "des.py",
       "what": "stocker metric counts lots after unload as on-machine",
       "status": "killed",
-      "seconds": 11.5,
-      "pytest": "1 failed, 46 passed, 1 skipped in 10.58s"
+      "seconds": 2.7,
+      "pytest": "exit=1 1 failed, 46 passed, 1 deselected in 2.21s"
     },
     {
       "id": "M31",
       "file": "agent/router.py",
       "what": "demand decreases read as increases",
       "status": "killed",
-      "seconds": 4.3,
-      "pytest": "1 failed, 7 passed in 3.20s"
+      "seconds": 1.5,
+      "pytest": "exit=1 1 failed, 7 passed, 1 deselected in 1.08s"
     },
     {
       "id": "M32",
       "file": "agent/router.py",
       "what": "next quarter -> Q1",
       "status": "killed",
-      "seconds": 6.0,
-      "pytest": "1 failed, 7 passed in 5.02s"
+      "seconds": 1.6,
+      "pytest": "exit=1 1 failed, 7 passed, 1 deselected in 1.09s"
     },
     {
       "id": "M33",
       "file": "agent/tools.py",
       "what": "percent rounding coarsened",
       "status": "killed",
-      "seconds": 6.5,
-      "pytest": "1 failed, 4 passed in 5.09s"
+      "seconds": 1.5,
+      "pytest": "exit=1 1 failed, 4 passed, 1 deselected in 1.05s"
     },
     {
       "id": "M34",
       "file": "agent/evaluate.py",
       "what": "keyword scoring too lenient",
       "status": "killed",
-      "seconds": 7.4,
-      "pytest": "1 failed, 11 passed in 5.90s"
+      "seconds": 1.5,
+      "pytest": "exit=1 1 failed, 11 passed, 1 deselected in 1.07s"
     },
     {
       "id": "M35",
       "file": "stats.py",
       "what": "one-sided t quantile",
       "status": "killed",
-      "seconds": 28.3,
-      "pytest": "1 failed, 237 passed, 1 skipped in 26.55s"
+      "seconds": 11.3,
+      "pytest": "exit=1 1 failed, 392 passed, 1 deselected in 10.77s"
     },
     {
       "id": "M36",
       "file": "io.py",
       "what": "result rounding changed",
       "status": "killed",
-      "seconds": 24.0,
-      "pytest": "1 failed, 238 passed, 1 skipped in 22.39s"
+      "seconds": 11.3,
+      "pytest": "exit=1 1 failed, 393 passed, 1 deselected in 10.78s"
     },
     {
       "id": "M37",
       "file": "agent/router.py",
       "what": "named-entity scope rule removed",
       "status": "killed",
-      "seconds": 4.3,
-      "pytest": "1 failed, 8 passed in 3.38s"
+      "seconds": 1.5,
+      "pytest": "exit=1 1 failed, 8 passed, 1 deselected in 1.06s"
     },
     {
       "id": "M46",
       "file": "agent/router.py",
       "what": "personal-belongings scope rule removed",
       "status": "killed",
-      "seconds": 4.8,
-      "pytest": "1 failed, 8 passed in 3.78s"
+      "seconds": 1.6,
+      "pytest": "exit=1 1 failed, 8 passed, 1 deselected in 1.11s"
     },
     {
       "id": "M47",
       "file": "agent/router.py",
       "what": "foreign-unit scope rule removed",
       "status": "killed",
-      "seconds": 4.0,
-      "pytest": "1 failed, 8 passed in 3.09s"
+      "seconds": 1.5,
+      "pytest": "exit=1 1 failed, 8 passed, 1 deselected in 1.07s"
     },
     {
       "id": "M48",
       "file": "agent/router.py",
       "what": "capitalised names not treated as entities",
       "status": "killed",
-      "seconds": 4.1,
-      "pytest": "1 failed, 8 passed in 3.18s"
+      "seconds": 1.5,
+      "pytest": "exit=1 1 failed, 8 passed, 1 deselected in 1.08s"
     },
     {
       "id": "M49",
       "file": "agent/validator.py",
       "what": "numbers from error payloads allowed",
       "status": "killed",
-      "seconds": 3.1,
-      "pytest": "1 failed, 4 passed in 2.24s"
+      "seconds": 1.7,
+      "pytest": "exit=1 1 failed, 4 passed, 1 deselected in 1.06s"
     },
     {
       "id": "M50",
       "file": "agent/validator.py",
       "what": "argument-derived outputs allowed without the question",
       "status": "killed",
-      "seconds": 4.4,
-      "pytest": "1 failed, 4 passed in 3.34s"
+      "seconds": 1.5,
+      "pytest": "exit=1 1 failed, 4 passed, 1 deselected in 1.06s"
     },
     {
       "id": "M51",
       "file": "agent/validator.py",
       "what": "dotted digit runs accepted",
       "status": "killed",
-      "seconds": 4.4,
-      "pytest": "1 failed, 4 passed in 3.27s"
+      "seconds": 1.5,
+      "pytest": "exit=1 1 failed, 4 passed, 1 deselected in 1.05s"
     },
     {
       "id": "M52",
       "file": "agent/validator.py",
       "what": "queue-name identifier swallows any number",
       "status": "killed",
-      "seconds": 3.5,
-      "pytest": "1 failed, 3 passed in 2.54s"
+      "seconds": 1.6,
+      "pytest": "exit=1 1 failed, 3 passed, 1 deselected in 1.09s"
     },
     {
       "id": "M53",
       "file": "agent/validator.py",
       "what": "quarter names not checked",
       "status": "killed",
-      "seconds": 4.0,
-      "pytest": "1 failed, 5 passed in 3.02s"
+      "seconds": 1.5,
+      "pytest": "exit=1 1 failed, 5 passed, 1 deselected in 1.06s"
     },
     {
       "id": "M54",
       "file": "agent/tools.py",
       "what": "capacity tool does not mark argument-derived outputs",
       "status": "killed",
-      "seconds": 4.7,
-      "pytest": "1 failed, 4 passed in 3.67s"
+      "seconds": 1.5,
+      "pytest": "exit=1 1 failed, 4 passed, 1 deselected in 1.05s"
     },
     {
       "id": "M69",
       "file": "agent/render.py",
       "what": "templates print argument-derived numbers",
       "status": "killed",
-      "seconds": 6.0,
-      "pytest": "1 failed, 12 passed in 4.37s"
+      "seconds": 1.6,
+      "pytest": "exit=1 1 failed, 12 passed, 1 deselected in 1.12s"
     },
     {
       "id": "M39",
       "file": "agent/llm.py",
       "what": "LLM answer not validated",
       "status": "killed",
-      "seconds": 8.8,
-      "pytest": "1 failed, 20 passed in 7.57s"
+      "seconds": 1.8,
+      "pytest": "exit=1 1 failed, 20 passed, 1 deselected in 1.35s"
     },
     {
       "id": "M40",
       "file": "agent/llm.py",
       "what": "repair turn not validated",
       "status": "killed",
-      "seconds": 9.0,
-      "pytest": "1 failed, 20 passed in 7.71s"
+      "seconds": 1.8,
+      "pytest": "exit=1 1 failed, 20 passed, 1 deselected in 1.37s"
     },
     {
       "id": "M41",
       "file": "agent/llm.py",
       "what": "number-only answer without tools not refused",
       "status": "killed",
-      "seconds": 7.9,
-      "pytest": "1 failed, 21 passed in 6.57s"
+      "seconds": 1.8,
+      "pytest": "exit=1 1 failed, 21 passed, 1 deselected in 1.33s"
     },
     {
       "id": "M55",
       "file": "des.py",
       "what": "run clock never ages",
       "status": "killed",
-      "seconds": 15.4,
-      "pytest": "1 failed, 52 passed, 1 skipped in 14.40s"
+      "seconds": 3.3,
+      "pytest": "exit=1 1 failed, 52 passed, 1 deselected in 2.78s"
     },
     {
       "id": "M56",
       "file": "des.py",
       "what": "run clock never fires mid-run",
       "status": "killed",
-      "seconds": 15.7,
-      "pytest": "1 failed, 52 passed, 1 skipped in 14.75s"
+      "seconds": 3.3,
+      "pytest": "exit=1 1 failed, 52 passed, 1 deselected in 2.82s"
     },
     {
       "id": "M57",
       "file": "des.py",
       "what": "tbf_scale ignored",
       "status": "killed",
-      "seconds": 14.2,
-      "pytest": "1 failed, 54 passed, 1 skipped in 13.15s"
+      "seconds": 3.3,
+      "pytest": "exit=1 1 failed, 54 passed, 1 deselected in 2.79s"
     },
     {
       "id": "M58",
       "file": "des.py",
       "what": "operator released between setup and load",
       "status": "killed",
-      "seconds": 15.6,
-      "pytest": "1 failed, 56 passed, 1 skipped in 14.56s"
+      "seconds": 3.5,
+      "pytest": "exit=1 1 failed, 56 passed, 1 deselected in 3.03s"
     },
     {
       "id": "M59",
       "file": "des.py",
       "what": "second technician not woken for PM",
       "status": "killed",
-      "seconds": 17.1,
-      "pytest": "1 failed, 57 passed, 1 skipped in 15.89s"
+      "seconds": 3.5,
+      "pytest": "exit=1 1 failed, 57 passed, 1 deselected in 3.00s"
     },
     {
       "id": "M60",
       "file": "des.py",
       "what": "calendar clock restarts at time zero after a repair",
       "status": "killed",
-      "seconds": 16.9,
-      "pytest": "1 failed, 38 passed, 1 skipped in 15.32s"
+      "seconds": 2.4,
+      "pytest": "exit=1 1 failed, 38 passed, 1 deselected in 1.86s"
     },
     {
       "id": "M61",
       "file": "capacity.py",
       "what": "run-clock EM ignores run time",
       "status": "killed",
-      "seconds": 12.5,
-      "pytest": "1 failed, 33 passed, 1 skipped in 10.74s"
+      "seconds": 1.8,
+      "pytest": "exit=1 1 failed, 33 passed, 1 deselected in 1.36s"
     },
     {
       "id": "M62",
       "file": "capacity.py",
       "what": "calendar TBF scale ignores repair time",
       "status": "killed",
-      "seconds": 15.2,
-      "pytest": "1 failed, 32 passed, 1 skipped in 13.29s"
+      "seconds": 1.8,
+      "pytest": "exit=1 1 failed, 32 passed, 1 deselected in 1.37s"
     },
     {
       "id": "M63",
       "file": "planning.py",
       "what": "technician load ignores purchased tools",
       "status": "killed",
-      "seconds": 22.6,
-      "pytest": "1 failed, 59 passed, 1 skipped in 21.11s"
+      "seconds": 11.0,
+      "pytest": "exit=1 1 failed, 174 passed, 1 deselected in 10.48s"
     },
     {
       "id": "M64",
       "file": "planning.py",
       "what": "people cap dropped for operators",
       "status": "killed",
-      "seconds": 22.7,
-      "pytest": "1 failed, 59 passed, 1 skipped in 19.31s"
+      "seconds": 10.8,
+      "pytest": "exit=1 1 failed, 159 passed, 1 deselected in 10.35s"
     },
     {
       "id": "M65",
       "file": "planning.py",
       "what": "labour cost left out of the objective",
       "status": "killed",
-      "seconds": 23.7,
-      "pytest": "1 failed, 59 passed, 1 skipped in 21.89s"
+      "seconds": 10.9,
+      "pytest": "exit=1 1 failed, 159 passed, 1 deselected in 10.39s"
     },
     {
       "id": "M66",
       "file": "validate.py",
       "what": "validator ignores the people cap",
       "status": "killed",
-      "seconds": 23.7,
-      "pytest": "1 failed, 65 passed, 1 skipped in 21.94s"
+      "seconds": 11.1,
+      "pytest": "exit=1 1 failed, 189 passed, 1 deselected in 10.60s"
     },
     {
       "id": "M67",
       "file": "validate.py",
       "what": "greedy ignores labour cost",
       "status": "killed",
-      "seconds": 18.6,
-      "pytest": "1 failed, 59 passed, 1 skipped in 17.19s"
+      "seconds": 10.9,
+      "pytest": "exit=1 1 failed, 159 passed, 1 deselected in 10.36s"
     },
     {
       "id": "M71",
       "file": "capacity.py",
       "what": "personnel load ignores the failure clock",
       "status": "killed",
-      "seconds": 9.7,
-      "pytest": "1 failed, 34 passed, 1 skipped in 8.30s"
+      "seconds": 1.8,
+      "pytest": "exit=1 1 failed, 34 passed, 1 deselected in 1.33s"
+    },
+    {
+      "id": "M72",
+      "file": "validate.py",
+      "what": "non-optimal solver status accepted",
+      "status": "killed",
+      "seconds": 10.6,
+      "pytest": "exit=1 1 failed, 90 passed, 1 deselected in 10.13s"
+    },
+    {
+      "id": "M73",
+      "file": "validate.py",
+      "what": "negative plan values accepted",
+      "status": "killed",
+      "seconds": 11.1,
+      "pytest": "exit=1 1 failed, 176 passed, 1 deselected in 10.66s"
+    },
+    {
+      "id": "M74",
+      "file": "validate.py",
+      "what": "booleans accepted as plan numbers",
+      "status": "killed",
+      "seconds": 10.8,
+      "pytest": "exit=1 1 failed, 117 passed, 1 deselected in 10.33s"
+    },
+    {
+      "id": "M75",
+      "file": "validate.py",
+      "what": "shortfall above demand accepted",
+      "status": "killed",
+      "seconds": 11.2,
+      "pytest": "exit=1 1 failed, 179 passed, 1 deselected in 10.72s"
+    },
+    {
+      "id": "M76",
+      "file": "validate.py",
+      "what": "utilisation target outside (0, 1] accepted",
+      "status": "killed",
+      "seconds": 11.2,
+      "pytest": "exit=1 1 failed, 180 passed, 1 deselected in 10.75s"
+    },
+    {
+      "id": "M78",
+      "file": "validate.py",
+      "what": "non-finite plan arithmetic not rejected",
+      "status": "killed",
+      "seconds": 10.7,
+      "pytest": "exit=1 1 failed, 128 passed, 1 deselected in 10.26s"
     },
     {
       "id": "E01",
       "file": "des.py",
       "what": "EQUIVALENT: when next_fail == run_start the elif branch sets fail_at = next_fail = run_start, same behaviour",
       "status": "equivalent (survived, as expected)",
-      "seconds": 19.7,
-      "pytest": "239 passed, 1 skipped in 18.33s"
+      "seconds": 11.3,
+      "pytest": "exit=0 394 passed, 1 deselected in 10.84s"
     },
     {
       "id": "E02",
       "file": "io.py",
       "what": "EQUIVALENT: f'{0.0:.10g}' is '0' and the final line maps -0.0 to 0.0 anyway",
       "status": "equivalent (survived, as expected)",
-      "seconds": 19.7,
-      "pytest": "239 passed, 1 skipped in 18.25s"
+      "seconds": 11.6,
+      "pytest": "exit=0 394 passed, 1 deselected in 11.05s"
+    },
+    {
+      "id": "E03",
+      "file": "validate.py",
+      "what": "EQUIVALENT: with zero demand the tool and operator loads that multiply `served` are zero, so u = 0 either way",
+      "status": "equivalent (survived, as expected)",
+      "seconds": 11.6,
+      "pytest": "exit=0 394 passed, 1 deselected in 11.09s"
+    },
+    {
+      "id": "E04",
+      "file": "planning.py",
+      "what": "EQUIVALENT: with zero demand loads[q] is zero, so every product with `served` is zero either way",
+      "status": "equivalent (survived, as expected)",
+      "seconds": 11.4,
+      "pytest": "exit=0 394 passed, 1 deselected in 10.88s"
     },
     {
       "id": "M38",
       "file": "des.py",
       "what": "run time booked as load (accounting)",
       "status": "killed",
-      "seconds": 13.4,
-      "pytest": "1 failed, 45 passed, 1 skipped in 11.76s"
+      "seconds": 2.8,
+      "pytest": "exit=1 1 failed, 45 passed, 1 deselected in 2.27s"
     }
   ]
 }
