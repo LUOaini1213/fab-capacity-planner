@@ -504,13 +504,13 @@ The harness tests exercise real passing, failing and invalid mini-suites; config
 are always excluded from mutation runs. CI runs the complete mutation gate separately from DES reproduction.
 
 CI re-runs the full gate on every push and uploads its `mutation.json` as an artifact; the committed
-`results/mutation.json` is the artifact of the run that added mutants M72-M79 for the plan-input contract,
-the non-finite guards and the zero-demand branches (`validate.py`, `planning.py`):
+`results/mutation.json` is the artifact of CI run 42511240656, which added mutants M72-M76 and M78 for the
+plan-input contract and the non-finite guard (`validate.py`) and the equivalents E03/E04:
 
 | Mutation testing | Value | Source |
 |---|---|---|
-| Mutants killed | 69 | `mutation.json#killed` |
-| Mutants applied (non-equivalent) | 69 | `mutation.json#total` |
+| Mutants killed | 75 | `mutation.json#killed` |
+| Mutants applied (non-equivalent) | 75 | `mutation.json#total` |
 
 The list covers the failure clock and TBF scale, run-clock EM accounting, the
 operator hold, the second technician, labour constraints and the validator's labour check, the router's
